@@ -2,7 +2,7 @@ import { ApiHandlerOptions, ModelRecord } from "../../shared/api"
 import { OpenRouterHandler } from "./openrouter"
 import { getModelParams } from "../transform/model-params"
 import { getModels } from "./fetchers/modelCache"
-import { DEEP_SEEK_DEFAULT_TEMPERATURE } from "@roo-code/types"
+import { DEEP_SEEK_DEFAULT_TEMPERATURE, kilocodeDefaultModelId } from "@roo-code/types"
 import { getKiloBaseUriFromToken } from "../../utils/kilocode-token"
 import { ApiHandlerCreateMessageMetadata } from ".."
 import OpenAI from "openai"
@@ -41,7 +41,7 @@ export class KilocodeOpenrouterHandler extends OpenRouterHandler {
 		let info
 		let defaultTemperature = 0
 
-		const selectedModel = this.options.kilocodeModel ?? "gemini25"
+		const selectedModel = this.options.kilocodeModel ?? kilocodeDefaultModelId
 
 		// Map the selected model to the corresponding OpenRouter model ID
 		// legacy mapping

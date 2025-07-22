@@ -25,6 +25,7 @@ import {
 	chutesDefaultModelId,
 	bedrockDefaultModelId,
 	vertexDefaultModelId,
+	kilocodeDefaultModelId,
 } from "@roo-code/types"
 
 import { vscode } from "@src/utils/vscode"
@@ -321,7 +322,7 @@ const ApiOptions = ({
 				openai: { field: "openAiModelId" },
 				ollama: { field: "ollamaModelId" },
 				lmstudio: { field: "lmStudioModelId" },
-				kilocode: { field: "kilocodeModel", default: "claude37" }, // kilocode_change
+				kilocode: { field: "kilocodeModel", default: kilocodeDefaultModelId }, // kilocode_change
 				cerebras: { field: "cerebrasModelId", default: cerebrasDefaultModelId }, // kilocode_change
 			}
 
