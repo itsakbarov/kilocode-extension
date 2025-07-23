@@ -126,7 +126,7 @@ const ChatTextArea = forwardRef<HTMLTextAreaElement, ChatTextAreaProps>(
 		const [fileSearchResults, setFileSearchResults] = useState<SearchResult[]>([])
 
 		// kilocode_change begin: remove button from chat when it gets to small
-		const [containerWidth, setContainerWidth] = useState<number>(300) // Default to a value larger than our threshold
+		const [, setContainerWidth] = useState<number>(300) // Default to a value larger than our threshold
 
 		const containerRef = useRef<HTMLDivElement>(null)
 
@@ -1181,73 +1181,6 @@ const ChatTextArea = forwardRef<HTMLTextAreaElement, ChatTextAreaProps>(
 			<div ref={containerRef} className={cn("flex", "justify-between", "items-center", "gap-2", "mt-2")}>
 				<div className={cn("flex", "items-center", "gap-2", "min-w-0")}>
 					{/* Mode Selector */}
-					<div className="shrink-0">
-						<SelectDropdown
-							value={allModes.find((m) => m.slug === mode)?.slug ?? defaultModeSlug}
-							title={t("chat:selectMode")}
-							options={[
-								{
-									value: "shortcut",
-									label: modeShortcutText,
-									disabled: true,
-									type: DropdownOptionType.SHORTCUT,
-								},
-								...allModes.map((mode) => ({
-									value: mode.slug,
-									label: mode.name,
-									codicon: mode.iconName,
-									type: DropdownOptionType.ITEM,
-								})),
-								{
-									value: "sep-1",
-									label: t("chat:separator"),
-									type: DropdownOptionType.SEPARATOR,
-								},
-								{
-									value: "promptsButtonClicked",
-									label: t("chat:edit"),
-									type: DropdownOptionType.ACTION,
-								},
-							]}
-							onChange={(value) => {
-								setMode(value as Mode)
-								vscode.postMessage({ type: "mode", text: value })
-							}}
-							shortcutText={modeShortcutText}
-							triggerClassName={cn(
-								"bg-[rgba(255,255,255,0.03)] border-[rgba(255,255,255,0.15)]",
-								"text-sm",
-								"rounded-lg px-3 py-1.5",
-							)}
-						/>
-					</div>
-
-					{/* AI Suggest Button */}
-					{containerWidth > 480 && (
-						<div className="shrink-0">
-							<StandardTooltip content="Find the best model for this task">
-								<Button
-									variant="outline"
-									size="sm"
-									className={cn(
-										"bg-[rgba(255,255,255,0.03)] border-[rgba(255,255,255,0.15)]",
-										"inline-flex items-center gap-1.5 px-3 py-3.5 text-sm",
-										"border-[var(--vscode-input-border)] rounded-lg",
-										"transition-colors duration-200",
-									)}
-									onClick={() => {
-										vscode.postMessage({
-											type: "suggestButtonClicked",
-											mode,
-											prompt: inputValue.trim(),
-										})
-									}}>
-									<WandSparkles className="w-3.5 h-3.5 opacity-80" />
-									Suggest Model
-								</Button>
-							</StandardTooltip>
-						</div>
-					)}
 
 					{/* kilocode_change start - hide if there is only one profile */}
 					<div
@@ -1322,7 +1255,10 @@ const ChatTextArea = forwardRef<HTMLTextAreaElement, ChatTextAreaProps>(
 							// kilocode_change start - VSC Theme
 							triggerClassName={cn(
 								"w-full text-ellipsis overflow-hidden",
-								"bg-[var(--background)] border-[var(--vscode-input-border)] hover:bg-[var(--color-vscode-list-hoverBackground)]",
+								"bg-[rgba(255,255,255,0.03)] border border-[rgba(255,255,255,0.15)]",
+								"hover:bg-[rgba(255,255,255,0.08)] hover:border-[rgba(255,255,255,0.2)]",
+								"transition-all duration-200",
+								"rounded-lg",
 							)}
 							// kilocode_change end
 							itemClassName="group"
@@ -1436,19 +1372,18 @@ const ChatTextArea = forwardRef<HTMLTextAreaElement, ChatTextAreaProps>(
 					"flex",
 					"flex-col-reverse",
 					"min-h-0",
-					"bg-[#000000]",
+					"bg-[rgba(255,255,255,0.03)]", // Match button background
 					"overflow-hidden",
 					"rounded-2xl", // More rounded corners
 					"border",
-					"border-vscode-widget-border",
+					"border-[rgba(255,255,255,0.15)]", // Match button border
 					isFocused
-						? "border-vscode-focusBorder shadow-sm"
+						? "border-[rgba(255,255,255,0.2)] shadow-sm" // Match button hover border
 						: isDraggingOver
 							? "border-2 border-dashed border-vscode-focusBorder"
-							: "border-vscode-widget-border",
-					isDraggingOver
-						? "bg-[color-mix(in_srgb,var(--vscode-input-background)_95%,var(--vscode-focusBorder))]"
-						: "bg-vscode-input-background",
+							: "border-[rgba(255,255,255,0.15)]",
+					isDraggingOver &&
+						"bg-[color-mix(in_srgb,var(--vscode-input-background)_95%,var(--vscode-focusBorder))]",
 					"transition-all duration-200 ease-in-out",
 				)}>
 				<div
@@ -1508,16 +1443,15 @@ const ChatTextArea = forwardRef<HTMLTextAreaElement, ChatTextAreaProps>(
 					autoFocus={true}
 					className={cn(
 						"w-full",
-						"border border-[rgba(255,255,255,0.08)]",
 						"font-vscode-font-family",
 						"text-vscode-editor-font-size",
 						"leading-vscode-editor-line-height",
 						"cursor-text",
 						isEditMode ? "pt-4 pb-20 px-5" : "py-4 px-5", // Increased padding
 						"border-none", // Remove border since container has it
+						"bg-transparent", // Transparent background
 						"transition-all duration-200 ease-in-out",
 						"will-change-transform",
-						"bg-[rgba(255,255,255,0.03)] border-[rgba(255,255,255,0.15)]",
 						"min-h-[80px]", // Increased minimum height
 						"box-border",
 						"resize-none",
@@ -1536,10 +1470,76 @@ const ChatTextArea = forwardRef<HTMLTextAreaElement, ChatTextAreaProps>(
 				/>
 
 				{/* Modern control bar - positioned at bottom */}
-				<div className="absolute bottom-4 left-5 right-5 z-30 flex items-center justify-between">
+				<div className="absolute bottom-4 left-4 right-4 z-30 flex items-center justify-between">
 					{/* Left side - Model selector */}
 					<div className="flex items-center gap-2">
-						<div className="flex items-center gap-1.5 text-xs text-vscode-descriptionForeground"></div>
+						<div className="shrink-0">
+							<SelectDropdown
+								value={allModes.find((m) => m.slug === mode)?.slug ?? defaultModeSlug}
+								options={[
+									{
+										value: "shortcut",
+										label: modeShortcutText,
+										disabled: true,
+										type: DropdownOptionType.SHORTCUT,
+									},
+									...allModes.map((mode) => ({
+										value: mode.slug,
+										label: mode.name,
+										codicon: mode.iconName,
+										type: DropdownOptionType.ITEM,
+									})),
+									{
+										value: "sep-1",
+										label: t("chat:separator"),
+										type: DropdownOptionType.SEPARATOR,
+									},
+									{
+										value: "promptsButtonClicked",
+										label: t("chat:edit"),
+										type: DropdownOptionType.ACTION,
+									},
+								]}
+								onChange={(value) => {
+									setMode(value as Mode)
+									vscode.postMessage({ type: "mode", text: value })
+								}}
+								shortcutText={modeShortcutText}
+								triggerClassName={cn(
+									"bg-[rgba(255,255,255,0.03)] text-white opacity-100 text-sm border border-[rgba(255,255,255,0.15)]",
+									"text-sm",
+									"rounded-lg px-3 py-1.5",
+									"hover:bg-[rgba(255,255,255,0.08)] hover:border-[rgba(255,255,255,0.2)]",
+									"transition-all duration-200",
+								)}
+							/>
+						</div>
+
+						{/* AI Suggest Button */}
+						<div className="shrink-0">
+							<StandardTooltip content="Find the best model for this task">
+								<Button
+									variant="outline"
+									size="sm"
+									className={cn(
+										"bg-[rgba(255,255,255,0.03)] border border-[rgba(255,255,255,0.15)]",
+										"inline-flex items-center gap-1.5 px-3 py-3.5 text-sm",
+										"rounded-lg",
+										"transition-all duration-200",
+										"hover:bg-[rgba(255,255,255,0.08)] hover:border-[rgba(255,255,255,0.2)]",
+									)}
+									onClick={() => {
+										vscode.postMessage({
+											type: "suggestButtonClicked",
+											mode,
+											prompt: inputValue.trim(),
+										})
+									}}>
+									<WandSparkles className="w-3.5 h-3.5 opacity-80" />
+									Suggest Model
+								</Button>
+							</StandardTooltip>
+						</div>
 					</div>
 
 					{/* Right side - Action buttons */}
@@ -1561,39 +1561,16 @@ const ChatTextArea = forwardRef<HTMLTextAreaElement, ChatTextAreaProps>(
 								}}
 								className={cn(
 									"relative inline-flex items-center justify-center",
-									"bg-transparent border-none p-1.5",
-									"rounded-md min-w-[28px] min-h-[28px]",
-									"opacity-60 hover:opacity-100 text-vscode-descriptionForeground hover:text-vscode-foreground",
-									"transition-all duration-150",
-									"hover:bg-[rgba(255,255,255,0.03)] hover:border-[rgba(255,255,255,0.15)]",
+									"bg-[rgba(255,255,255,0.03)] border border-[rgba(255,255,255,0.15)]",
+									"px-2 py-2",
+									"rounded-lg min-w-[32px] min-h-[32px]",
+									"transition-all duration-200",
 									"focus:outline-none focus-visible:ring-1 focus-visible:ring-vscode-focusBorder",
-									"active:bg-[rgba(255,255,255,0.1)]",
-									!showContextMenu && "cursor-pointer",
-									showContextMenu && "opacity-40 cursor-not-allowed",
+									!showContextMenu
+										? "hover:bg-[rgba(255,255,255,0.08)] hover:border-[rgba(255,255,255,0.2)] cursor-pointer"
+										: "opacity-50 cursor-not-allowed",
 								)}>
 								<span className="codicon codicon-add text-sm" />
-							</button>
-						</StandardTooltip>
-
-						{/* Image upload button */}
-						<StandardTooltip content={t("chat:addImages")}>
-							<button
-								aria-label={t("chat:addImages")}
-								disabled={shouldDisableImages}
-								onClick={!shouldDisableImages ? onSelectImages : undefined}
-								className={cn(
-									"relative inline-flex items-center justify-center",
-									"bg-transparent border-none p-1.5",
-									"rounded-md min-w-[28px] min-h-[28px]",
-									"opacity-60 hover:opacity-100 text-vscode-descriptionForeground hover:text-vscode-foreground",
-									"transition-all duration-150",
-									"hover:bg-[rgba(255,255,255,0.03)] hover:border-[rgba(255,255,255,0.15)]",
-									"focus:outline-none focus-visible:ring-1 focus-visible:ring-vscode-focusBorder",
-									"active:bg-[rgba(255,255,255,0.1)]",
-									!shouldDisableImages && "cursor-pointer",
-									shouldDisableImages && "opacity-40 cursor-not-allowed",
-								)}>
-								<span className="codicon codicon-image text-sm" />
 							</button>
 						</StandardTooltip>
 
@@ -1606,13 +1583,14 @@ const ChatTextArea = forwardRef<HTMLTextAreaElement, ChatTextAreaProps>(
 									onClick={!sendingDisabled ? onSend : undefined}
 									className={cn(
 										"relative inline-flex items-center justify-center",
-										"border-none p-2",
-										"rounded-lg w-8 h-8",
+										"bg-[rgba(255,255,255,0.03)] border border-[rgba(255,255,255,0.15)]",
+										"px-2 py-2",
+										"rounded-lg min-w-[32px] min-h-[32px]",
 										"transition-all duration-200",
 										"focus:outline-none focus-visible:ring-1 focus-visible:ring-vscode-focusBorder",
 										!sendingDisabled
-											? "bg-vscode-button-background text-vscode-button-foreground hover:bg-vscode-button-hoverBackground cursor-pointer"
-											: "bg-vscode-button-secondaryBackground text-vscode-descriptionForeground opacity-50 cursor-not-allowed",
+											? "hover:bg-[rgba(255,255,255,0.08)] hover:border-[rgba(255,255,255,0.2)] cursor-pointer"
+											: "opacity-50 cursor-not-allowed",
 									)}>
 									<span className="codicon codicon-send text-sm rtl:-scale-x-100" />
 								</button>
@@ -1643,16 +1621,14 @@ const ChatTextArea = forwardRef<HTMLTextAreaElement, ChatTextAreaProps>(
 							onClick={!sendingDisabled ? handleEnhancePrompt : undefined}
 							className={cn(
 								"relative inline-flex items-center justify-center",
-								"bg-transparent border-none p-1.5",
-								"rounded-md min-w-[28px] min-h-[28px]",
-								"opacity-60 hover:opacity-100 text-vscode-descriptionForeground hover:text-vscode-foreground",
-								"transition-all duration-150",
-								"hover:bg-[rgba(255,255,255,0.03)] hover:border-[rgba(255,255,255,0.15)]",
+								"bg-[rgba(255,255,255,0.03)] border border-[rgba(255,255,255,0.15)]",
+								"px-2 py-2",
+								"rounded-lg min-w-[32px] min-h-[32px]",
+								"transition-all duration-200",
 								"focus:outline-none focus-visible:ring-1 focus-visible:ring-vscode-focusBorder",
-								"active:bg-[rgba(255,255,255,0.1)]",
-								!sendingDisabled && "cursor-pointer",
-								sendingDisabled &&
-									"opacity-40 cursor-not-allowed grayscale-[30%] hover:bg-transparent hover:border-[rgba(255,255,255,0.08)] active:bg-transparent",
+								!sendingDisabled
+									? "hover:bg-[rgba(255,255,255,0.08)] hover:border-[rgba(255,255,255,0.2)] cursor-pointer"
+									: "opacity-50 cursor-not-allowed",
 							)}>
 							<WandSparkles className={cn("w-4 h-4", isEnhancingPrompt && "animate-spin")} />
 						</button>

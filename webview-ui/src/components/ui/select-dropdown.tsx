@@ -7,7 +7,6 @@ import { useTranslation } from "react-i18next"
 import { cn } from "@/lib/utils"
 import { useRooPortal } from "./hooks/useRooPortal"
 import { Popover, PopoverContent, PopoverTrigger } from "@/components/ui"
-import { StandardTooltip } from "@/components/ui"
 import { IconProps } from "@radix-ui/react-icons/dist/types" // kilocode_change
 
 export enum DropdownOptionType {
@@ -52,7 +51,6 @@ export const SelectDropdown = React.memo(
 				options,
 				onChange,
 				disabled = false,
-				title = "",
 				triggerClassName = "",
 				contentClassName = "",
 				itemClassName = "",
@@ -227,7 +225,7 @@ export const SelectDropdown = React.memo(
 
 			return (
 				<Popover open={open} onOpenChange={onOpenChange} data-testid="dropdown-root">
-					{title ? <StandardTooltip content={title}>{triggerContent}</StandardTooltip> : triggerContent}
+					{triggerContent}
 					<PopoverContent
 						align={align}
 						sideOffset={sideOffset}
