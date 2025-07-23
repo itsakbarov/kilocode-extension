@@ -52,7 +52,8 @@ mermaid.initialize({
 	themeVariables: {
 		...MERMAID_THEME,
 		fontSize: "16px",
-		fontFamily: "var(--vscode-font-family, 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif)",
+		fontFamily:
+			"GeistSans, GeistSans Fallback, ui-sans-serif, system-ui, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji",
 
 		// Additional styling
 		noteTextColor: "#ffffff",

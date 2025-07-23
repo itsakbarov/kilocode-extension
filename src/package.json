@@ -3,7 +3,7 @@
 	"displayName": "O Code",
 	"description": "Generate, Refactor, And debug code with AI assistance. Check out our <DocsLink>documentation</DocsLink> to learn more.",
 	"publisher": "ocode",
-	"version": "4.63.3",
+	"version": "4.63.4",
 	"icon": "assets/icons/icon-128.png",
 	"galleryBanner": {
 		"color": "#FFFFFF",

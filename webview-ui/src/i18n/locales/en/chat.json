@@ -97,7 +97,7 @@
 		"placeholder": "Edit your message..."
 	},
 	"scrollToBottom": "Scroll to bottom of chat",
-	"about": "Generate, Refactor, And debug code with AI assistance. Check out our <DocsLink>documentation</DocsLink> to learn more.",
+	"about": "Generate, Refactor, And debug Code with AI assistance. Check out our <DocsLink>documentation</DocsLink> to learn more.",
 	"onboarding": "Your task list in this workspace is empty.",
 	"rooTips": {
 		"boomerangTasks": {

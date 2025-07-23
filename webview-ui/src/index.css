@@ -24,7 +24,9 @@
 @plugin "tailwindcss-animate";
 
 @theme {
-	--font-display: var(--vscode-font-family);
+	--font-display:
+		"GeistSans", "GeistSans Fallback", ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
+		"Segoe UI Symbol", "Noto Color Emoji";
 
 	--text-xs: calc(var(--vscode-font-size) * 0.85);
 	--text-sm: calc(var(--vscode-font-size) * 0.9);
