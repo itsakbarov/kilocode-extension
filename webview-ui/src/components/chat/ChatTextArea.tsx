@@ -1377,14 +1377,14 @@ const ChatTextArea = forwardRef<HTMLTextAreaElement, ChatTextAreaProps>(
 					"rounded-2xl", // More rounded corners
 					"border",
 					"border-[rgba(255,255,255,0.15)]", // Match button border
-					isFocused
-						? "border-[rgba(255,255,255,0.2)] shadow-sm" // Match button hover border
-						: isDraggingOver
-							? "border-2 border-dashed border-vscode-focusBorder"
-							: "border-[rgba(255,255,255,0.15)]",
+					isDraggingOver
+						? "border-2 border-dashed border-vscode-focusBorder"
+						: "border-[rgba(255,255,255,0.15)]",
 					isDraggingOver &&
 						"bg-[color-mix(in_srgb,var(--vscode-input-background)_95%,var(--vscode-focusBorder))]",
 					"transition-all duration-200 ease-in-out",
+					"focus-within:outline-none", // Remove outline when child is focused
+					"focus-within:border-[rgba(255,255,255,0.15)]", // Keep same border when focused
 				)}>
 				<div
 					ref={highlightLayerRef}
@@ -1463,8 +1463,10 @@ const ChatTextArea = forwardRef<HTMLTextAreaElement, ChatTextAreaProps>(
 						"scrollbar-none",
 						"scrollbar-hide",
 						"pb-20", // Increased bottom padding for controls
+						"outline-none", // Remove default outline
 						"focus:outline-none", // Remove focus outline
 						"focus:ring-0", // Remove focus ring
+						"focus:border-transparent", // Remove focus border
 					)}
 					onScroll={() => updateHighlights()}
 				/>
@@ -1506,8 +1508,7 @@ const ChatTextArea = forwardRef<HTMLTextAreaElement, ChatTextAreaProps>(
 								}}
 								shortcutText={modeShortcutText}
 								triggerClassName={cn(
-									"bg-[rgba(255,255,255,0.03)] text-white opacity-100 text-sm border border-[rgba(255,255,255,0.15)]",
-									"text-sm",
+									"bg-[rgba(255,255,255,0.03)] text-white opacity-100 text-xs border border-[rgba(255,255,255,0.15)]",
 									"rounded-lg px-3 py-1.5",
 									"hover:bg-[rgba(255,255,255,0.08)] hover:border-[rgba(255,255,255,0.2)]",
 									"transition-all duration-200",
@@ -1523,7 +1524,7 @@ const ChatTextArea = forwardRef<HTMLTextAreaElement, ChatTextAreaProps>(
 									size="sm"
 									className={cn(
 										"bg-[rgba(255,255,255,0.03)] border border-[rgba(255,255,255,0.15)]",
-										"inline-flex items-center gap-1.5 px-3 py-3.5 text-sm",
+										"inline-flex items-center gap-1.5 px-3 py-3.5 text-xs",
 										"rounded-lg",
 										"transition-all duration-200",
 										"hover:bg-[rgba(255,255,255,0.08)] hover:border-[rgba(255,255,255,0.2)]",
@@ -1535,7 +1536,7 @@ const ChatTextArea = forwardRef<HTMLTextAreaElement, ChatTextAreaProps>(
 											prompt: inputValue.trim(),
 										})
 									}}>
-									<WandSparkles className="w-3.5 h-3.5 opacity-80" />
+									<WandSparkles className="scale-[0.8] opacity-80" />
 									Suggest Model
 								</Button>
 							</StandardTooltip>
@@ -1565,7 +1566,6 @@ const ChatTextArea = forwardRef<HTMLTextAreaElement, ChatTextAreaProps>(
 									"px-2 py-2",
 									"rounded-lg min-w-[32px] min-h-[32px]",
 									"transition-all duration-200",
-									"focus:outline-none focus-visible:ring-1 focus-visible:ring-vscode-focusBorder",
 									!showContextMenu
 										? "hover:bg-[rgba(255,255,255,0.08)] hover:border-[rgba(255,255,255,0.2)] cursor-pointer"
 										: "opacity-50 cursor-not-allowed",
@@ -1587,7 +1587,6 @@ const ChatTextArea = forwardRef<HTMLTextAreaElement, ChatTextAreaProps>(
 										"px-2 py-2",
 										"rounded-lg min-w-[32px] min-h-[32px]",
 										"transition-all duration-200",
-										"focus:outline-none focus-visible:ring-1 focus-visible:ring-vscode-focusBorder",
 										!sendingDisabled
 											? "hover:bg-[rgba(255,255,255,0.08)] hover:border-[rgba(255,255,255,0.2)] cursor-pointer"
 											: "opacity-50 cursor-not-allowed",
@@ -1625,7 +1624,6 @@ const ChatTextArea = forwardRef<HTMLTextAreaElement, ChatTextAreaProps>(
 								"px-2 py-2",
 								"rounded-lg min-w-[32px] min-h-[32px]",
 								"transition-all duration-200",
-								"focus:outline-none focus-visible:ring-1 focus-visible:ring-vscode-focusBorder",
 								!sendingDisabled
 									? "hover:bg-[rgba(255,255,255,0.08)] hover:border-[rgba(255,255,255,0.2)] cursor-pointer"
 									: "opacity-50 cursor-not-allowed",
