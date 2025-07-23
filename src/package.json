@@ -4,7 +4,7 @@
 	"description": "%extension.description%",
 	"publisher": "ocode",
 	"version": "4.63.3",
-	"icon": "assets/icons/kilo-dark.png",
+	"icon": "assets/icons/icon-128.png",
 	"galleryBanner": {
 		"color": "#FFFFFF",
 		"theme": "light"
@@ -109,8 +109,8 @@
 				{
 					"id": "o-code-ActivityBar",
 					"title": "%views.activitybar.title%",
-					"icon": "assets/icons/kilo-dark.png",
-					"darkIcon": "assets/icons/kilo-dark.png",
+					"icon": "assets/icons/icon-128.png",
+					"darkIcon": "assets/icons/icon-128.png",
 					"when": "isMac"
 				}
 			]
@@ -245,8 +245,8 @@
 				"command": "o-code.generateCommitMessage",
 				"title": "%command.generateCommitMessage.title%",
 				"icon": {
-					"light": "assets/icons/kilo-dark.png",
-					"dark": "assets/icons/kilo-dark.png"
+					"light": "assets/icons/icon-128.png",
+					"dark": "assets/icons/icon-128.png"
 				},
 				"category": "%configuration.title%"
 			},

@@ -1,5 +1,5 @@
 {
-	"extension.displayName": "O Code AI Agent (Cline / Roo features combined)",
+	"extension.displayName": "O Code AI Agent ",
 	"extension.description": "Asistente de codificación de IA de código abierto para planificar, crear y corregir código.",
 	"command.newTask.title": "Nueva Tarea",
 	"command.explainCode.title": "Explicar Código",
