@@ -1173,19 +1173,6 @@ const ChatViewComponent: React.ForwardRefRenderFunction<ChatViewRef, ChatViewPro
 		setWasStreaming(isStreaming)
 	}, [isStreaming, lastMessage, wasStreaming, isAutoApproved, messages.length])
 
-	const isBrowserSessionMessage = (message: ClineMessage): boolean => {
-		// Which of visible messages are browser session messages, see above.
-		if (message.type === "ask") {
-			return ["browser_action_launch"].includes(message.ask!)
-		}
-
-		if (message.type === "say") {
-			return ["api_req_started", "text", "browser_action", "browser_action_result"].includes(message.say!)
-		}
-
-		return false
-	}
-
 	const groupedMessages = useMemo(() => {
 		// For v0.dev-style clean interface, we only show user messages
 		// No need for browser session grouping since we're only showing user inputs
