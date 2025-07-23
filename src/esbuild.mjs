@@ -75,10 +75,24 @@ async function main() {
 
 						// Copy codicon font file for icon display
 						const codiconSrc = path.join(srcDir, "node_modules", "@vscode", "codicons", "dist", "codicon.ttf")
-						const codiconDest = path.join(distDir, "assets", "codicon.ttf")
+						const codiconCssSrc = path.join(srcDir, "node_modules", "@vscode", "codicons", "dist", "codicon.css")
+						const codiconsDir = path.join(distDir, "assets", "codicons")
+						
+						// Create codicons directory
+						fs.mkdirSync(codiconsDir, { recursive: true })
+						
+						// Copy font file
 						if (fs.existsSync(codiconSrc)) {
+							const codiconDest = path.join(codiconsDir, "codicon.ttf")
 							fs.copyFileSync(codiconSrc, codiconDest)
-							console.log(`[copyPaths] Copied codicon.ttf to assets/ in dist`)
+							console.log(`[copyPaths] Copied codicon.ttf to assets/codicons/ in dist`)
+						}
+						
+						// Copy CSS file
+						if (fs.existsSync(codiconCssSrc)) {
+							const codiconCssDest = path.join(codiconsDir, "codicon.css")
+							fs.copyFileSync(codiconCssSrc, codiconCssDest)
+							console.log(`[copyPaths] Copied codicon.css to assets/codicons/ in dist`)
 						}
 
 					// Copy walkthrough files to dist directory

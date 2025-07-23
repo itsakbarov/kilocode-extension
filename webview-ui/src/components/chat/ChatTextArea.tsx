@@ -1507,7 +1507,7 @@ const ChatTextArea = forwardRef<HTMLTextAreaElement, ChatTextAreaProps>(
 					autoFocus={true}
 					className={cn(
 						"w-full",
-						"text-vscode-input-foreground",
+						"bg-[var(--vscode-notificationCenterHeader-background)]",
 						"font-vscode-font-family",
 						"text-vscode-editor-font-size",
 						"leading-vscode-editor-line-height",

@@ -1,13 +1,10 @@
 /* Custom codicon classes */
 
-/* Override codicon font-face to point to correct path */
+/* Override codicon font-face to fix the path for webview context */
 @font-face {
 	font-family: "codicon";
 	font-display: block;
-	src:
-		url("./build/assets/codicon.ttf") format("truetype"),
-		url("./assets/codicon.ttf") format("truetype"),
-		url("./codicon.ttf") format("truetype");
+	src: url("./fonts/codicon.ttf") format("truetype");
 }
 
 /* Make all codicon icons square shape */
@@ -18,6 +15,18 @@
 	width: 1em !important;
 	height: 1em !important;
 	aspect-ratio: 1 / 1 !important;
+	line-height: 1 !important;
+	vertical-align: middle !important;
+}
+
+/* Ensure codicon pseudo-elements work properly */
+.codicon::before {
+	display: inline-block !important;
+	width: 1em !important;
+	height: 1em !important;
+	line-height: 1 !important;
+	text-align: center !important;
+	font-family: "codicon" !important;
 }
 
 /*
