@@ -13,7 +13,7 @@ import { appendImages } from "@src/utils/imageUtils"
 
 import type { ClineAsk, ClineMessage } from "@roo-code/types"
 
-import { ClineSayBrowserAction, ClineSayTool, ExtensionMessage } from "@roo/ExtensionMessage"
+import { ClineSayBrowserAction as _ClineSayBrowserAction, ClineSayTool, ExtensionMessage } from "@roo/ExtensionMessage"
 import { McpServer, McpTool } from "@roo/mcp"
 import { findLast } from "@roo/array"
 import { FollowUpData, SuggestionItem } from "@roo-code/types"
@@ -833,7 +833,7 @@ const ChatViewComponent: React.ForwardRefRenderFunction<ChatViewRef, ChatViewPro
 		[isHidden, sendingDisabled, enableButtons],
 	)
 
-	const visibleMessages = useMemo(() => {
+	const _visibleMessages = useMemo(() => {
 		const newVisibleMessages = modifiedMessages.filter((message) => {
 			if (everVisibleMessagesTsRef.current.has(message.ts)) {
 				// If it was ever visible, and it's not one of the types that should always be hidden once processed, keep it.
@@ -896,6 +896,23 @@ const ChatViewComponent: React.ForwardRefRenderFunction<ChatViewRef, ChatViewPro
 		newVisibleMessages.forEach((msg) => everVisibleMessagesTsRef.current.set(msg.ts, true))
 
 		return newVisibleMessages
+	}, [modifiedMessages])
+
+	// Create a filtered list of only user messages for v0.dev-style clean interface
+	const userMessages = useMemo(() => {
+		return modifiedMessages.filter((message) => {
+			// Only show user messages (type === "ask")
+			if (message.type !== "ask") return false
+
+			// Filter out certain types of asks that aren't actual user input
+			const hiddenAskTypes: ClineAsk[] = ["api_req_failed", "resume_task", "resume_completed_task"]
+			if (message.ask && hiddenAskTypes.includes(message.ask)) return false
+
+			// Filter out empty messages
+			if (!message.text || message.text.trim() === "") return false
+
+			return true
+		})
 	}, [modifiedMessages])
 
 	const isReadOnlyToolAction = useCallback((message: ClineMessage | undefined) => {
@@ -1170,84 +1187,9 @@ const ChatViewComponent: React.ForwardRefRenderFunction<ChatViewRef, ChatViewPro
 	}
 
 	const groupedMessages = useMemo(() => {
-		const result: (ClineMessage | ClineMessage[])[] = []
-		let currentGroup: ClineMessage[] = []
-		let isInBrowserSession = false
-
-		const endBrowserSession = () => {
-			if (currentGroup.length > 0) {
-				result.push([...currentGroup])
-				currentGroup = []
-				isInBrowserSession = false
-			}
-		}
-
-		visibleMessages.forEach((message) => {
-			// Special handling for browser_action_result - ensure it's always in a browser session
-			if (message.say === "browser_action_result" && !isInBrowserSession) {
-				isInBrowserSession = true
-				currentGroup = []
-			}
-
-			// Special handling for browser_action - ensure it's always in a browser session
-			if (message.say === "browser_action" && !isInBrowserSession) {
-				isInBrowserSession = true
-				currentGroup = []
-			}
-
-			if (message.ask === "browser_action_launch") {
-				// Complete existing browser session if any.
-				endBrowserSession()
-				// Start new.
-				isInBrowserSession = true
-				currentGroup.push(message)
-			} else if (isInBrowserSession) {
-				// End session if `api_req_started` is cancelled.
-
-				if (message.say === "api_req_started") {
-					// Get last `api_req_started` in currentGroup to check if
-					// it's cancelled. If it is then this api req is not part
-					// of the current browser session.
-					const lastApiReqStarted = [...currentGroup].reverse().find((m) => m.say === "api_req_started")
-
-					if (lastApiReqStarted?.text !== null && lastApiReqStarted?.text !== undefined) {
-						const info = JSON.parse(lastApiReqStarted.text)
-						const isCancelled = info.cancelReason !== null && info.cancelReason !== undefined
-
-						if (isCancelled) {
-							endBrowserSession()
-							result.push(message)
-							return
-						}
-					}
-				}
-
-				if (isBrowserSessionMessage(message)) {
-					currentGroup.push(message)
-					if (message.say === "browser_action_result") {
-						// Check if the previous browser_action was a close action
-						const lastBrowserAction = [...currentGroup].reverse().find((m) => m.say === "browser_action")
-						if (lastBrowserAction) {
-							const browserAction = JSON.parse(lastBrowserAction.text || "{}") as ClineSayBrowserAction
-							if (browserAction.action === "close") {
-								endBrowserSession()
-							}
-						}
-					}
-				} else {
-					// complete existing browser session if any
-					endBrowserSession()
-					result.push(message)
-				}
-			} else {
-				result.push(message)
-			}
-		})
-
-		// Handle case where browser session is the last group
-		if (currentGroup.length > 0) {
-			result.push([...currentGroup])
-		}
+		// For v0.dev-style clean interface, we only show user messages
+		// No need for browser session grouping since we're only showing user inputs
+		const result: (ClineMessage | ClineMessage[])[] = userMessages.map((msg) => msg)
 
 		if (isCondensing) {
 			// Show indicator after clicking condense button
@@ -1260,7 +1202,7 @@ const ChatViewComponent: React.ForwardRefRenderFunction<ChatViewRef, ChatViewPro
 		}
 
 		return result
-	}, [isCondensing, visibleMessages])
+	}, [isCondensing, userMessages])
 
 	// scrolling
 

@@ -1215,7 +1215,8 @@ const ChatTextArea = forwardRef<HTMLTextAreaElement, ChatTextAreaProps>(
 							}}
 							shortcutText={modeShortcutText}
 							triggerClassName={cn(
-								"text-sm bg-vscode-button-secondaryBackground border-vscode-widget-border hover:bg-vscode-button-hoverBackground",
+								"bg-[rgba(255,255,255,0.03)] border-[rgba(255,255,255,0.15)]",
+								"text-sm",
 								"rounded-lg px-3 py-1.5",
 							)}
 						/>
@@ -1229,9 +1230,9 @@ const ChatTextArea = forwardRef<HTMLTextAreaElement, ChatTextAreaProps>(
 									variant="outline"
 									size="sm"
 									className={cn(
-										"inline-flex items-center gap-1.5 px-3 py-1.5 text-sm",
-										"bg-vscode-button-secondaryBackground border-vscode-widget-border rounded-lg",
-										"hover:bg-vscode-button-hoverBackground text-vscode-foreground",
+										"bg-[rgba(255,255,255,0.03)] border-[rgba(255,255,255,0.15)]",
+										"inline-flex items-center gap-1.5 px-3 py-3.5 text-sm",
+										"border-[var(--vscode-input-border)] rounded-lg",
 										"transition-colors duration-200",
 									)}
 									onClick={() => {
@@ -1242,7 +1243,7 @@ const ChatTextArea = forwardRef<HTMLTextAreaElement, ChatTextAreaProps>(
 										})
 									}}>
 									<WandSparkles className="w-3.5 h-3.5 opacity-80" />
-									Suggest
+									Suggest Model
 								</Button>
 							</StandardTooltip>
 						</div>
@@ -1507,16 +1508,16 @@ const ChatTextArea = forwardRef<HTMLTextAreaElement, ChatTextAreaProps>(
 					autoFocus={true}
 					className={cn(
 						"w-full",
-						"bg-[var(--vscode-notificationCenterHeader-background)]",
+						"border border-[rgba(255,255,255,0.08)]",
 						"font-vscode-font-family",
 						"text-vscode-editor-font-size",
 						"leading-vscode-editor-line-height",
 						"cursor-text",
 						isEditMode ? "pt-4 pb-20 px-5" : "py-4 px-5", // Increased padding
 						"border-none", // Remove border since container has it
-						"bg-transparent", // Transparent background
 						"transition-all duration-200 ease-in-out",
 						"will-change-transform",
+						"bg-[rgba(255,255,255,0.03)] border-[rgba(255,255,255,0.15)]",
 						"min-h-[80px]", // Increased minimum height
 						"box-border",
 						"resize-none",
@@ -1538,38 +1539,11 @@ const ChatTextArea = forwardRef<HTMLTextAreaElement, ChatTextAreaProps>(
 				<div className="absolute bottom-4 left-5 right-5 z-30 flex items-center justify-between">
 					{/* Left side - Model selector */}
 					<div className="flex items-center gap-2">
-						<div className="flex items-center gap-1.5 text-xs text-vscode-descriptionForeground">
-							<span className="codicon codicon-pulse text-sm" />
-							<span>v0-1.5-md</span>
-							<span className="codicon codicon-chevron-down text-xs" />
-						</div>
+						<div className="flex items-center gap-1.5 text-xs text-vscode-descriptionForeground"></div>
 					</div>
 
 					{/* Right side - Action buttons */}
 					<div className="flex items-center gap-2">
-						{/* Enhance prompt button */}
-						<StandardTooltip content={t("chat:enhancePrompt")}>
-							<button
-								aria-label={t("chat:enhancePrompt")}
-								disabled={sendingDisabled}
-								onClick={!sendingDisabled ? handleEnhancePrompt : undefined}
-								className={cn(
-									"relative inline-flex items-center justify-center",
-									"bg-transparent border-none p-1.5",
-									"rounded-md min-w-[28px] min-h-[28px]",
-									"opacity-60 hover:opacity-100 text-vscode-descriptionForeground hover:text-vscode-foreground",
-									"transition-all duration-150",
-									"hover:bg-[rgba(255,255,255,0.03)] hover:border-[rgba(255,255,255,0.15)]",
-									"focus:outline-none focus-visible:ring-1 focus-visible:ring-vscode-focusBorder",
-									"active:bg-[rgba(255,255,255,0.1)]",
-									!sendingDisabled && "cursor-pointer",
-									sendingDisabled &&
-										"opacity-40 cursor-not-allowed grayscale-[30%] hover:bg-transparent hover:border-[rgba(255,255,255,0.08)] active:bg-transparent",
-								)}>
-								<WandSparkles className={cn("w-4 h-4", isEnhancingPrompt && "animate-spin")} />
-							</button>
-						</StandardTooltip>
-
 						{/* Add Context button */}
 						<StandardTooltip content="Add Context (@)">
 							<button
@@ -1694,9 +1668,7 @@ const ChatTextArea = forwardRef<HTMLTextAreaElement, ChatTextAreaProps>(
 							color: "var(--vscode-tab-inactiveForeground)",
 							userSelect: "none",
 							pointerEvents: "none",
-						}}>
-						<span className="text-sm opacity-70">Ask a follow-up...</span>
-					</div>
+						}}></div>
 				)}
 			</div>
 		)
