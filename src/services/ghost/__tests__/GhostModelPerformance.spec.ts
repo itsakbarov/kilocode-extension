@@ -50,7 +50,7 @@ describe("GhostModelPerformance", () => {
 		}
 	}
 
-	describe("Kilo Code", () => {
+	describe("O Code", () => {
 		it("google/gemini-2.5-flash", async () => {
 			if (!KEYS.KILOCODE) {
 				return

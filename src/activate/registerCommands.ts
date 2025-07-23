@@ -17,13 +17,291 @@ import { importSettingsWithFeedback } from "../core/config/importExport"
 import { MdmService } from "../services/mdm/MdmService"
 import { t } from "../i18n"
 
+// Types for task analysis and model recommendations
+interface ModelRecommendation {
+	name: string
+	provider: string
+	reasoning: string
+}
+
+interface TaskAnalysis {
+	taskType: string
+	complexity: string
+	domain: string
+	recommendedModel: ModelRecommendation
+	alternatives: ModelRecommendation[]
+	tips: string[]
+}
+
+/**
+ * Analyzes the user's prompt and suggests the best model for the task
+ * This is a mock implementation with predefined patterns and suggestions
+ */
+function analyzePromptAndSuggestModel(prompt: string, mode: string): TaskAnalysis {
+	const lowercasePrompt = prompt.toLowerCase()
+
+	// Mock analysis based on prompt keywords and patterns
+	let taskType = "General Assistance"
+	let complexity = "Medium"
+	let domain = "General"
+	let recommendedModel: ModelRecommendation = {
+		name: "Claude 3.5 Sonnet",
+		provider: "Anthropic",
+		reasoning: "Well-balanced model with strong reasoning capabilities suitable for general tasks.",
+	}
+	let alternatives: ModelRecommendation[] = [
+		{ name: "GPT-4", provider: "OpenAI", reasoning: "Versatile model with broad capabilities for various tasks." },
+		{ name: "Gemini Pro", provider: "Google", reasoning: "Good general-purpose model with factual accuracy." },
+	]
+	let tips: string[] = [
+		"Be specific about your requirements",
+		"Provide relevant context",
+		"Break down complex tasks into smaller parts",
+	]
+
+	// Analyze prompt for different task types
+	if (
+		lowercasePrompt.includes("code") ||
+		lowercasePrompt.includes("program") ||
+		lowercasePrompt.includes("function") ||
+		lowercasePrompt.includes("debug")
+	) {
+		taskType = "Code Development"
+		domain = "Software Engineering"
+		complexity = detectCodeComplexity(lowercasePrompt)
+		recommendedModel = {
+			name: "Claude 3.5 Sonnet",
+			provider: "Anthropic",
+			reasoning:
+				"Excellent at code generation, debugging, and understanding complex programming patterns with strong reasoning capabilities.",
+		}
+		alternatives = [
+			{
+				name: "GPT-4",
+				provider: "OpenAI",
+				reasoning: "Strong coding abilities with extensive training on programming languages.",
+			},
+			{
+				name: "Codestral",
+				provider: "Mistral",
+				reasoning: "Specialized code model with good performance on specific programming tasks.",
+			},
+		]
+		tips = [
+			"Include specific programming language requirements",
+			"Provide context about your project structure",
+			"Mention any frameworks or libraries you're using",
+		]
+	} else if (
+		lowercasePrompt.includes("write") ||
+		lowercasePrompt.includes("article") ||
+		lowercasePrompt.includes("blog") ||
+		lowercasePrompt.includes("content")
+	) {
+		taskType = "Content Creation"
+		domain = "Writing & Communication"
+		complexity = detectWritingComplexity(lowercasePrompt)
+		recommendedModel = {
+			name: "GPT-4",
+			provider: "OpenAI",
+			reasoning: "Outstanding creative writing abilities with excellent language flow and style adaptation.",
+		}
+		alternatives = [
+			{
+				name: "Claude 3.5 Sonnet",
+				provider: "Anthropic",
+				reasoning: "Great for analytical and structured writing with clear explanations.",
+			},
+			{
+				name: "Gemini Pro",
+				provider: "Google",
+				reasoning: "Good for factual content and research-based writing.",
+			},
+		]
+		tips = [
+			"Specify your target audience",
+			"Mention desired tone and style",
+			"Include any SEO or formatting requirements",
+		]
+	} else if (
+		lowercasePrompt.includes("analyze") ||
+		lowercasePrompt.includes("research") ||
+		lowercasePrompt.includes("study") ||
+		lowercasePrompt.includes("data")
+	) {
+		taskType = "Analysis & Research"
+		domain = "Research & Analytics"
+		complexity = detectAnalysisComplexity(lowercasePrompt)
+		recommendedModel = {
+			name: "Claude 3.5 Sonnet",
+			provider: "Anthropic",
+			reasoning: "Exceptional analytical reasoning with ability to break down complex problems systematically.",
+		}
+		alternatives = [
+			{
+				name: "GPT-4",
+				provider: "OpenAI",
+				reasoning: "Strong analytical capabilities with broad knowledge base.",
+			},
+			{
+				name: "Gemini Pro",
+				provider: "Google",
+				reasoning: "Excellent for factual analysis and data interpretation.",
+			},
+		]
+		tips = [
+			"Provide clear research objectives",
+			"Include relevant data sources or context",
+			"Specify the format you want for results",
+		]
+	} else if (
+		lowercasePrompt.includes("creative") ||
+		lowercasePrompt.includes("story") ||
+		lowercasePrompt.includes("design") ||
+		lowercasePrompt.includes("brainstorm")
+	) {
+		taskType = "Creative Tasks"
+		domain = "Creative & Design"
+		complexity = "Medium"
+		recommendedModel = {
+			name: "GPT-4",
+			provider: "OpenAI",
+			reasoning: "Superior creative capabilities with imaginative and diverse outputs.",
+		}
+		alternatives = [
+			{
+				name: "Claude 3.5 Sonnet",
+				provider: "Anthropic",
+				reasoning: "Good creative writing with structured approach to storytelling.",
+			},
+			{ name: "Gemini Pro", provider: "Google", reasoning: "Decent creative abilities with factual grounding." },
+		]
+		tips = [
+			"Provide creative constraints or guidelines",
+			"Specify the target audience or style",
+			"Include examples of desired output if available",
+		]
+	} else if (
+		lowercasePrompt.includes("explain") ||
+		lowercasePrompt.includes("teach") ||
+		lowercasePrompt.includes("learn") ||
+		lowercasePrompt.includes("how to")
+	) {
+		taskType = "Educational Content"
+		domain = "Education & Learning"
+		complexity = "Low"
+		recommendedModel = {
+			name: "Claude 3.5 Sonnet",
+			provider: "Anthropic",
+			reasoning: "Excellent at clear explanations with step-by-step breakdowns and educational structure.",
+		}
+		alternatives = [
+			{
+				name: "GPT-4",
+				provider: "OpenAI",
+				reasoning: "Great teaching abilities with adaptive explanations for different skill levels.",
+			},
+			{
+				name: "Gemini Pro",
+				provider: "Google",
+				reasoning: "Good for factual explanations and educational content.",
+			},
+		]
+		tips = [
+			"Specify the learner's skill level",
+			"Mention preferred learning style (visual, examples, etc.)",
+			"Include any specific topics to focus on or avoid",
+		]
+	}
+
+	// Adjust recommendations based on mode
+	if (mode === "architecture") {
+		recommendedModel = {
+			name: "Claude 3.5 Sonnet",
+			provider: "Anthropic",
+			reasoning: "Exceptional at system design and architectural thinking with strong analytical capabilities.",
+		}
+		tips.push("Consider mentioning scalability requirements", "Include performance constraints if applicable")
+	} else if (mode === "edit") {
+		tips.push("Be specific about what needs to be changed", "Provide context about the original intent")
+	}
+
+	return {
+		taskType,
+		complexity,
+		domain,
+		recommendedModel,
+		alternatives,
+		tips,
+	}
+}
+
+/**
+ * Detects code complexity based on prompt keywords
+ */
+function detectCodeComplexity(prompt: string): string {
+	if (
+		prompt.includes("algorithm") ||
+		prompt.includes("optimization") ||
+		prompt.includes("architecture") ||
+		prompt.includes("system design")
+	) {
+		return "High"
+	} else if (
+		prompt.includes("refactor") ||
+		prompt.includes("implement") ||
+		prompt.includes("class") ||
+		prompt.includes("database")
+	) {
+		return "Medium"
+	} else {
+		return "Low"
+	}
+}
+
+/**
+ * Detects writing complexity based on prompt keywords
+ */
+function detectWritingComplexity(prompt: string): string {
+	if (
+		prompt.includes("technical") ||
+		prompt.includes("research") ||
+		prompt.includes("academic") ||
+		prompt.includes("white paper")
+	) {
+		return "High"
+	} else if (prompt.includes("blog") || prompt.includes("article") || prompt.includes("report")) {
+		return "Medium"
+	} else {
+		return "Low"
+	}
+}
+
+/**
+ * Detects analysis complexity based on prompt keywords
+ */
+function detectAnalysisComplexity(prompt: string): string {
+	if (
+		prompt.includes("statistical") ||
+		prompt.includes("machine learning") ||
+		prompt.includes("predictive") ||
+		prompt.includes("model")
+	) {
+		return "High"
+	} else if (prompt.includes("trend") || prompt.includes("comparison") || prompt.includes("performance")) {
+		return "Medium"
+	} else {
+		return "Low"
+	}
+}
+
 /**
  * Helper to get the visible ClineProvider instance or log if not found.
  */
 export function getVisibleProviderOrLog(outputChannel: vscode.OutputChannel): ClineProvider | undefined {
 	const visibleProvider = ClineProvider.getVisibleInstance()
 	if (!visibleProvider) {
-		outputChannel.appendLine("Cannot find any visible Kilo Code instances.")
+		outputChannel.appendLine("Cannot find any visible O Code instances.")
 		return undefined
 	}
 	return visibleProvider
@@ -169,6 +447,59 @@ const getCommandsMap = ({ context, outputChannel }: RegisterCommandOptions): Rec
 		if (!visibleProvider) return
 		visibleProvider.postMessageToWebview({ type: "action", action: "marketplaceButtonClicked" })
 	},
+	suggestButtonClicked: async (mode: string = "chat", prompt: string = "") => {
+		const visibleProvider = getVisibleProviderOrLog(outputChannel)
+		if (!visibleProvider) return
+
+		// Check if user has provided a prompt
+		if (!prompt.trim()) {
+			vscode.window.showWarningMessage(
+				"Please enter a prompt first, then click the suggest button to get model recommendations.",
+			)
+			return
+		}
+
+		// Mock data for task analysis and model suggestions
+		const taskAnalysis = analyzePromptAndSuggestModel(prompt, mode)
+
+		// Create suggestion message with analysis results
+		const suggestionMessage = `## 🎯 Task Analysis & Model Recommendation
+
+**Your prompt:** "${prompt}"
+
+**Current Mode:** ${mode}
+
+**Analysis Results:**
+- **Task Type:** ${taskAnalysis.taskType}
+- **Complexity:** ${taskAnalysis.complexity}
+- **Domain:** ${taskAnalysis.domain}
+
+**📊 Recommended Model:**
+- **Model:** ${taskAnalysis.recommendedModel.name}
+- **Provider:** ${taskAnalysis.recommendedModel.provider}
+- **Reasoning:** ${taskAnalysis.recommendedModel.reasoning}
+
+**🔧 Alternative Options:**
+${taskAnalysis.alternatives.map((alt) => `- **${alt.name}** (${alt.provider}): ${alt.reasoning}`).join("\n")}
+
+**💡 Optimization Tips:**
+${taskAnalysis.tips.map((tip) => `- ${tip}`).join("\n")}
+
+*This analysis is based on mock data for demonstration. In a production environment, this would use real AI model performance metrics and task categorization.*`
+
+		// Send the suggestion to the chat
+		visibleProvider.postMessageToWebview({
+			type: "invoke",
+			invoke: "newChat",
+			text: suggestionMessage,
+			images: [],
+		})
+
+		// Show success message
+		vscode.window.showInformationMessage(
+			`Generated model recommendations for your "${taskAnalysis.taskType}" task!`,
+		)
+	},
 	showHumanRelayDialog: (params: { requestId: string; promptText: string }) => {
 		const panel = getPanel()
 
@@ -222,7 +553,7 @@ const getCommandsMap = ({ context, outputChannel }: RegisterCommandOptions): Rec
 	}, // kilocode_change begin
 	focusChatInput: async () => {
 		try {
-			await vscode.commands.executeCommand("kilo-code.SidebarProvider.focus")
+			await vscode.commands.executeCommand("o-code.SidebarProvider.focus")
 			await delay(100)
 
 			let visibleProvider = getVisibleProviderOrLog(outputChannel)
@@ -284,7 +615,7 @@ export const openClineInNewTab = async ({ context, outputChannel }: Omit<Registe
 
 	const targetCol = hasVisibleEditors ? Math.max(lastCol + 1, 1) : vscode.ViewColumn.Two
 
-	const newPanel = vscode.window.createWebviewPanel(ClineProvider.tabPanelId, "Kilo Code", targetCol, {
+	const newPanel = vscode.window.createWebviewPanel(ClineProvider.tabPanelId, "O Code", targetCol, {
 		enableScripts: true,
 		retainContextWhenHidden: true,
 		localResourceRoots: [context.extensionUri],

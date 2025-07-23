@@ -1233,6 +1233,35 @@ const ChatTextArea = forwardRef<HTMLTextAreaElement, ChatTextAreaProps>(
 						{/* kilocode_change end */}
 					</div>
 
+					{/* Suggest Button */}
+					<div className="shrink-0">
+						<StandardTooltip content="Analyze prompt and suggest best model for this task">
+							<Button
+								variant="outline"
+								size="sm"
+								// disabled={sendingDisabled}
+								className={cn(
+									"w-full min-w-0 max-w-full inline-flex items-center gap-1.5 relative whitespace-nowrap px-1.5 py-1 text-xs",
+									"bg-transparent border border-[rgba(255,255,255,0.08)] rounded-md text-vscode-foreground w-auto",
+									"transition-all duration-150 focus:outline-none focus-visible:ring-1 focus-visible:ring-vscode-focusBorder focus-visible:ring-inset",
+									"bg-[var(--background)] border-[var(--vscode-input-border)] hover:bg-[var(--color-vscode-list-hoverBackground)]",
+									"text-vscode-foreground hover:text-vscode-foreground",
+									"codicon opacity-80 text-[12px]",
+									"cursor-pointer",
+								)}
+								onClick={() => {
+									vscode.postMessage({
+										type: "suggestButtonClicked",
+										mode,
+										prompt: inputValue.trim(),
+									})
+								}}>
+								<WandSparkles className="pointer-events-none opacity-80 flex-shrink-0 size-3" />
+								Find best model
+							</Button>
+						</StandardTooltip>
+					</div>
+
 					{/* kilocode_change start - hide if there is only one profile */}
 					<div
 						className={cn("flex-1", "min-w-0", "overflow-hidden", {

@@ -1,5 +1,5 @@
 {
-	"greeting": "وش يقدر Kilo Code يسوّي لك؟",
+	"greeting": "وش يقدر O Code يسوّي لك؟",
 	"task": {
 		"title": "المهمة",
 		"seeMore": "عرض المزيد",
@@ -18,7 +18,7 @@
 		"sharePublicly": "مشاركة للجميع",
 		"sharePubliclyDescription": "أي أحد عنده الرابط يقدر يشوف",
 		"connectToCloud": "اتصل بالسحابة",
-		"connectToCloudDescription": "سجّل دخولك لـ Kilo Code Cloud لمشاركة المهام",
+		"connectToCloudDescription": "سجّل دخولك لـ O Code Cloud لمشاركة المهام",
 		"sharingDisabledByOrganization": "المشاركة معطّلة من قِبَل المنظمة",
 		"shareSuccessOrganization": "تم نسخ رابط المنظمة للحافظة",
 		"shareSuccessPublic": "تم نسخ الرابط العام للحافظة"
@@ -125,7 +125,7 @@
 		"title": "الأنماط",
 		"marketplace": "سوق الأنماط",
 		"settings": "إعدادات الأنماط",
-		"description": "شخصيات متخصصة تضبط سلوك Kilo Code."
+		"description": "شخصيات متخصصة تضبط سلوك O Code."
 	},
 	"enhancePromptDescription": "زر «حسّن الموجه» يطوّر موجهك بإضافة سياق أو توضيح أو إعادة صياغة. جرّب اكتب موجه هنا ثم اضغط الزر مرة ثانية وشوف النتيجة.",
 	"addImages": "أضف صور للرسالة",
@@ -173,46 +173,46 @@
 		"tokens": "توكينات"
 	},
 	"instructions": {
-		"wantsToFetch": "Kilo Code يريد جلب تعليمات تفصيلية للمهمة الحالية"
+		"wantsToFetch": "O Code يريد جلب تعليمات تفصيلية للمهمة الحالية"
 	},
 	"fileOperations": {
-		"wantsToRead": "Kilo Code يريد قراءة هذا الملف:",
-		"wantsToReadMultiple": "Kilo Code يريد قراءة عدة ملفات:",
-		"wantsToReadAndXMore": "Kilo Code يريد قراءة هذا الملف و{{count}} غيره:",
-		"wantsToReadOutsideWorkspace": "Kilo Code يريد قراءة ملف خارج مساحة العمل:",
-		"didRead": "Kilo Code قرأ هذا الملف:",
-		"wantsToEdit": "Kilo Code يريد تعديل هذا الملف:",
-		"wantsToEditOutsideWorkspace": "Kilo Code يريد تعديل ملف خارج مساحة العمل:",
-		"wantsToEditProtected": "Kilo Code يريد تعديل ملف إعدادات محمي:",
-		"wantsToApplyBatchChanges": "Kilo Code يريد تطبيق تغييرات على عدة ملفات:",
-		"wantsToCreate": "Kilo Code يريد إنشاء ملف جديد:",
-		"wantsToSearchReplace": "Kilo Code يريد البحث والاستبدال في هذا الملف:",
-		"didSearchReplace": "Kilo Code أجرى بحثًا واستبدالًا في هذا الملف:",
-		"wantsToInsert": "Kilo Code يريد إدراج محتوى في هذا الملف:",
-		"wantsToInsertWithLineNumber": "Kilo Code يريد إدراج محتوى في هذا الملف عند السطر {{lineNumber}}:",
-		"wantsToInsertAtEnd": "Kilo Code يريد إضافة محتوى في نهاية هذا الملف:"
+		"wantsToRead": "O Code يريد قراءة هذا الملف:",
+		"wantsToReadMultiple": "O Code يريد قراءة عدة ملفات:",
+		"wantsToReadAndXMore": "O Code يريد قراءة هذا الملف و{{count}} غيره:",
+		"wantsToReadOutsideWorkspace": "O Code يريد قراءة ملف خارج مساحة العمل:",
+		"didRead": "O Code قرأ هذا الملف:",
+		"wantsToEdit": "O Code يريد تعديل هذا الملف:",
+		"wantsToEditOutsideWorkspace": "O Code يريد تعديل ملف خارج مساحة العمل:",
+		"wantsToEditProtected": "O Code يريد تعديل ملف إعدادات محمي:",
+		"wantsToApplyBatchChanges": "O Code يريد تطبيق تغييرات على عدة ملفات:",
+		"wantsToCreate": "O Code يريد إنشاء ملف جديد:",
+		"wantsToSearchReplace": "O Code يريد البحث والاستبدال في هذا الملف:",
+		"didSearchReplace": "O Code أجرى بحثًا واستبدالًا في هذا الملف:",
+		"wantsToInsert": "O Code يريد إدراج محتوى في هذا الملف:",
+		"wantsToInsertWithLineNumber": "O Code يريد إدراج محتوى في هذا الملف عند السطر {{lineNumber}}:",
+		"wantsToInsertAtEnd": "O Code يريد إضافة محتوى في نهاية هذا الملف:"
 	},
 	"directoryOperations": {
-		"wantsToViewTopLevel": "Kilo Code يريد عرض الملفات العلوية في هذا المجلد:",
-		"didViewTopLevel": "Kilo Code عرض الملفات العلوية في هذا المجلد:",
-		"wantsToViewTopLevelOutsideWorkspace": "Kilo Code يريد عرض الملفات العلوية في هذا المجلد (خارج مساحة العمل):",
-		"didViewTopLevelOutsideWorkspace": "Kilo Code عرض الملفات العلوية في هذا المجلد (خارج مساحة العمل):",
-		"wantsToViewRecursive": "Kilo Code يريد استعراض كل الملفات في هذا المجلد بشكل متعمق:",
-		"didViewRecursive": "Kilo Code استعرض كل الملفات في هذا المجلد:",
-		"wantsToViewRecursiveOutsideWorkspace": "Kilo Code يريد استعراض كل الملفات في هذا المجلد (خارج مساحة العمل):",
-		"didViewRecursiveOutsideWorkspace": "Kilo Code استعرض كل الملفات في هذا المجلد (خارج مساحة العمل):",
-		"wantsToViewDefinitions": "Kilo Code يريد عرض أسماء التعريفات البرمجية المستخدمة في هذا المجلد:",
-		"didViewDefinitions": "Kilo Code عرض أسماء التعريفات البرمجية المستخدمة في هذا المجلد:",
-		"wantsToViewDefinitionsOutsideWorkspace": "Kilo Code يريد عرض أسماء التعريفات في هذا المجلد (خارج مساحة العمل):",
-		"didViewDefinitionsOutsideWorkspace": "Kilo Code عرض أسماء التعريفات في هذا المجلد (خارج مساحة العمل):",
-		"wantsToSearch": "Kilo Code يريد البحث في هذا المجلد عن <code>{{regex}}</code>:",
-		"didSearch": "Kilo Code بحث في هذا المجلد عن <code>{{regex}}</code>:",
-		"wantsToSearchOutsideWorkspace": "Kilo Code يريد البحث في هذا المجلد (خارج مساحة العمل) عن <code>{{regex}}</code>:",
-		"didSearchOutsideWorkspace": "Kilo Code بحث في هذا المجلد (خارج مساحة العمل) عن <code>{{regex}}</code>:"
+		"wantsToViewTopLevel": "O Code يريد عرض الملفات العلوية في هذا المجلد:",
+		"didViewTopLevel": "O Code عرض الملفات العلوية في هذا المجلد:",
+		"wantsToViewTopLevelOutsideWorkspace": "O Code يريد عرض الملفات العلوية في هذا المجلد (خارج مساحة العمل):",
+		"didViewTopLevelOutsideWorkspace": "O Code عرض الملفات العلوية في هذا المجلد (خارج مساحة العمل):",
+		"wantsToViewRecursive": "O Code يريد استعراض كل الملفات في هذا المجلد بشكل متعمق:",
+		"didViewRecursive": "O Code استعرض كل الملفات في هذا المجلد:",
+		"wantsToViewRecursiveOutsideWorkspace": "O Code يريد استعراض كل الملفات في هذا المجلد (خارج مساحة العمل):",
+		"didViewRecursiveOutsideWorkspace": "O Code استعرض كل الملفات في هذا المجلد (خارج مساحة العمل):",
+		"wantsToViewDefinitions": "O Code يريد عرض أسماء التعريفات البرمجية المستخدمة في هذا المجلد:",
+		"didViewDefinitions": "O Code عرض أسماء التعريفات البرمجية المستخدمة في هذا المجلد:",
+		"wantsToViewDefinitionsOutsideWorkspace": "O Code يريد عرض أسماء التعريفات في هذا المجلد (خارج مساحة العمل):",
+		"didViewDefinitionsOutsideWorkspace": "O Code عرض أسماء التعريفات في هذا المجلد (خارج مساحة العمل):",
+		"wantsToSearch": "O Code يريد البحث في هذا المجلد عن <code>{{regex}}</code>:",
+		"didSearch": "O Code بحث في هذا المجلد عن <code>{{regex}}</code>:",
+		"wantsToSearchOutsideWorkspace": "O Code يريد البحث في هذا المجلد (خارج مساحة العمل) عن <code>{{regex}}</code>:",
+		"didSearchOutsideWorkspace": "O Code بحث في هذا المجلد (خارج مساحة العمل) عن <code>{{regex}}</code>:"
 	},
 	"codebaseSearch": {
-		"wantsToSearch": "Kilo Code يريد البحث في الكود عن <code>{{query}}</code>:",
-		"wantsToSearchWithPath": "Kilo Code يريد البحث في الكود عن <code>{{query}}</code> في <code>{{path}}</code>:",
+		"wantsToSearch": "O Code يريد البحث في الكود عن <code>{{query}}</code>:",
+		"wantsToSearchWithPath": "O Code يريد البحث في الكود عن <code>{{query}}</code> في <code>{{path}}</code>:",
 		"didSearch_one": "تم العثور على نتيجة واحدة",
 		"didSearch_other": "تم العثور على {{count}} نتيجة",
 		"resultTooltip": "درجة التشابه: {{score}} (انقر لفتح الملف)"
@@ -225,18 +225,18 @@
 	"response": "الاستجابة",
 	"arguments": "المعطيات",
 	"mcp": {
-		"wantsToUseTool": "Kilo Code يريد استخدام أداة على خادم MCP {{serverName}}:",
-		"wantsToAccessResource": "Kilo Code يريد الوصول إلى مورد على خادم MCP {{serverName}}:"
+		"wantsToUseTool": "O Code يريد استخدام أداة على خادم MCP {{serverName}}:",
+		"wantsToAccessResource": "O Code يريد الوصول إلى مورد على خادم MCP {{serverName}}:"
 	},
 	"modes": {
-		"wantsToSwitch": "Kilo Code يريد التبديل إلى النمط {{mode}}",
-		"wantsToSwitchWithReason": "Kilo Code يريد التبديل إلى النمط {{mode}} لأن: {{reason}}",
-		"didSwitch": "Kilo Code انتقل إلى النمط {{mode}}",
-		"didSwitchWithReason": "Kilo Code انتقل إلى النمط {{mode}} لأن: {{reason}}"
+		"wantsToSwitch": "O Code يريد التبديل إلى النمط {{mode}}",
+		"wantsToSwitchWithReason": "O Code يريد التبديل إلى النمط {{mode}} لأن: {{reason}}",
+		"didSwitch": "O Code انتقل إلى النمط {{mode}}",
+		"didSwitchWithReason": "O Code انتقل إلى النمط {{mode}} لأن: {{reason}}"
 	},
 	"subtasks": {
-		"wantsToCreate": "Kilo Code يريد إنشاء مهمة فرعية جديدة في النمط {{mode}}:",
-		"wantsToFinish": "Kilo Code يريد إنهاء هذه المهمة الفرعية",
+		"wantsToCreate": "O Code يريد إنشاء مهمة فرعية جديدة في النمط {{mode}}:",
+		"wantsToFinish": "O Code يريد إنهاء هذه المهمة الفرعية",
 		"newTaskContent": "تعليمات المهمة الفرعية",
 		"completionContent": "المهمة الفرعية انتهت",
 		"resultContent": "نتائج المهمة الفرعية",
@@ -244,21 +244,21 @@
 		"completionInstructions": "تمت المهمة الفرعية! راجع النتائج واقترح تصحيحات أو خطوات لاحقة. إذا كل شي تمام، أكّد للرجوع للمهمة الأم."
 	},
 	"questions": {
-		"hasQuestion": "Kilo Code عنده سؤال:"
+		"hasQuestion": "O Code عنده سؤال:"
 	},
 	"taskCompleted": "المهمة انتهت",
 	"error": "خطأ",
 	"diffError": {
 		"title": "التعديل لم ينجح"
 	},
-	"troubleMessage": "Kilo Code يواجه مشكلة...",
+	"troubleMessage": "O Code يواجه مشكلة...",
 	"powershell": {
 		"issues": "يبدو أنك تواجه مشاكل مع Windows PowerShell، اطلع هنا"
 	},
 	"autoApprove": {
 		"title": "الموافقة التلقائية:",
 		"none": "لا شيء",
-		"description": "الموافقة التلقائية تسمح لـ Kilo Code بتنفيذ إجراءات دون طلب إذن. فعّلها فقط للإجراءات اللي تثق فيها تماماً. إعدادات تفصيلية أكثر متوفرة في <settingsLink>الإعدادات</settingsLink>.",
+		"description": "الموافقة التلقائية تسمح لـ O Code بتنفيذ إجراءات دون طلب إذن. فعّلها فقط للإجراءات اللي تثق فيها تماماً. إعدادات تفصيلية أكثر متوفرة في <settingsLink>الإعدادات</settingsLink>.",
 		"selectOptionsFirst": "اختر خيار واحد على الأقل أدناه لتفعيل الموافقة التلقائية",
 		"toggleAriaLabel": "تبديل الموافقة التلقائية",
 		"disabledAriaLabel": "الموافقة التلقائية معطّلة - اختر الخيارات أولاً"
@@ -268,10 +268,10 @@
 		"approveAllTooltip": "وافق على كل الإجراءات تلقائياً"
 	},
 	"announcement": {
-		"title": "🎉 Kilo Code {{version}} تم إطلاقه",
-		"description": "Kilo Code {{version}} يجلب ميزات وتحسينات كبيرة بناءً على ملاحظاتكم.",
+		"title": "🎉 O Code {{version}} تم إطلاقه",
+		"description": "O Code {{version}} يجلب ميزات وتحسينات كبيرة بناءً على ملاحظاتكم.",
 		"whatsNew": "الجديد",
-		"feature1": "<bold>إطلاق سوق Kilo Code</bold>: السوق صار متاح! اكتشف وثبّت الأنماط و MCPs بسهولة.",
+		"feature1": "<bold>إطلاق سوق O Code</bold>: السوق صار متاح! اكتشف وثبّت الأنماط و MCPs بسهولة.",
 		"feature2": "<bold>نماذج Gemini 2.5</bold>: دعم نماذج Gemini 2.5 Pro و Flash و Flash Lite.",
 		"feature3": "<bold>دعم ملفات Excel والمزيد</bold>: دعم ملفات .xlsx بالإضافة لكثير من الإصلاحات والتحسينات!",
 		"hideButton": "إخفاء الإعلان",
@@ -287,7 +287,7 @@
 		"countdownDisplay": "{{count}}ث"
 	},
 	"browser": {
-		"rooWantsToUse": "Kilo Code يريد استخدام المتصفح:",
+		"rooWantsToUse": "O Code يريد استخدام المتصفح:",
 		"consoleLogs": "سجلات الكونسول",
 		"noNewLogs": "(لا توجد سجلات جديدة)",
 		"screenshot": "لقطة شاشة للمتصفح",
@@ -321,13 +321,13 @@
 	"profileViolationWarning": "الملف الحالي يخالف إعدادات منظمتك",
 	"shellIntegration": {
 		"title": "تحذير تنفيذ الأوامر",
-		"description": "يتم تنفيذ الأمر خارج تكامل الشل في VS Code. لإيقاف هذا التحذير عطّل تكامل الشل من قسم <strong>Terminal</strong> في <settingsLink>إعدادات Kilo Code</settingsLink> أو اطّلع على الدليل أدناه.",
+		"description": "يتم تنفيذ الأمر خارج تكامل الشل في VS Code. لإيقاف هذا التحذير عطّل تكامل الشل من قسم <strong>Terminal</strong> في <settingsLink>إعدادات O Code</settingsLink> أو اطّلع على الدليل أدناه.",
 		"troubleshooting": "اضغط هنا لدليل تكامل الشل."
 	},
 	"ask": {
 		"autoApprovedRequestLimitReached": {
 			"title": "تم بلوغ حد الطلبات الموافق عليها تلقائياً",
-			"description": "Kilo Code وصل لحد {{count}} طلب API موافَق عليه تلقائيًا. تبي تعيد العداد وتكمل المهمة؟",
+			"description": "O Code وصل لحد {{count}} طلب API موافَق عليه تلقائيًا. تبي تعيد العداد وتكمل المهمة؟",
 			"button": "إعادة الضبط والمتابعة"
 		}
 	},

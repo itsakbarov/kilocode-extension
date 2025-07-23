@@ -1,7 +1,7 @@
 {
 	"welcome": {
-		"greeting": "Selamat datang di Kilo Code!",
-		"introText1": "Kilo Code adalah agen coding AI gratis dan open source.",
+		"greeting": "Selamat datang di O Code!",
+		"introText1": "O Code adalah agen coding AI gratis dan open source.",
 		"introText2": "Bekerja dengan model AI terbaru seperti Claude 4 Sonnet, Gemini 2.5 Pro, GPT-4.1, dan lebih dari 450 model lainnya.",
 		"introText3": "Buat akun gratis dan dapatkan $20 token untuk digunakan dengan model AI apapun.",
 		"ctaButton": "Buat akun gratis",
@@ -11,7 +11,7 @@
 	},
 	"lowCreditWarning": {
 		"addCredit": "Tambah Kredit",
-		"lowBalance": "Saldo Kilo Code kamu rendah"
+		"lowBalance": "Saldo O Code kamu rendah"
 	},
 	"notifications": {
 		"toolRequest": "Permintaan tool menunggu persetujuan",
@@ -23,32 +23,32 @@
 			"mcp": "Server MCP"
 		},
 		"provider": {
-			"account": "Akun Kilo Code",
-			"apiKey": "API Key Kilo Code",
-			"login": "Masuk ke Kilo Code",
-			"logout": "Keluar dari Kilo Code",
+			"account": "Akun O Code",
+			"apiKey": "API Key O Code",
+			"login": "Masuk ke O Code",
+			"logout": "Keluar dari O Code",
 			"providerRouting": {
-				"title": "Kilo Code - Perutean Penyedia OpenRouter",
-				"description": "Kilo Code merutekan permintaan ke penyedia terbaik yang tersedia untuk model Anda. Secara default, permintaan diseimbangkan bebannya di seluruh penyedia teratas untuk memaksimalkan waktu aktif. Namun, Anda dapat memilih penyedia tertentu untuk digunakan untuk model ini."
+				"title": "O Code - Perutean Penyedia OpenRouter",
+				"description": "O Code merutekan permintaan ke penyedia terbaik yang tersedia untuk model Anda. Secara default, permintaan diseimbangkan bebannya di seluruh penyedia teratas untuk memaksimalkan waktu aktif. Namun, Anda dapat memilih penyedia tertentu untuk digunakan untuk model ini."
 			}
 		},
 		"contextManagement": {
 			"allowVeryLargeReads": {
 				"label": "Izinkan pembacaan file yang sangat besar",
-				"description": "Saat diaktifkan, Kilo Code akan melakukan pembacaan file atau output MCP yang sangat besar meskipun ada kemungkinan tinggi meluapnya jendela konteks (ukuran konten >80% dari jendela konteks)."
+				"description": "Saat diaktifkan, O Code akan melakukan pembacaan file atau output MCP yang sangat besar meskipun ada kemungkinan tinggi meluapnya jendela konteks (ukuran konten >80% dari jendela konteks)."
 			}
 		},
 		"systemNotifications": {
 			"label": "Aktifkan Notifikasi Sistem",
-			"description": "Saat diaktifkan, Kilo Code akan mengirim notifikasi sistem untuk kejadian penting seperti penyelesaian tugas atau kesalahan.",
+			"description": "Saat diaktifkan, O Code akan mengirim notifikasi sistem untuk kejadian penting seperti penyelesaian tugas atau kesalahan.",
 			"testButton": "Uji Notifikasi",
-			"testTitle": "Kilo Code",
-			"testMessage": "Ini adalah notifikasi uji dari Kilo Code."
+			"testTitle": "O Code",
+			"testMessage": "Ini adalah notifikasi uji dari O Code."
 		}
 	},
 	"chat": {
 		"condense": {
-			"wantsToCondense": "Kilo Code ingin mengondensasi percakapan kamu",
+			"wantsToCondense": "O Code ingin mengondensasi percakapan kamu",
 			"condenseConversation": "Kondensasi Percakapan"
 		}
 	},
@@ -64,15 +64,15 @@
 	},
 	"docs": "Dokumentasi",
 	"rules": {
-		"tooltip": "Kelola Aturan & Alur Kerja Kilo Code",
-		"ariaLabel": "Aturan Kilo Code",
+		"tooltip": "Kelola Aturan & Alur Kerja O Code",
+		"ariaLabel": "Aturan O Code",
 		"tabs": {
 			"rules": "Aturan",
 			"workflows": "Alur Kerja"
 		},
 		"description": {
-			"rules": "Aturan memungkinkan kamu memberikan instruksi kepada Kilo Code yang harus diikuti di semua mode dan untuk semua prompt. Mereka adalah cara persisten untuk menyertakan konteks dan preferensi untuk semua percakapan di workspace kamu atau secara global.",
-			"workflows": "Alur kerja adalah template yang disiapkan untuk percakapan. Alur kerja memungkinkan kamu menentukan prompt yang sering kamu gunakan, dan dapat mencakup serangkaian langkah untuk memandu Kilo Code melalui tugas-tugas berulang, seperti menerapkan layanan atau mengirim PR. Untuk memanggil alur kerja, ketik",
+			"rules": "Aturan memungkinkan kamu memberikan instruksi kepada O Code yang harus diikuti di semua mode dan untuk semua prompt. Mereka adalah cara persisten untuk menyertakan konteks dan preferensi untuk semua percakapan di workspace kamu atau secara global.",
+			"workflows": "Alur kerja adalah template yang disiapkan untuk percakapan. Alur kerja memungkinkan kamu menentukan prompt yang sering kamu gunakan, dan dapat mencakup serangkaian langkah untuk memandu O Code melalui tugas-tugas berulang, seperti menerapkan layanan atau mengirim PR. Untuk memanggil alur kerja, ketik",
 			"workflowsInChat": "di chat."
 		},
 		"sections": {

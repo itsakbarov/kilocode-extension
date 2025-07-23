@@ -40,7 +40,7 @@
 		}
 	},
 	"commitMessage": {
-		"activated": "Générateur de message de commit Kilo Code activé",
+		"activated": "Générateur de message de commit O Code activé",
 		"gitNotFound": "⚠️ Dépôt Git introuvable ou git non disponible",
 		"gitInitError": "⚠️ Erreur d'initialisation Git : {{error}}",
 		"generating": "Kilo : Génération du message de commit...",
@@ -57,10 +57,10 @@
 			"enabled": "$(sparkle) Kilo Autocomplétion",
 			"warning": "$(warning) Kilo Autocomplétion",
 			"tooltip": {
-				"disabled": "Autocomplétion Kilo Code (désactivée)",
+				"disabled": "Autocomplétion O Code (désactivée)",
 				"tokenError": "Un jeton valide doit être défini pour utiliser l'autocomplétion",
 				"sessionTotal": "Coût total de la séance :",
-				"basic": "Autocomplétion Kilo Code",
+				"basic": "Autocomplétion O Code",
 				"lastCompletion": "Dernière complétion :",
 				"model": "Modèle :"
 			},
@@ -77,28 +77,28 @@
 			"processing": "Traitement des modifications suggérées...",
 			"analyzing": "Analyse de votre code en cours...",
 			"showing": "Affichage des modifications suggérées...",
-			"title": "Kilo Code"
+			"title": "O Code"
 		},
 		"input": {
-			"title": "Kilo Code : Tâche Rapide",
+			"title": "O Code : Tâche Rapide",
 			"placeholder": "par ex., 'refactorisez cette fonction pour la rendre plus efficace'"
 		},
 		"commands": {
-			"generateSuggestions": "Kilo Code : Générer des suggestions de modifications",
+			"generateSuggestions": "O Code : Générer des suggestions de modifications",
 			"displaySuggestions": "Afficher les modifications suggérées",
 			"applyCurrentSuggestion": "Appliquer la modification suggérée actuelle",
 			"applyAllSuggestions": "Appliquer toutes les modifications suggérées",
 			"cancelSuggestions": "Annuler les modifications suggérées",
 			"promptCodeSuggestion": "Tâche Rapide d'Invite",
-			"category": "Kilo Code"
+			"category": "O Code"
 		},
 		"chatParticipant": {
 			"name": "Agent",
-			"fullName": "Agent Kilo Code",
+			"fullName": "Agent O Code",
 			"description": "Je peux vous aider avec des tâches rapides et des modifications suggérées."
 		},
 		"codeAction": {
-			"title": "Kilo Code : Modifications suggérées"
+			"title": "O Code : Modifications suggérées"
 		},
 		"messages": {
 			"provideCodeSuggestions": "Suggestions de code en cours..."

@@ -1,6 +1,6 @@
 {
 	"extension": {
-		"name": "Kilo Code",
+		"name": "O Code",
 		"description": "コードの計画、構築、修正のためのオープンソース AI コーディング アシスタント。"
 	},
 	"number_format": {
@@ -99,7 +99,7 @@
 	"warnings": {
 		"no_terminal_content": "選択されたターミナルコンテンツがありません",
 		"missing_task_files": "このタスクのファイルが見つかりません。タスクリストから削除しますか？",
-		"auto_import_failed": "Kilo Code設定の自動インポートに失敗しました：{{error}}"
+		"auto_import_failed": "O Code設定の自動インポートに失敗しました：{{error}}"
 	},
 	"info": {
 		"no_changes": "変更は見つかりませんでした。",
@@ -108,7 +108,7 @@
 		"custom_storage_path_set": "カスタムストレージパスが設定されました：{{path}}",
 		"default_storage_path": "デフォルトのストレージパスに戻りました",
 		"settings_imported": "設定が正常にインポートされました。",
-		"auto_import_success": "Kilo Code設定が{{filename}}から自動インポートされました",
+		"auto_import_success": "O Code設定が{{filename}}から自動インポートされました",
 		"share_link_copied": "共有リンクがクリップボードにコピーされました",
 		"image_copied_to_clipboard": "画像データURIがクリップボードにコピーされました",
 		"image_saved": "画像を{{path}}に保存しました",
@@ -140,7 +140,7 @@
 		"enter_valid_path": "有効なパスを入力してください"
 	},
 	"input": {
-		"task_prompt": "Kilo Codeにどんなことをさせますか？",
+		"task_prompt": "O Codeにどんなことをさせますか？",
 		"task_placeholder": "タスクをここに入力してください"
 	},
 	"settings": {
@@ -172,8 +172,8 @@
 	},
 	"mdm": {
 		"errors": {
-			"cloud_auth_required": "あなたの組織では Kilo Code Cloud 認証が必要です。続行するにはサインインしてください。",
-			"organization_mismatch": "組織の Kilo Code Cloud アカウントで認証する必要があります。",
+			"cloud_auth_required": "あなたの組織では O Code Cloud 認証が必要です。続行するにはサインインしてください。",
+			"organization_mismatch": "組織の O Code Cloud アカウントで認証する必要があります。",
 			"verification_failed": "組織認証の確認ができませんでした。"
 		}
 	},

@@ -1,10 +1,10 @@
 {
-	"extension.displayName": "Kilo Code AI Agent (Cline / Roo features combined)",
+	"extension.displayName": "O Code AI Agent (Cline / Roo features combined)",
 	"extension.description": "コードの計画、構築、修正のためのオープンソース AI コーディング アシスタント。",
-	"views.contextMenu.label": "Kilo Code",
-	"views.terminalMenu.label": "Kilo Code",
-	"views.sidebar.name": "Kilo Code",
-	"views.activitybar.title": "Kilo Code",
+	"views.contextMenu.label": "O Code",
+	"views.terminalMenu.label": "O Code",
+	"views.sidebar.name": "O Code",
+	"views.activitybar.title": "O Code",
 	"command.newTask.title": "新しいタスク",
 	"command.mcpServers.title": "MCPサーバー",
 	"command.prompts.title": "モード",
@@ -27,10 +27,10 @@
 	"command.acceptInput.title": "入力/提案を承認",
 	"command.generateCommitMessage.title": "Kiloでコミットメッセージを生成",
 	"command.profile.title": "プロフィール",
-	"configuration.title": "Kilo Code",
-	"ghost.input.title": "Kilo Code ゴーストライター",
+	"configuration.title": "O Code",
+	"ghost.input.title": "O Code ゴーストライター",
 	"ghost.input.placeholder": "コーディングしたい内容を説明してください...",
-	"ghost.commands.generateSuggestions": "Kilo Code: 提案された編集を生成",
+	"ghost.commands.generateSuggestions": "O Code: 提案された編集を生成",
 	"ghost.commands.displaySuggestions": "提案された編集を表示",
 	"ghost.commands.cancelSuggestions": "提案された編集をキャンセル",
 	"ghost.commands.applyCurrentSuggestion": "現在の提案された編集を適用",
@@ -45,6 +45,6 @@
 	"settings.vsCodeLmModelSelector.vendor.description": "言語モデルのベンダー（例：copilot）",
 	"settings.vsCodeLmModelSelector.family.description": "言語モデルのファミリー（例：gpt-4）",
 	"settings.customStoragePath.description": "カスタムストレージパス。デフォルトの場所を使用する場合は空のままにします。絶対パスをサポートします（例：'D:\\KiloCodeStorage'）",
-	"settings.enableCodeActions.description": "Kilo Codeのクイック修正を有効にする。",
-	"settings.autoImportSettingsPath.description": "拡張機能の起動時に自動的にインポートするKilo Code設定ファイルへのパス。絶対パスとホームディレクトリからの相対パスをサポートします（例：'~/Documents/kilo-code-settings.json'）。自動インポートを無効にするには、空のままにします。"
+	"settings.enableCodeActions.description": "O Codeのクイック修正を有効にする。",
+	"settings.autoImportSettingsPath.description": "拡張機能の起動時に自動的にインポートするO Code設定ファイルへのパス。絶対パスとホームディレクトリからの相対パスをサポートします（例：'~/Documents/kilo-code-settings.json'）。自動インポートを無効にするには、空のままにします。"
 }

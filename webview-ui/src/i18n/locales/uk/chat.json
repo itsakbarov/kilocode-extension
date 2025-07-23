@@ -1,5 +1,5 @@
 {
-	"greeting": "Що Kilo Code може зробити для тебе?",
+	"greeting": "Що O Code може зробити для тебе?",
 	"task": {
 		"title": "Завдання",
 		"seeMore": "Дивитися більше",
@@ -18,7 +18,7 @@
 		"sharePublicly": "Поділитися публічно",
 		"sharePubliclyDescription": "Будь-хто з посиланням має доступ",
 		"connectToCloud": "Підключитися до Cloud",
-		"connectToCloudDescription": "Увійдіть до Kilo Code Cloud для обміну завданнями",
+		"connectToCloudDescription": "Увійдіть до O Code Cloud для обміну завданнями",
 		"sharingDisabledByOrganization": "Обмін вимкнено організацією",
 		"shareSuccessOrganization": "Посилання організації скопійовано до буфера обміну",
 		"shareSuccessPublic": "Публічне посилання скопійовано до буфера обміну"
@@ -126,7 +126,7 @@
 		"title": "Режими",
 		"marketplace": "Ринок режимів",
 		"settings": "Налаштування режимів",
-		"description": "Спеціалізовані персони, які налаштовують поведінку Kilo Code."
+		"description": "Спеціалізовані персони, які налаштовують поведінку O Code."
 	},
 	"addImages": "Додати зображення до повідомлення",
 	"sendMessage": "Надіслати повідомлення",
@@ -173,46 +173,46 @@
 		"tokens": "токени"
 	},
 	"instructions": {
-		"wantsToFetch": "Kilo Code хоче отримати детальні інструкції для допомоги з поточним завданням"
+		"wantsToFetch": "O Code хоче отримати детальні інструкції для допомоги з поточним завданням"
 	},
 	"fileOperations": {
-		"wantsToRead": "Kilo Code хоче прочитати цей файл:",
-		"wantsToReadMultiple": "Kilo Code хоче прочитати кілька файлів:",
-		"wantsToReadAndXMore": "Kilo Code хоче прочитати цей файл і ще {{count}}:",
-		"wantsToReadOutsideWorkspace": "Kilo Code хоче прочитати цей файл за межами робочого простору:",
-		"didRead": "Kilo Code прочитав цей файл:",
-		"wantsToEdit": "Kilo Code хоче редагувати цей файл:",
-		"wantsToEditOutsideWorkspace": "Kilo Code хоче редагувати цей файл за межами робочого простору:",
-		"wantsToEditProtected": "Kilo Code хоче редагувати захищений файл конфігурації:",
-		"wantsToApplyBatchChanges": "Kilo Code хоче застосувати зміни до кількох файлів:",
-		"wantsToCreate": "Kilo Code хоче створити новий файл:",
-		"wantsToSearchReplace": "Kilo Code хоче шукати та замінити в цьому файлі:",
-		"didSearchReplace": "Kilo Code виконав пошук і заміну в цьому файлі:",
-		"wantsToInsert": "Kilo Code хоче вставити вміст у цей файл:",
-		"wantsToInsertWithLineNumber": "Kilo Code хоче вставити вміст у цей файл на рядку {{lineNumber}}:",
-		"wantsToInsertAtEnd": "Kilo Code хоче додати вміст в кінець цього файлу:"
+		"wantsToRead": "O Code хоче прочитати цей файл:",
+		"wantsToReadMultiple": "O Code хоче прочитати кілька файлів:",
+		"wantsToReadAndXMore": "O Code хоче прочитати цей файл і ще {{count}}:",
+		"wantsToReadOutsideWorkspace": "O Code хоче прочитати цей файл за межами робочого простору:",
+		"didRead": "O Code прочитав цей файл:",
+		"wantsToEdit": "O Code хоче редагувати цей файл:",
+		"wantsToEditOutsideWorkspace": "O Code хоче редагувати цей файл за межами робочого простору:",
+		"wantsToEditProtected": "O Code хоче редагувати захищений файл конфігурації:",
+		"wantsToApplyBatchChanges": "O Code хоче застосувати зміни до кількох файлів:",
+		"wantsToCreate": "O Code хоче створити новий файл:",
+		"wantsToSearchReplace": "O Code хоче шукати та замінити в цьому файлі:",
+		"didSearchReplace": "O Code виконав пошук і заміну в цьому файлі:",
+		"wantsToInsert": "O Code хоче вставити вміст у цей файл:",
+		"wantsToInsertWithLineNumber": "O Code хоче вставити вміст у цей файл на рядку {{lineNumber}}:",
+		"wantsToInsertAtEnd": "O Code хоче додати вміст в кінець цього файлу:"
 	},
 	"directoryOperations": {
-		"wantsToViewTopLevel": "Kilo Code хоче переглянути файли верхнього рівня в цій директорії:",
-		"didViewTopLevel": "Kilo Code переглянув файли верхнього рівня в цій директорії:",
-		"wantsToViewTopLevelOutsideWorkspace": "Kilo Code хоче переглянути файли верхнього рівня в цій директорії (за межами робочого простору):",
-		"didViewTopLevelOutsideWorkspace": "Kilo Code переглянув файли верхнього рівня в цій директорії (за межами робочого простору):",
-		"wantsToViewRecursive": "Kilo Code хоче рекурсивно переглянути всі файли в цій директорії:",
-		"didViewRecursive": "Kilo Code рекурсивно переглянув всі файли в цій директорії:",
-		"wantsToViewRecursiveOutsideWorkspace": "Kilo Code хоче рекурсивно переглянути всі файли в цій директорії (за межами робочого простору):",
-		"didViewRecursiveOutsideWorkspace": "Kilo Code рекурсивно переглянув всі файли в цій директорії (за межами робочого простору):",
-		"wantsToViewDefinitions": "Kilo Code хоче переглянути назви визначень вихідного коду, що використовуються в цій директорії:",
-		"didViewDefinitions": "Kilo Code переглянув назви визначень вихідного коду, що використовуються в цій директорії:",
-		"wantsToViewDefinitionsOutsideWorkspace": "Kilo Code хоче переглянути назви визначень вихідного коду, що використовуються в цій директорії (за межами робочого простору):",
-		"didViewDefinitionsOutsideWorkspace": "Kilo Code переглянув назви визначень вихідного коду, що використовуються в цій директорії (за межами робочого простору):",
-		"wantsToSearch": "Kilo Code хоче шукати в цій директорії <code>{{regex}}</code>:",
-		"didSearch": "Kilo Code шукав у цій директорії <code>{{regex}}</code>:",
-		"wantsToSearchOutsideWorkspace": "Kilo Code хоче шукати в цій директорії (за межами робочого простору) <code>{{regex}}</code>:",
-		"didSearchOutsideWorkspace": "Kilo Code шукав у цій директорії (за межами робочого простору) <code>{{regex}}</code>:"
+		"wantsToViewTopLevel": "O Code хоче переглянути файли верхнього рівня в цій директорії:",
+		"didViewTopLevel": "O Code переглянув файли верхнього рівня в цій директорії:",
+		"wantsToViewTopLevelOutsideWorkspace": "O Code хоче переглянути файли верхнього рівня в цій директорії (за межами робочого простору):",
+		"didViewTopLevelOutsideWorkspace": "O Code переглянув файли верхнього рівня в цій директорії (за межами робочого простору):",
+		"wantsToViewRecursive": "O Code хоче рекурсивно переглянути всі файли в цій директорії:",
+		"didViewRecursive": "O Code рекурсивно переглянув всі файли в цій директорії:",
+		"wantsToViewRecursiveOutsideWorkspace": "O Code хоче рекурсивно переглянути всі файли в цій директорії (за межами робочого простору):",
+		"didViewRecursiveOutsideWorkspace": "O Code рекурсивно переглянув всі файли в цій директорії (за межами робочого простору):",
+		"wantsToViewDefinitions": "O Code хоче переглянути назви визначень вихідного коду, що використовуються в цій директорії:",
+		"didViewDefinitions": "O Code переглянув назви визначень вихідного коду, що використовуються в цій директорії:",
+		"wantsToViewDefinitionsOutsideWorkspace": "O Code хоче переглянути назви визначень вихідного коду, що використовуються в цій директорії (за межами робочого простору):",
+		"didViewDefinitionsOutsideWorkspace": "O Code переглянув назви визначень вихідного коду, що використовуються в цій директорії (за межами робочого простору):",
+		"wantsToSearch": "O Code хоче шукати в цій директорії <code>{{regex}}</code>:",
+		"didSearch": "O Code шукав у цій директорії <code>{{regex}}</code>:",
+		"wantsToSearchOutsideWorkspace": "O Code хоче шукати в цій директорії (за межами робочого простору) <code>{{regex}}</code>:",
+		"didSearchOutsideWorkspace": "O Code шукав у цій директорії (за межами робочого простору) <code>{{regex}}</code>:"
 	},
 	"codebaseSearch": {
-		"wantsToSearch": "Kilo Code хоче шукати в кодовій базі <code>{{query}}</code>:",
-		"wantsToSearchWithPath": "Kilo Code хоче шукати в кодовій базі <code>{{query}}</code> в <code>{{path}}</code>:",
+		"wantsToSearch": "O Code хоче шукати в кодовій базі <code>{{query}}</code>:",
+		"wantsToSearchWithPath": "O Code хоче шукати в кодовій базі <code>{{query}}</code> в <code>{{path}}</code>:",
 		"didSearch_one": "Знайдено 1 результат",
 		"didSearch_other": "Знайдено {{count}} результатів",
 		"resultTooltip": "Оцінка схожості: {{score}} (клікни для відкриття файлу)"
@@ -221,18 +221,18 @@
 	"response": "Відповідь",
 	"arguments": "Аргументи",
 	"mcp": {
-		"wantsToUseTool": "Kilo Code хоче використати інструмент на сервері MCP {{serverName}}:",
-		"wantsToAccessResource": "Kilo Code хоче отримати доступ до ресурсу на сервері MCP {{serverName}}:"
+		"wantsToUseTool": "O Code хоче використати інструмент на сервері MCP {{serverName}}:",
+		"wantsToAccessResource": "O Code хоче отримати доступ до ресурсу на сервері MCP {{serverName}}:"
 	},
 	"modes": {
-		"wantsToSwitch": "Kilo Code хоче перейти в режим {{mode}}",
-		"wantsToSwitchWithReason": "Kilo Code хоче перейти в режим {{mode}}, тому що: {{reason}}",
-		"didSwitch": "Kilo Code перейшов у режим {{mode}}",
-		"didSwitchWithReason": "Kilo Code перейшов у режим {{mode}}, тому що: {{reason}}"
+		"wantsToSwitch": "O Code хоче перейти в режим {{mode}}",
+		"wantsToSwitchWithReason": "O Code хоче перейти в режим {{mode}}, тому що: {{reason}}",
+		"didSwitch": "O Code перейшов у режим {{mode}}",
+		"didSwitchWithReason": "O Code перейшов у режим {{mode}}, тому що: {{reason}}"
 	},
 	"subtasks": {
-		"wantsToCreate": "Kilo Code хоче створити нове підзавдання в режимі {{mode}}:",
-		"wantsToFinish": "Kilo Code хоче завершити це підзавдання",
+		"wantsToCreate": "O Code хоче створити нове підзавдання в режимі {{mode}}:",
+		"wantsToFinish": "O Code хоче завершити це підзавдання",
 		"newTaskContent": "Інструкції підзавдання",
 		"completionContent": "Підзавдання завершено",
 		"resultContent": "Результати підзавдання",
@@ -240,30 +240,30 @@
 		"completionInstructions": "Підзавдання завершено! Ти можеш переглянути результати та запропонувати будь-які виправлення або наступні кроки. Якщо все виглядає добре, підтверди, щоб повернути результат до батьківського завдання."
 	},
 	"questions": {
-		"hasQuestion": "Kilo Code має питання:"
+		"hasQuestion": "O Code має питання:"
 	},
 	"taskCompleted": "Завдання виконано",
 	"error": "Помилка",
 	"diffError": {
 		"title": "Редагування не вдалося"
 	},
-	"troubleMessage": "Kilo Code має проблеми...",
+	"troubleMessage": "O Code має проблеми...",
 	"powershell": {
 		"issues": "Схоже, у тебе проблеми з Windows PowerShell, будь ласка, подивись це"
 	},
 	"autoApprove": {
 		"title": "Автосхвалення:",
 		"none": "Немає",
-		"description": "Автосхвалення дозволяє Kilo Code виконувати дії без запиту дозволу. Увімкни лише для дій, яким ти повністю довіряєш. Більш детальна конфігурація доступна в <settingsLink>Налаштуваннях</settingsLink>.",
+		"description": "Автосхвалення дозволяє O Code виконувати дії без запиту дозволу. Увімкни лише для дій, яким ти повністю довіряєш. Більш детальна конфігурація доступна в <settingsLink>Налаштуваннях</settingsLink>.",
 		"selectOptionsFirst": "Спочатку вибери принаймні один варіант нижче, щоб увімкнути автосхвалення",
 		"toggleAriaLabel": "Перемкнути автосхвалення",
 		"disabledAriaLabel": "Автосхвалення вимкнено - спочатку вибери варіанти"
 	},
 	"announcement": {
-		"title": "🎉 Випущено Kilo Code {{version}}",
-		"description": "Kilo Code {{version}} приносить основні нові функції та покращення на основі твоїх відгуків.",
+		"title": "🎉 Випущено O Code {{version}}",
+		"description": "O Code {{version}} приносить основні нові функції та покращення на основі твоїх відгуків.",
 		"whatsNew": "Що нового",
-		"feature1": "<bold>Запуск Kilo Code Marketplace</bold>: Маркетплейс тепер працює! Відкривай та встановлюй режими та MCP легше, ніж будь-коли.",
+		"feature1": "<bold>Запуск O Code Marketplace</bold>: Маркетплейс тепер працює! Відкривай та встановлюй режими та MCP легше, ніж будь-коли.",
 		"feature2": "<bold>Моделі Gemini 2.5</bold>: Додано підтримку нових моделей Gemini 2.5 Pro, Flash та Flash Lite.",
 		"feature3": "<bold>Підтримка файлів Excel та інше</bold>: Додано підтримку файлів Excel (.xlsx) та численні виправлення помилок і покращення!",
 		"hideButton": "Приховати оголошення",
@@ -279,7 +279,7 @@
 		"countdownDisplay": "{{count}}с"
 	},
 	"browser": {
-		"rooWantsToUse": "Kilo Code хоче використати браузер:",
+		"rooWantsToUse": "O Code хоче використати браузер:",
 		"consoleLogs": "Логи консолі",
 		"noNewLogs": "(Немає нових логів)",
 		"screenshot": "Знімок екрана браузера",
@@ -313,13 +313,13 @@
 	"profileViolationWarning": "Поточний профіль порушує налаштування твоєї організації",
 	"shellIntegration": {
 		"title": "Попередження про виконання команди",
-		"description": "Твоя команда виконується без інтеграції оболонки терміналу VSCode. Щоб прибрати це попередження, ти можеш вимкнути інтеграцію оболонки в розділі <strong>Terminal</strong> <settingsLink>налаштувань Kilo Code</settingsLink> або усунути проблеми з інтеграцією терміналу VSCode, використовуючи посилання нижче.",
+		"description": "Твоя команда виконується без інтеграції оболонки терміналу VSCode. Щоб прибрати це попередження, ти можеш вимкнути інтеграцію оболонки в розділі <strong>Terminal</strong> <settingsLink>налаштувань O Code</settingsLink> або усунути проблеми з інтеграцією терміналу VSCode, використовуючи посилання нижче.",
 		"troubleshooting": "Натисни тут для документації з інтеграції оболонки."
 	},
 	"ask": {
 		"autoApprovedRequestLimitReached": {
 			"title": "Досягнуто ліміт автосхвалених запитів",
-			"description": "Kilo Code досяг автосхваленого ліміту {{count}} API запит(ів). Хочеш скинути лічильник і продовжити завдання?",
+			"description": "O Code досяг автосхваленого ліміту {{count}} API запит(ів). Хочеш скинути лічильник і продовжити завдання?",
 			"button": "Скинути і продовжити"
 		}
 	},

@@ -1,5 +1,5 @@
 {
-	"greeting": "Kilo Code は何をお手伝いできますか？",
+	"greeting": "O Code は何をお手伝いできますか？",
 	"task": {
 		"title": "タスク",
 		"seeMore": "もっと見る",
@@ -18,7 +18,7 @@
 		"sharePublicly": "公開で共有",
 		"sharePubliclyDescription": "リンクを持つ誰でもアクセスできます",
 		"connectToCloud": "クラウドに接続",
-		"connectToCloudDescription": "タスクを共有するためにKilo Code Cloudにサインイン",
+		"connectToCloudDescription": "タスクを共有するためにO Code Cloudにサインイン",
 		"sharingDisabledByOrganization": "組織により共有が無効化されています",
 		"shareSuccessOrganization": "組織リンクをクリップボードにコピーしました",
 		"shareSuccessPublic": "公開リンクをクリップボードにコピーしました"
@@ -123,7 +123,7 @@
 		"title": "モード",
 		"marketplace": "モードマーケットプレイス",
 		"settings": "モード設定",
-		"description": "Kilo Codeの動作をカスタマイズする専門的なペルソナ。"
+		"description": "O Codeの動作をカスタマイズする専門的なペルソナ。"
 	},
 	"errorReadingFile": "ファイル読み込みエラー:",
 	"noValidImages": "有効な画像が処理されませんでした",
@@ -135,7 +135,7 @@
 	"diffError": {
 		"title": "編集に失敗しました"
 	},
-	"troubleMessage": "Kilo Codeに問題が発生しています...",
+	"troubleMessage": "O Codeに問題が発生しています...",
 	"apiRequest": {
 		"title": "APIリクエスト",
 		"failed": "APIリクエスト失敗",
@@ -161,59 +161,59 @@
 		"current": "現在"
 	},
 	"instructions": {
-		"wantsToFetch": "Kilo Codeは現在のタスクを支援するための詳細な指示を取得したい"
+		"wantsToFetch": "O Codeは現在のタスクを支援するための詳細な指示を取得したい"
 	},
 	"fileOperations": {
-		"wantsToRead": "Kilo Codeはこのファイルを読みたい:",
-		"wantsToReadOutsideWorkspace": "Kilo Codeはワークスペース外のこのファイルを読みたい:",
-		"didRead": "Kilo Codeはこのファイルを読みました:",
-		"wantsToEdit": "Kilo Codeはこのファイルを編集したい:",
-		"wantsToEditOutsideWorkspace": "Kilo Codeはワークスペース外のこのファイルを編集したい:",
-		"wantsToEditProtected": "Kilo Codeは保護された設定ファイルを編集したい:",
-		"wantsToCreate": "Kilo Codeは新しいファイルを作成したい:",
-		"wantsToSearchReplace": "Kilo Codeはこのファイルで検索と置換を行う:",
-		"didSearchReplace": "Kilo Codeはこのファイルで検索と置換を実行しました:",
-		"wantsToInsert": "Kilo Codeはこのファイルにコンテンツを挿入したい:",
-		"wantsToInsertWithLineNumber": "Kilo Codeはこのファイルの{{lineNumber}}行目にコンテンツを挿入したい:",
-		"wantsToInsertAtEnd": "Kilo Codeはこのファイルの末尾にコンテンツを追加したい:",
-		"wantsToReadAndXMore": "Kilo Code はこのファイルと他に {{count}} 個のファイルを読み込もうとしています:",
-		"wantsToReadMultiple": "Kilo Codeは複数のファイルを読み取ろうとしています：",
-		"wantsToApplyBatchChanges": "Kilo Codeは複数のファイルに変更を適用したい:"
+		"wantsToRead": "O Codeはこのファイルを読みたい:",
+		"wantsToReadOutsideWorkspace": "O Codeはワークスペース外のこのファイルを読みたい:",
+		"didRead": "O Codeはこのファイルを読みました:",
+		"wantsToEdit": "O Codeはこのファイルを編集したい:",
+		"wantsToEditOutsideWorkspace": "O Codeはワークスペース外のこのファイルを編集したい:",
+		"wantsToEditProtected": "O Codeは保護された設定ファイルを編集したい:",
+		"wantsToCreate": "O Codeは新しいファイルを作成したい:",
+		"wantsToSearchReplace": "O Codeはこのファイルで検索と置換を行う:",
+		"didSearchReplace": "O Codeはこのファイルで検索と置換を実行しました:",
+		"wantsToInsert": "O Codeはこのファイルにコンテンツを挿入したい:",
+		"wantsToInsertWithLineNumber": "O Codeはこのファイルの{{lineNumber}}行目にコンテンツを挿入したい:",
+		"wantsToInsertAtEnd": "O Codeはこのファイルの末尾にコンテンツを追加したい:",
+		"wantsToReadAndXMore": "O Code はこのファイルと他に {{count}} 個のファイルを読み込もうとしています:",
+		"wantsToReadMultiple": "O Codeは複数のファイルを読み取ろうとしています：",
+		"wantsToApplyBatchChanges": "O Codeは複数のファイルに変更を適用したい:"
 	},
 	"directoryOperations": {
-		"wantsToViewTopLevel": "Kilo Codeはこのディレクトリのトップレベルファイルを表示したい:",
-		"didViewTopLevel": "Kilo Codeはこのディレクトリのトップレベルファイルを表示しました:",
-		"wantsToViewRecursive": "Kilo Codeはこのディレクトリのすべてのファイルを再帰的に表示したい:",
-		"didViewRecursive": "Kilo Codeはこのディレクトリのすべてのファイルを再帰的に表示しました:",
-		"wantsToViewDefinitions": "Kilo Codeはこのディレクトリで使用されているソースコード定義名を表示したい:",
-		"didViewDefinitions": "Kilo Codeはこのディレクトリで使用されているソースコード定義名を表示しました:",
-		"wantsToSearch": "Kilo Codeはこのディレクトリで <code>{{regex}}</code> を検索したい:",
-		"didSearch": "Kilo Codeはこのディレクトリで <code>{{regex}}</code> を検索しました:",
-		"wantsToSearchOutsideWorkspace": "Kilo Codeはこのディレクトリ（ワークスペース外）で <code>{{regex}}</code> を検索したい:",
-		"didSearchOutsideWorkspace": "Kilo Codeはこのディレクトリ（ワークスペース外）で <code>{{regex}}</code> を検索しました:",
-		"wantsToViewTopLevelOutsideWorkspace": "Kilo Codeはこのディレクトリ（ワークスペース外）のトップレベルファイルを表示したい:",
-		"didViewTopLevelOutsideWorkspace": "Kilo Codeはこのディレクトリ（ワークスペース外）のトップレベルファイルを表示しました:",
-		"wantsToViewRecursiveOutsideWorkspace": "Kilo Codeはこのディレクトリ（ワークスペース外）のすべてのファイルを再帰的に表示したい:",
-		"didViewRecursiveOutsideWorkspace": "Kilo Codeはこのディレクトリ（ワークスペース外）のすべてのファイルを再帰的に表示しました:",
-		"wantsToViewDefinitionsOutsideWorkspace": "Kilo Codeはこのディレクトリ（ワークスペース外）で使用されているソースコード定義名を表示したい:",
-		"didViewDefinitionsOutsideWorkspace": "Kilo Codeはこのディレクトリ（ワークスペース外）で使用されているソースコード定義名を表示しました:"
+		"wantsToViewTopLevel": "O Codeはこのディレクトリのトップレベルファイルを表示したい:",
+		"didViewTopLevel": "O Codeはこのディレクトリのトップレベルファイルを表示しました:",
+		"wantsToViewRecursive": "O Codeはこのディレクトリのすべてのファイルを再帰的に表示したい:",
+		"didViewRecursive": "O Codeはこのディレクトリのすべてのファイルを再帰的に表示しました:",
+		"wantsToViewDefinitions": "O Codeはこのディレクトリで使用されているソースコード定義名を表示したい:",
+		"didViewDefinitions": "O Codeはこのディレクトリで使用されているソースコード定義名を表示しました:",
+		"wantsToSearch": "O Codeはこのディレクトリで <code>{{regex}}</code> を検索したい:",
+		"didSearch": "O Codeはこのディレクトリで <code>{{regex}}</code> を検索しました:",
+		"wantsToSearchOutsideWorkspace": "O Codeはこのディレクトリ（ワークスペース外）で <code>{{regex}}</code> を検索したい:",
+		"didSearchOutsideWorkspace": "O Codeはこのディレクトリ（ワークスペース外）で <code>{{regex}}</code> を検索しました:",
+		"wantsToViewTopLevelOutsideWorkspace": "O Codeはこのディレクトリ（ワークスペース外）のトップレベルファイルを表示したい:",
+		"didViewTopLevelOutsideWorkspace": "O Codeはこのディレクトリ（ワークスペース外）のトップレベルファイルを表示しました:",
+		"wantsToViewRecursiveOutsideWorkspace": "O Codeはこのディレクトリ（ワークスペース外）のすべてのファイルを再帰的に表示したい:",
+		"didViewRecursiveOutsideWorkspace": "O Codeはこのディレクトリ（ワークスペース外）のすべてのファイルを再帰的に表示しました:",
+		"wantsToViewDefinitionsOutsideWorkspace": "O Codeはこのディレクトリ（ワークスペース外）で使用されているソースコード定義名を表示したい:",
+		"didViewDefinitionsOutsideWorkspace": "O Codeはこのディレクトリ（ワークスペース外）で使用されているソースコード定義名を表示しました:"
 	},
 	"commandOutput": "コマンド出力",
 	"response": "応答",
 	"arguments": "引数",
 	"mcp": {
-		"wantsToUseTool": "Kilo CodeはMCPサーバー{{serverName}}でツールを使用したい:",
-		"wantsToAccessResource": "Kilo CodeはMCPサーバー{{serverName}}のリソースにアクセスしたい:"
+		"wantsToUseTool": "O CodeはMCPサーバー{{serverName}}でツールを使用したい:",
+		"wantsToAccessResource": "O CodeはMCPサーバー{{serverName}}のリソースにアクセスしたい:"
 	},
 	"modes": {
-		"wantsToSwitch": "Kilo Codeは<code>{{mode}}</code>モードに切り替えたい",
-		"wantsToSwitchWithReason": "Kilo Codeは次の理由で<code>{{mode}}</code>モードに切り替えたい: {{reason}}",
-		"didSwitch": "Kilo Codeは<code>{{mode}}</code>モードに切り替えました",
-		"didSwitchWithReason": "Kilo Codeは次の理由で<code>{{mode}}</code>モードに切り替えました: {{reason}}"
+		"wantsToSwitch": "O Codeは<code>{{mode}}</code>モードに切り替えたい",
+		"wantsToSwitchWithReason": "O Codeは次の理由で<code>{{mode}}</code>モードに切り替えたい: {{reason}}",
+		"didSwitch": "O Codeは<code>{{mode}}</code>モードに切り替えました",
+		"didSwitchWithReason": "O Codeは次の理由で<code>{{mode}}</code>モードに切り替えました: {{reason}}"
 	},
 	"subtasks": {
-		"wantsToCreate": "Kilo Code<code>{{mode}}</code>モードで新しいサブタスクを作成したい:",
-		"wantsToFinish": "Kilo Codeはこのサブタスクを終了したい",
+		"wantsToCreate": "O Code<code>{{mode}}</code>モードで新しいサブタスクを作成したい:",
+		"wantsToFinish": "O Codeはこのサブタスクを終了したい",
 		"newTaskContent": "サブタスク指示",
 		"completionContent": "サブタスク完了",
 		"resultContent": "サブタスク結果",
@@ -221,7 +221,7 @@
 		"completionInstructions": "サブタスク完了！結果を確認し、修正や次のステップを提案できます。問題なければ、親タスクに結果を返すために確認してください。"
 	},
 	"questions": {
-		"hasQuestion": "Kilo Codeは質問があります:"
+		"hasQuestion": "O Codeは質問があります:"
 	},
 	"taskCompleted": "タスク完了",
 	"powershell": {
@@ -230,7 +230,7 @@
 	"autoApprove": {
 		"title": "自動承認:",
 		"none": "なし",
-		"description": "自動承認はKilo Codeに許可を求めずに操作を実行する権限を与えます。完全に信頼できる操作のみ有効にしてください。より詳細な設定は<settingsLink>設定</settingsLink>で利用できます。",
+		"description": "自動承認はO Codeに許可を求めずに操作を実行する権限を与えます。完全に信頼できる操作のみ有効にしてください。より詳細な設定は<settingsLink>設定</settingsLink>で利用できます。",
 		"selectOptionsFirst": "自動承認を有効にするには、以下のオプションを少なくとも1つ選択してください",
 		"toggleAriaLabel": "自動承認の切り替え",
 		"disabledAriaLabel": "自動承認が無効です - 最初にオプションを選択してください"
@@ -251,8 +251,8 @@
 		"countdownDisplay": "{{count}}秒"
 	},
 	"announcement": {
-		"title": "🎉 Kilo Code {{version}} リリース",
-		"description": "Kilo Code {{version}}は、開発ワークフローを向上させる強力な新機能と重要な改善をもたらします。",
+		"title": "🎉 O Code {{version}} リリース",
+		"description": "O Code {{version}}は、開発ワークフローを向上させる強力な新機能と重要な改善をもたらします。",
 		"whatsNew": "新機能",
 		"feature1": "<bold>コードベースインデックス機能が実験段階を卒業</bold>: 完全なコードベースインデックス機能が安定し、改善された検索とコンテキスト理解により本番環境での使用が可能になりました。",
 		"feature2": "<bold>新しいTodoリスト機能</bold>: 統合されたTodo管理でタスクを軌道に乗せ、開発目標に整理され集中した状態を維持できます。",
@@ -261,7 +261,7 @@
 		"detailsDiscussLinks": "詳細は<discordLink>Discord</discordLink>と<redditLink>Reddit</redditLink>でご確認・ディスカッションください 🚀"
 	},
 	"browser": {
-		"rooWantsToUse": "Kilo Codeはブラウザを使用したい:",
+		"rooWantsToUse": "O Codeはブラウザを使用したい:",
 		"consoleLogs": "コンソールログ",
 		"noNewLogs": "(新しいログはありません)",
 		"screenshot": "ブラウザのスクリーンショット",
@@ -295,13 +295,13 @@
 	"profileViolationWarning": "現在のプロファイルは組織の設定と互換性がありません",
 	"shellIntegration": {
 		"title": "コマンド実行警告",
-		"description": "コマンドはVSCodeターミナルシェル統合なしで実行されています。この警告を非表示にするには、<settingsLink>Kilo Code設定</settingsLink>の<strong>Terminal</strong>セクションでシェル統合を無効にするか、以下のリンクを使用してVSCodeターミナル統合のトラブルシューティングを行ってください。",
+		"description": "コマンドはVSCodeターミナルシェル統合なしで実行されています。この警告を非表示にするには、<settingsLink>O Code設定</settingsLink>の<strong>Terminal</strong>セクションでシェル統合を無効にするか、以下のリンクを使用してVSCodeターミナル統合のトラブルシューティングを行ってください。",
 		"troubleshooting": "シェル統合のドキュメントはこちらをクリック"
 	},
 	"ask": {
 		"autoApprovedRequestLimitReached": {
 			"title": "自動承認リクエスト制限に達しました",
-			"description": "Kilo Codeは{{count}}件のAPI自動承認リクエスト制限に達しました。カウントをリセットしてタスクを続行しますか？",
+			"description": "O Codeは{{count}}件のAPI自動承認リクエスト制限に達しました。カウントをリセットしてタスクを続行しますか？",
 			"button": "リセットして続行"
 		}
 	},

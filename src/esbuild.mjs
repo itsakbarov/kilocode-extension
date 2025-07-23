@@ -60,8 +60,23 @@ async function main() {
 						buildDir,
 					)
 
+					// Copy assets directory which includes icons to dist
+					copyPaths([["assets", "assets"]], srcDir, distDir)
+
+					// Copy the main icon to dist root for better VS Code compatibility
+					const iconSrc = path.join(srcDir, "assets", "icons", "kilo-dark.png")
+					const iconDest = path.join(distDir, "assets", "icons", "kilo-dark.png")
+					if (fs.existsSync(iconSrc)) {
+						// Ensure assets/icons directory exists in dist
+						fs.mkdirSync(path.join(distDir, "assets", "icons"), { recursive: true })
+						fs.copyFileSync(iconSrc, iconDest)
+						console.log(`[copyPaths] Copied kilo-dark.png to assets/icons/kilo-dark.png in dist`)
+					}
+
 					// Copy walkthrough files to dist directory
 					copyPaths([["walkthrough", "walkthrough"]], srcDir, distDir)
+					
+					// Assets are already copied above with kilo.png icon included
 				})
 			},
 		},

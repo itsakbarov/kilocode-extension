@@ -753,6 +753,10 @@ export const webviewMessageHandler = async (
 		case "cancelTask":
 			await provider.cancelTask()
 			break
+		case "suggestButtonClicked":
+			// Handle suggest button click - analyze prompt and suggest best model
+			vscode.commands.executeCommand("o-code.suggestButtonClicked", message.mode || "chat", message.prompt || "")
+			break
 		case "allowedCommands": {
 			// Validate and sanitize the commands array
 			const commands = message.commands ?? []

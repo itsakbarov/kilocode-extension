@@ -1,5 +1,5 @@
 {
-	"greeting": "Selamat datang di Kilo Code",
+	"greeting": "Selamat datang di O Code",
 	"task": {
 		"title": "Tugas",
 		"seeMore": "Lihat lebih banyak",
@@ -18,7 +18,7 @@
 		"sharePublicly": "Bagikan secara publik",
 		"sharePubliclyDescription": "Siapa pun dengan tautan dapat mengakses",
 		"connectToCloud": "Hubungkan ke Cloud",
-		"connectToCloudDescription": "Masuk ke Kilo Code Cloud untuk berbagi tugas",
+		"connectToCloudDescription": "Masuk ke O Code Cloud untuk berbagi tugas",
 		"sharingDisabledByOrganization": "Berbagi dinonaktifkan oleh organisasi",
 		"shareSuccessOrganization": "Tautan organisasi disalin ke clipboard",
 		"shareSuccessPublic": "Tautan publik disalin ke clipboard"
@@ -123,7 +123,7 @@
 		"title": "Mode",
 		"marketplace": "Marketplace Mode",
 		"settings": "Pengaturan Mode",
-		"description": "Persona khusus yang menyesuaikan perilaku Kilo Code."
+		"description": "Persona khusus yang menyesuaikan perilaku O Code."
 	},
 	"addImages": "Tambahkan gambar ke pesan",
 	"sendMessage": "Kirim pesan",
@@ -170,46 +170,46 @@
 		"tokens": "token"
 	},
 	"instructions": {
-		"wantsToFetch": "Kilo Code ingin mengambil instruksi detail untuk membantu tugas saat ini"
+		"wantsToFetch": "O Code ingin mengambil instruksi detail untuk membantu tugas saat ini"
 	},
 	"fileOperations": {
-		"wantsToRead": "Kilo Code ingin membaca file ini:",
-		"wantsToReadMultiple": "Kilo Code ingin membaca beberapa file:",
-		"wantsToReadAndXMore": "Kilo Code ingin membaca file ini dan {{count}} lainnya:",
-		"wantsToReadOutsideWorkspace": "Kilo Code ingin membaca file ini di luar workspace:",
-		"didRead": "Kilo Code membaca file ini:",
-		"wantsToEdit": "Kilo Code ingin mengedit file ini:",
-		"wantsToEditOutsideWorkspace": "Kilo Code ingin mengedit file ini di luar workspace:",
-		"wantsToEditProtected": "Kilo Code ingin mengedit file konfigurasi yang dilindungi:",
-		"wantsToApplyBatchChanges": "Kilo Code ingin menerapkan perubahan ke beberapa file:",
-		"wantsToCreate": "Kilo Code ingin membuat file baru:",
-		"wantsToSearchReplace": "Kilo Code ingin mencari dan mengganti di file ini:",
-		"didSearchReplace": "Kilo Code melakukan pencarian dan penggantian pada file ini:",
-		"wantsToInsert": "Kilo Code ingin menyisipkan konten ke file ini:",
-		"wantsToInsertWithLineNumber": "Kilo Code ingin menyisipkan konten ke file ini di baris {{lineNumber}}:",
-		"wantsToInsertAtEnd": "Kilo Code ingin menambahkan konten ke akhir file ini:"
+		"wantsToRead": "O Code ingin membaca file ini:",
+		"wantsToReadMultiple": "O Code ingin membaca beberapa file:",
+		"wantsToReadAndXMore": "O Code ingin membaca file ini dan {{count}} lainnya:",
+		"wantsToReadOutsideWorkspace": "O Code ingin membaca file ini di luar workspace:",
+		"didRead": "O Code membaca file ini:",
+		"wantsToEdit": "O Code ingin mengedit file ini:",
+		"wantsToEditOutsideWorkspace": "O Code ingin mengedit file ini di luar workspace:",
+		"wantsToEditProtected": "O Code ingin mengedit file konfigurasi yang dilindungi:",
+		"wantsToApplyBatchChanges": "O Code ingin menerapkan perubahan ke beberapa file:",
+		"wantsToCreate": "O Code ingin membuat file baru:",
+		"wantsToSearchReplace": "O Code ingin mencari dan mengganti di file ini:",
+		"didSearchReplace": "O Code melakukan pencarian dan penggantian pada file ini:",
+		"wantsToInsert": "O Code ingin menyisipkan konten ke file ini:",
+		"wantsToInsertWithLineNumber": "O Code ingin menyisipkan konten ke file ini di baris {{lineNumber}}:",
+		"wantsToInsertAtEnd": "O Code ingin menambahkan konten ke akhir file ini:"
 	},
 	"directoryOperations": {
-		"wantsToViewTopLevel": "Kilo Code ingin melihat file tingkat atas di direktori ini:",
-		"didViewTopLevel": "Kilo Code melihat file tingkat atas di direktori ini:",
-		"wantsToViewRecursive": "Kilo Code ingin melihat semua file secara rekursif di direktori ini:",
-		"didViewRecursive": "Kilo Code melihat semua file secara rekursif di direktori ini:",
-		"wantsToViewDefinitions": "Kilo Code ingin melihat nama definisi source code yang digunakan di direktori ini:",
-		"didViewDefinitions": "Kilo Code melihat nama definisi source code yang digunakan di direktori ini:",
-		"wantsToSearch": "Kilo Code ingin mencari direktori ini untuk <code>{{regex}}</code>:",
-		"didSearch": "Kilo Code mencari direktori ini untuk <code>{{regex}}</code>:",
-		"wantsToSearchOutsideWorkspace": "Kilo Code ingin mencari direktori ini (di luar workspace) untuk <code>{{regex}}</code>:",
-		"didSearchOutsideWorkspace": "Kilo Code mencari direktori ini (di luar workspace) untuk <code>{{regex}}</code>:",
-		"wantsToViewTopLevelOutsideWorkspace": "Kilo Code ingin melihat file tingkat atas di direktori ini (di luar workspace):",
-		"didViewTopLevelOutsideWorkspace": "Kilo Code melihat file tingkat atas di direktori ini (di luar workspace):",
-		"wantsToViewRecursiveOutsideWorkspace": "Kilo Code ingin melihat semua file secara rekursif di direktori ini (di luar workspace):",
-		"didViewRecursiveOutsideWorkspace": "Kilo Code melihat semua file secara rekursif di direktori ini (di luar workspace):",
-		"wantsToViewDefinitionsOutsideWorkspace": "Kilo Code ingin melihat nama definisi source code yang digunakan di direktori ini (di luar workspace):",
-		"didViewDefinitionsOutsideWorkspace": "Kilo Code melihat nama definisi source code yang digunakan di direktori ini (di luar workspace):"
+		"wantsToViewTopLevel": "O Code ingin melihat file tingkat atas di direktori ini:",
+		"didViewTopLevel": "O Code melihat file tingkat atas di direktori ini:",
+		"wantsToViewRecursive": "O Code ingin melihat semua file secara rekursif di direktori ini:",
+		"didViewRecursive": "O Code melihat semua file secara rekursif di direktori ini:",
+		"wantsToViewDefinitions": "O Code ingin melihat nama definisi source code yang digunakan di direktori ini:",
+		"didViewDefinitions": "O Code melihat nama definisi source code yang digunakan di direktori ini:",
+		"wantsToSearch": "O Code ingin mencari direktori ini untuk <code>{{regex}}</code>:",
+		"didSearch": "O Code mencari direktori ini untuk <code>{{regex}}</code>:",
+		"wantsToSearchOutsideWorkspace": "O Code ingin mencari direktori ini (di luar workspace) untuk <code>{{regex}}</code>:",
+		"didSearchOutsideWorkspace": "O Code mencari direktori ini (di luar workspace) untuk <code>{{regex}}</code>:",
+		"wantsToViewTopLevelOutsideWorkspace": "O Code ingin melihat file tingkat atas di direktori ini (di luar workspace):",
+		"didViewTopLevelOutsideWorkspace": "O Code melihat file tingkat atas di direktori ini (di luar workspace):",
+		"wantsToViewRecursiveOutsideWorkspace": "O Code ingin melihat semua file secara rekursif di direktori ini (di luar workspace):",
+		"didViewRecursiveOutsideWorkspace": "O Code melihat semua file secara rekursif di direktori ini (di luar workspace):",
+		"wantsToViewDefinitionsOutsideWorkspace": "O Code ingin melihat nama definisi source code yang digunakan di direktori ini (di luar workspace):",
+		"didViewDefinitionsOutsideWorkspace": "O Code melihat nama definisi source code yang digunakan di direktori ini (di luar workspace):"
 	},
 	"codebaseSearch": {
-		"wantsToSearch": "Kilo Code ingin mencari codebase untuk <code>{{query}}</code>:",
-		"wantsToSearchWithPath": "Kilo Code ingin mencari codebase untuk <code>{{query}}</code> di <code>{{path}}</code>:",
+		"wantsToSearch": "O Code ingin mencari codebase untuk <code>{{query}}</code>:",
+		"wantsToSearchWithPath": "O Code ingin mencari codebase untuk <code>{{query}}</code> di <code>{{path}}</code>:",
 		"didSearch_one": "Ditemukan 1 hasil",
 		"didSearch_other": "Ditemukan {{count}} hasil",
 		"resultTooltip": "Skor kemiripan: {{score}} (klik untuk membuka file)"
@@ -218,18 +218,18 @@
 	"response": "Respons",
 	"arguments": "Argumen",
 	"mcp": {
-		"wantsToUseTool": "Kilo Code ingin menggunakan tool di server MCP {{serverName}}:",
-		"wantsToAccessResource": "Kilo Code ingin mengakses resource di server MCP {{serverName}}:"
+		"wantsToUseTool": "O Code ingin menggunakan tool di server MCP {{serverName}}:",
+		"wantsToAccessResource": "O Code ingin mengakses resource di server MCP {{serverName}}:"
 	},
 	"modes": {
-		"wantsToSwitch": "Kilo Code ingin beralih ke mode {{mode}}",
-		"wantsToSwitchWithReason": "Kilo Code ingin beralih ke mode {{mode}} karena: {{reason}}",
-		"didSwitch": "Kilo Code beralih ke mode {{mode}}",
-		"didSwitchWithReason": "Kilo Code beralih ke mode {{mode}} karena: {{reason}}"
+		"wantsToSwitch": "O Code ingin beralih ke mode {{mode}}",
+		"wantsToSwitchWithReason": "O Code ingin beralih ke mode {{mode}} karena: {{reason}}",
+		"didSwitch": "O Code beralih ke mode {{mode}}",
+		"didSwitchWithReason": "O Code beralih ke mode {{mode}} karena: {{reason}}"
 	},
 	"subtasks": {
-		"wantsToCreate": "Kilo Code ingin membuat subtugas baru dalam mode {{mode}}:",
-		"wantsToFinish": "Kilo Code ingin menyelesaikan subtugas ini",
+		"wantsToCreate": "O Code ingin membuat subtugas baru dalam mode {{mode}}:",
+		"wantsToFinish": "O Code ingin menyelesaikan subtugas ini",
 		"newTaskContent": "Instruksi Subtugas",
 		"completionContent": "Subtugas Selesai",
 		"resultContent": "Hasil Subtugas",
@@ -237,28 +237,28 @@
 		"completionInstructions": "Subtugas selesai! Kamu bisa meninjau hasilnya dan menyarankan koreksi atau langkah selanjutnya. Jika semuanya terlihat baik, konfirmasi untuk mengembalikan hasil ke tugas induk."
 	},
 	"questions": {
-		"hasQuestion": "Kilo Code punya pertanyaan:"
+		"hasQuestion": "O Code punya pertanyaan:"
 	},
 	"taskCompleted": "Tugas Selesai",
 	"error": "Error",
 	"diffError": {
 		"title": "Edit Tidak Berhasil"
 	},
-	"troubleMessage": "Kilo Code mengalami masalah...",
+	"troubleMessage": "O Code mengalami masalah...",
 	"powershell": {
 		"issues": "Sepertinya kamu mengalami masalah Windows PowerShell, silakan lihat ini"
 	},
 	"autoApprove": {
 		"title": "Auto-approve:",
 		"none": "Tidak Ada",
-		"description": "Auto-approve memungkinkan Kilo Code melakukan aksi tanpa meminta izin. Hanya aktifkan untuk aksi yang benar-benar kamu percayai. Konfigurasi lebih detail tersedia di <settingsLink>Pengaturan</settingsLink>.",
+		"description": "Auto-approve memungkinkan O Code melakukan aksi tanpa meminta izin. Hanya aktifkan untuk aksi yang benar-benar kamu percayai. Konfigurasi lebih detail tersedia di <settingsLink>Pengaturan</settingsLink>.",
 		"selectOptionsFirst": "Pilih setidaknya satu opsi di bawah untuk mengaktifkan persetujuan otomatis",
 		"toggleAriaLabel": "Beralih persetujuan otomatis",
 		"disabledAriaLabel": "Persetujuan otomatis dinonaktifkan - pilih opsi terlebih dahulu"
 	},
 	"announcement": {
-		"title": "🎉 Kilo Code {{version}} Dirilis",
-		"description": "Kilo Code {{version}} menghadirkan fitur-fitur baru yang kuat dan peningkatan signifikan untuk meningkatkan alur kerja pengembangan Anda.",
+		"title": "🎉 O Code {{version}} Dirilis",
+		"description": "O Code {{version}} menghadirkan fitur-fitur baru yang kuat dan peningkatan signifikan untuk meningkatkan alur kerja pengembangan Anda.",
 		"whatsNew": "Yang Baru",
 		"feature1": "<bold>Pengindeksan Codebase Lulus dari Eksperimental</bold>: Pengindeksan codebase lengkap kini stabil dan siap untuk penggunaan produksi dengan pencarian yang ditingkatkan dan pemahaman konteks.",
 		"feature2": "<bold>Fitur Daftar Todo Baru</bold>: Jaga tugas Anda tetap pada jalur dengan manajemen todo terintegrasi yang membantu Anda tetap terorganisir dan fokus pada tujuan pengembangan.",
@@ -276,7 +276,7 @@
 		"countdownDisplay": "{{count}}dtk"
 	},
 	"browser": {
-		"rooWantsToUse": "Kilo Code ingin menggunakan browser:",
+		"rooWantsToUse": "O Code ingin menggunakan browser:",
 		"consoleLogs": "Log Konsol",
 		"noNewLogs": "(Tidak ada log baru)",
 		"screenshot": "Screenshot browser",
@@ -310,13 +310,13 @@
 	"profileViolationWarning": "Profil saat ini tidak kompatibel dengan pengaturan organisasi kamu",
 	"shellIntegration": {
 		"title": "Peringatan Eksekusi Perintah",
-		"description": "Perintah kamu dijalankan tanpa integrasi shell terminal VSCode. Untuk menekan peringatan ini kamu bisa menonaktifkan integrasi shell di bagian <strong>Terminal</strong> dari <settingsLink>pengaturan Kilo Code</settingsLink> atau troubleshoot integrasi terminal VSCode menggunakan link di bawah.",
+		"description": "Perintah kamu dijalankan tanpa integrasi shell terminal VSCode. Untuk menekan peringatan ini kamu bisa menonaktifkan integrasi shell di bagian <strong>Terminal</strong> dari <settingsLink>pengaturan O Code</settingsLink> atau troubleshoot integrasi terminal VSCode menggunakan link di bawah.",
 		"troubleshooting": "Klik di sini untuk dokumentasi integrasi shell."
 	},
 	"ask": {
 		"autoApprovedRequestLimitReached": {
 			"title": "Batas Permintaan yang Disetujui Otomatis Tercapai",
-			"description": "Kilo Code telah mencapai batas {{count}} permintaan API yang disetujui otomatis. Apakah kamu ingin mengatur ulang hitungan dan melanjutkan tugas?",
+			"description": "O Code telah mencapai batas {{count}} permintaan API yang disetujui otomatis. Apakah kamu ingin mengatur ulang hitungan dan melanjutkan tugas?",
 			"button": "Atur Ulang dan Lanjutkan"
 		}
 	},

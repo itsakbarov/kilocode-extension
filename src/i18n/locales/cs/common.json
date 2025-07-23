@@ -1,6 +1,6 @@
 {
 	"extension": {
-		"name": "Kilo Code",
+		"name": "O Code",
 		"description": "Open Source AI asistent pro kódování pro plánování, vytváření a opravy kódu."
 	},
 	"number_format": {
@@ -104,7 +104,7 @@
 	"warnings": {
 		"no_terminal_content": "Není vybrán žádný obsah terminálu",
 		"missing_task_files": "Soubory této úlohy chybí. Chceš ji odstranit ze seznamu úloh?",
-		"auto_import_failed": "Automatický import nastavení Kilo Code selhal: {{error}}"
+		"auto_import_failed": "Automatický import nastavení O Code selhal: {{error}}"
 	},
 	"info": {
 		"no_changes": "Nebyly nalezeny žádné změny.",
@@ -113,7 +113,7 @@
 		"custom_storage_path_set": "Nastavena vlastní cesta úložiště: {{path}}",
 		"default_storage_path": "Návrat k použití výchozí cesty úložiště",
 		"settings_imported": "Nastavení byla úspěšně importována.",
-		"auto_import_success": "Nastavení Kilo Code byla automaticky importována ze souboru {{filename}}",
+		"auto_import_success": "Nastavení O Code byla automaticky importována ze souboru {{filename}}",
 		"share_link_copied": "Odkaz pro sdílení zkopírován do schránky",
 		"organization_share_link_copied": "Odkaz pro sdílení organizace zkopírován do schránky!",
 		"public_share_link_copied": "Veřejný odkaz pro sdílení zkopírován do schránky!",
@@ -146,7 +146,7 @@
 		"enter_valid_path": "Prosím zadej platnou cestu"
 	},
 	"input": {
-		"task_prompt": "Co by měl Kilo Code udělat?",
+		"task_prompt": "Co by měl O Code udělat?",
 		"task_placeholder": "Vytvořit, najít, zeptat se na něco"
 	},
 	"customModes": {
@@ -167,8 +167,8 @@
 	},
 	"mdm": {
 		"errors": {
-			"cloud_auth_required": "Tvá organizace vyžaduje autentizaci Kilo Code Cloud. Prosím přihlas se pro pokračování.",
-			"organization_mismatch": "Musíš být autentizován s účtem Kilo Code Cloud tvé organizace.",
+			"cloud_auth_required": "Tvá organizace vyžaduje autentizaci O Code Cloud. Prosím přihlas se pro pokračování.",
+			"organization_mismatch": "Musíš být autentizován s účtem O Code Cloud tvé organizace.",
 			"verification_failed": "Nelze ověřit autentizaci organizace."
 		}
 	},

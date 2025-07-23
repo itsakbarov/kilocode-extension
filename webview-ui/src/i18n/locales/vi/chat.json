@@ -1,5 +1,5 @@
 {
-	"greeting": "Kilo Code có thể giúp gì cho bạn?",
+	"greeting": "O Code có thể giúp gì cho bạn?",
 	"task": {
 		"title": "Nhiệm vụ",
 		"seeMore": "Xem thêm",
@@ -18,7 +18,7 @@
 		"sharePublicly": "Chia sẻ công khai",
 		"sharePubliclyDescription": "Bất kỳ ai có liên kết đều có thể truy cập",
 		"connectToCloud": "Kết nối với Cloud",
-		"connectToCloudDescription": "Đăng nhập vào Kilo Code Cloud để chia sẻ tác vụ",
+		"connectToCloudDescription": "Đăng nhập vào O Code Cloud để chia sẻ tác vụ",
 		"sharingDisabledByOrganization": "Chia sẻ bị tổ chức vô hiệu hóa",
 		"shareSuccessOrganization": "Liên kết tổ chức đã được sao chép vào clipboard",
 		"shareSuccessPublic": "Liên kết công khai đã được sao chép vào clipboard"
@@ -87,7 +87,7 @@
 	},
 	"scrollToBottom": "Cuộn xuống cuối cuộc trò chuyện",
 	"about": "Tạo, tái cấu trúc và gỡ lỗi mã bằng sự hỗ trợ của AI. Kiểm tra <DocsLink>tài liệu</DocsLink> của chúng tôi để tìm hiểu thêm.",
-	"onboarding": "<strong>Danh sách nhiệm vụ của bạn trong không gian làm việc này trống.</strong> Bắt đầu bằng cách nhập nhiệm vụ bên dưới. Bạn không chắc chắn nên bắt đầu như thế nào? Đọc thêm về những gì Kilo Code có thể làm cho bạn trong <DocsLink>tài liệu</DocsLink>.",
+	"onboarding": "<strong>Danh sách nhiệm vụ của bạn trong không gian làm việc này trống.</strong> Bắt đầu bằng cách nhập nhiệm vụ bên dưới. Bạn không chắc chắn nên bắt đầu như thế nào? Đọc thêm về những gì O Code có thể làm cho bạn trong <DocsLink>tài liệu</DocsLink>.",
 	"rooTips": {
 		"boomerangTasks": {
 			"title": "Điều phối Nhiệm vụ",
@@ -123,7 +123,7 @@
 		"title": "Chế độ",
 		"marketplace": "Chợ Chế độ",
 		"settings": "Cài đặt Chế độ",
-		"description": "Các nhân cách chuyên biệt điều chỉnh hành vi của Kilo Code."
+		"description": "Các nhân cách chuyên biệt điều chỉnh hành vi của O Code."
 	},
 	"errorReadingFile": "Lỗi khi đọc tệp:",
 	"noValidImages": "Không có hình ảnh hợp lệ nào được xử lý",
@@ -135,7 +135,7 @@
 	"diffError": {
 		"title": "Chỉnh sửa không thành công"
 	},
-	"troubleMessage": "Kilo Code đang gặp sự cố...",
+	"troubleMessage": "O Code đang gặp sự cố...",
 	"apiRequest": {
 		"title": "Yêu cầu API",
 		"failed": "Yêu cầu API thất bại",
@@ -161,59 +161,59 @@
 		"current": "Hiện tại"
 	},
 	"instructions": {
-		"wantsToFetch": "Kilo Code muốn lấy hướng dẫn chi tiết để hỗ trợ nhiệm vụ hiện tại"
+		"wantsToFetch": "O Code muốn lấy hướng dẫn chi tiết để hỗ trợ nhiệm vụ hiện tại"
 	},
 	"fileOperations": {
-		"wantsToRead": "Kilo Code muốn đọc tệp này:",
-		"wantsToReadOutsideWorkspace": "Kilo Code muốn đọc tệp này bên ngoài không gian làm việc:",
-		"didRead": "Kilo Code đã đọc tệp này:",
-		"wantsToEdit": "Kilo Code muốn chỉnh sửa tệp này:",
-		"wantsToEditOutsideWorkspace": "Kilo Code muốn chỉnh sửa tệp này bên ngoài không gian làm việc:",
-		"wantsToEditProtected": "Kilo Code muốn chỉnh sửa tệp cấu hình được bảo vệ:",
-		"wantsToCreate": "Kilo Code muốn tạo một tệp mới:",
-		"wantsToSearchReplace": "Kilo Code muốn thực hiện tìm kiếm và thay thế trong tệp này:",
-		"didSearchReplace": "Kilo Code đã thực hiện tìm kiếm và thay thế trong tệp này:",
-		"wantsToInsert": "Kilo Code muốn chèn nội dung vào tệp này:",
-		"wantsToInsertWithLineNumber": "Kilo Code muốn chèn nội dung vào dòng {{lineNumber}} của tệp này:",
-		"wantsToInsertAtEnd": "Kilo Code muốn thêm nội dung vào cuối tệp này:",
-		"wantsToReadAndXMore": "Kilo Code muốn đọc tệp này và {{count}} tệp khác:",
-		"wantsToReadMultiple": "Kilo Code muốn đọc nhiều tệp:",
-		"wantsToApplyBatchChanges": "Kilo Code muốn áp dụng thay đổi cho nhiều tệp:"
+		"wantsToRead": "O Code muốn đọc tệp này:",
+		"wantsToReadOutsideWorkspace": "O Code muốn đọc tệp này bên ngoài không gian làm việc:",
+		"didRead": "O Code đã đọc tệp này:",
+		"wantsToEdit": "O Code muốn chỉnh sửa tệp này:",
+		"wantsToEditOutsideWorkspace": "O Code muốn chỉnh sửa tệp này bên ngoài không gian làm việc:",
+		"wantsToEditProtected": "O Code muốn chỉnh sửa tệp cấu hình được bảo vệ:",
+		"wantsToCreate": "O Code muốn tạo một tệp mới:",
+		"wantsToSearchReplace": "O Code muốn thực hiện tìm kiếm và thay thế trong tệp này:",
+		"didSearchReplace": "O Code đã thực hiện tìm kiếm và thay thế trong tệp này:",
+		"wantsToInsert": "O Code muốn chèn nội dung vào tệp này:",
+		"wantsToInsertWithLineNumber": "O Code muốn chèn nội dung vào dòng {{lineNumber}} của tệp này:",
+		"wantsToInsertAtEnd": "O Code muốn thêm nội dung vào cuối tệp này:",
+		"wantsToReadAndXMore": "O Code muốn đọc tệp này và {{count}} tệp khác:",
+		"wantsToReadMultiple": "O Code muốn đọc nhiều tệp:",
+		"wantsToApplyBatchChanges": "O Code muốn áp dụng thay đổi cho nhiều tệp:"
 	},
 	"directoryOperations": {
-		"wantsToViewTopLevel": "Kilo Code muốn xem các tệp cấp cao nhất trong thư mục này:",
-		"didViewTopLevel": "Kilo Code đã xem các tệp cấp cao nhất trong thư mục này:",
-		"wantsToViewRecursive": "Kilo Code muốn xem đệ quy tất cả các tệp trong thư mục này:",
-		"didViewRecursive": "Kilo Code đã xem đệ quy tất cả các tệp trong thư mục này:",
-		"wantsToViewDefinitions": "Kilo Code muốn xem tên định nghĩa mã nguồn được sử dụng trong thư mục này:",
-		"didViewDefinitions": "Kilo Code đã xem tên định nghĩa mã nguồn được sử dụng trong thư mục này:",
-		"wantsToSearch": "Kilo Code muốn tìm kiếm trong thư mục này cho <code>{{regex}}</code>:",
-		"didSearch": "Kilo Code đã tìm kiếm trong thư mục này cho <code>{{regex}}</code>:",
-		"wantsToSearchOutsideWorkspace": "Kilo Code muốn tìm kiếm trong thư mục này (ngoài không gian làm việc) cho <code>{{regex}}</code>:",
-		"didSearchOutsideWorkspace": "Kilo Code đã tìm kiếm trong thư mục này (ngoài không gian làm việc) cho <code>{{regex}}</code>:",
-		"wantsToViewTopLevelOutsideWorkspace": "Kilo Code muốn xem các tệp cấp cao nhất trong thư mục này (ngoài không gian làm việc):",
-		"didViewTopLevelOutsideWorkspace": "Kilo Code đã xem các tệp cấp cao nhất trong thư mục này (ngoài không gian làm việc):",
-		"wantsToViewRecursiveOutsideWorkspace": "Kilo Code muốn xem đệ quy tất cả các tệp trong thư mục này (ngoài không gian làm việc):",
-		"didViewRecursiveOutsideWorkspace": "Kilo Code đã xem đệ quy tất cả các tệp trong thư mục này (ngoài không gian làm việc):",
-		"wantsToViewDefinitionsOutsideWorkspace": "Kilo Code muốn xem tên định nghĩa mã nguồn được sử dụng trong thư mục này (ngoài không gian làm việc):",
-		"didViewDefinitionsOutsideWorkspace": "Kilo Code đã xem tên định nghĩa mã nguồn được sử dụng trong thư mục này (ngoài không gian làm việc):"
+		"wantsToViewTopLevel": "O Code muốn xem các tệp cấp cao nhất trong thư mục này:",
+		"didViewTopLevel": "O Code đã xem các tệp cấp cao nhất trong thư mục này:",
+		"wantsToViewRecursive": "O Code muốn xem đệ quy tất cả các tệp trong thư mục này:",
+		"didViewRecursive": "O Code đã xem đệ quy tất cả các tệp trong thư mục này:",
+		"wantsToViewDefinitions": "O Code muốn xem tên định nghĩa mã nguồn được sử dụng trong thư mục này:",
+		"didViewDefinitions": "O Code đã xem tên định nghĩa mã nguồn được sử dụng trong thư mục này:",
+		"wantsToSearch": "O Code muốn tìm kiếm trong thư mục này cho <code>{{regex}}</code>:",
+		"didSearch": "O Code đã tìm kiếm trong thư mục này cho <code>{{regex}}</code>:",
+		"wantsToSearchOutsideWorkspace": "O Code muốn tìm kiếm trong thư mục này (ngoài không gian làm việc) cho <code>{{regex}}</code>:",
+		"didSearchOutsideWorkspace": "O Code đã tìm kiếm trong thư mục này (ngoài không gian làm việc) cho <code>{{regex}}</code>:",
+		"wantsToViewTopLevelOutsideWorkspace": "O Code muốn xem các tệp cấp cao nhất trong thư mục này (ngoài không gian làm việc):",
+		"didViewTopLevelOutsideWorkspace": "O Code đã xem các tệp cấp cao nhất trong thư mục này (ngoài không gian làm việc):",
+		"wantsToViewRecursiveOutsideWorkspace": "O Code muốn xem đệ quy tất cả các tệp trong thư mục này (ngoài không gian làm việc):",
+		"didViewRecursiveOutsideWorkspace": "O Code đã xem đệ quy tất cả các tệp trong thư mục này (ngoài không gian làm việc):",
+		"wantsToViewDefinitionsOutsideWorkspace": "O Code muốn xem tên định nghĩa mã nguồn được sử dụng trong thư mục này (ngoài không gian làm việc):",
+		"didViewDefinitionsOutsideWorkspace": "O Code đã xem tên định nghĩa mã nguồn được sử dụng trong thư mục này (ngoài không gian làm việc):"
 	},
 	"commandOutput": "Kết quả lệnh",
 	"response": "Phản hồi",
 	"arguments": "Tham số",
 	"mcp": {
-		"wantsToUseTool": "Kilo Code muốn sử dụng một công cụ trên máy chủ MCP {{serverName}}:",
-		"wantsToAccessResource": "Kilo Code muốn truy cập một tài nguyên trên máy chủ MCP {{serverName}}:"
+		"wantsToUseTool": "O Code muốn sử dụng một công cụ trên máy chủ MCP {{serverName}}:",
+		"wantsToAccessResource": "O Code muốn truy cập một tài nguyên trên máy chủ MCP {{serverName}}:"
 	},
 	"modes": {
-		"wantsToSwitch": "Kilo Code muốn chuyển sang chế độ <code>{{mode}}</code>",
-		"wantsToSwitchWithReason": "Kilo Code muốn chuyển sang chế độ <code>{{mode}}</code> vì: {{reason}}",
-		"didSwitch": "Kilo Code đã chuyển sang chế độ <code>{{mode}}</code>",
-		"didSwitchWithReason": "Kilo Code đã chuyển sang chế độ <code>{{mode}}</code> vì: {{reason}}"
+		"wantsToSwitch": "O Code muốn chuyển sang chế độ <code>{{mode}}</code>",
+		"wantsToSwitchWithReason": "O Code muốn chuyển sang chế độ <code>{{mode}}</code> vì: {{reason}}",
+		"didSwitch": "O Code đã chuyển sang chế độ <code>{{mode}}</code>",
+		"didSwitchWithReason": "O Code đã chuyển sang chế độ <code>{{mode}}</code> vì: {{reason}}"
 	},
 	"subtasks": {
-		"wantsToCreate": "Kilo Code muốn tạo một nhiệm vụ phụ mới trong chế độ <code>{{mode}}</code>:",
-		"wantsToFinish": "Kilo Code muốn hoàn thành nhiệm vụ phụ này",
+		"wantsToCreate": "O Code muốn tạo một nhiệm vụ phụ mới trong chế độ <code>{{mode}}</code>:",
+		"wantsToFinish": "O Code muốn hoàn thành nhiệm vụ phụ này",
 		"newTaskContent": "Hướng dẫn nhiệm vụ phụ",
 		"completionContent": "Nhiệm vụ phụ đã hoàn thành",
 		"resultContent": "Kết quả nhiệm vụ phụ",
@@ -221,7 +221,7 @@
 		"completionInstructions": "Nhiệm vụ phụ đã hoàn thành! Bạn có thể xem lại kết quả và đề xuất các sửa đổi hoặc bước tiếp theo. Nếu mọi thứ có vẻ tốt, hãy xác nhận để trả kết quả về nhiệm vụ chính."
 	},
 	"questions": {
-		"hasQuestion": "Kilo Code có một câu hỏi:"
+		"hasQuestion": "O Code có một câu hỏi:"
 	},
 	"taskCompleted": "Nhiệm vụ hoàn thành",
 	"powershell": {
@@ -230,7 +230,7 @@
 	"autoApprove": {
 		"title": "Tự động phê duyệt:",
 		"none": "Không",
-		"description": "Tự động phê duyệt cho phép Kilo Code thực hiện hành động mà không cần xin phép. Chỉ bật cho các hành động bạn hoàn toàn tin tưởng. Cấu hình chi tiết hơn có sẵn trong <settingsLink>Cài đặt</settingsLink>.",
+		"description": "Tự động phê duyệt cho phép O Code thực hiện hành động mà không cần xin phép. Chỉ bật cho các hành động bạn hoàn toàn tin tưởng. Cấu hình chi tiết hơn có sẵn trong <settingsLink>Cài đặt</settingsLink>.",
 		"selectOptionsFirst": "Chọn ít nhất một tùy chọn bên dưới để bật tự động phê duyệt",
 		"toggleAriaLabel": "Chuyển đổi tự động phê duyệt",
 		"disabledAriaLabel": "Tự động phê duyệt bị vô hiệu hóa - hãy chọn các tùy chọn trước"
@@ -251,8 +251,8 @@
 		"countdownDisplay": "{{count}}s"
 	},
 	"announcement": {
-		"title": "🎉 Kilo Code {{version}} Đã phát hành",
-		"description": "Kilo Code {{version}} mang đến các tính năng mạnh mẽ mới và cải tiến đáng kể để nâng cao quy trình phát triển của bạn.",
+		"title": "🎉 O Code {{version}} Đã phát hành",
+		"description": "O Code {{version}} mang đến các tính năng mạnh mẽ mới và cải tiến đáng kể để nâng cao quy trình phát triển của bạn.",
 		"whatsNew": "Có gì mới",
 		"feature1": "<bold>Lập chỉ mục Codebase Tốt nghiệp từ Thử nghiệm</bold>: Lập chỉ mục codebase đầy đủ hiện đã ổn định và sẵn sàng cho sử dụng sản xuất với tìm kiếm cải tiến và hiểu biết ngữ cảnh.",
 		"feature2": "<bold>Tính năng Danh sách Todo Mới</bold>: Giữ nhiệm vụ của bạn đúng hướng với quản lý todo tích hợp giúp bạn duy trì tổ chức và tập trung vào mục tiêu phát triển.",
@@ -261,7 +261,7 @@
 		"detailsDiscussLinks": "Nhận thêm chi tiết và thảo luận tại <discordLink>Discord</discordLink> và <redditLink>Reddit</redditLink> 🚀"
 	},
 	"browser": {
-		"rooWantsToUse": "Kilo Code muốn sử dụng trình duyệt:",
+		"rooWantsToUse": "O Code muốn sử dụng trình duyệt:",
 		"consoleLogs": "Nhật ký bảng điều khiển",
 		"noNewLogs": "(Không có nhật ký mới)",
 		"screenshot": "Ảnh chụp màn hình trình duyệt",
@@ -295,19 +295,19 @@
 	"profileViolationWarning": "Hồ sơ hiện tại không tương thích với cài đặt của tổ chức của bạn",
 	"shellIntegration": {
 		"title": "Cảnh báo thực thi lệnh",
-		"description": "Lệnh của bạn đang được thực thi mà không có tích hợp shell terminal VSCode. Để ẩn cảnh báo này, bạn có thể vô hiệu hóa tích hợp shell trong phần <strong>Terminal</strong> của <settingsLink>cài đặt Kilo Code</settingsLink> hoặc khắc phục sự cố tích hợp terminal VSCode bằng liên kết bên dưới.",
+		"description": "Lệnh của bạn đang được thực thi mà không có tích hợp shell terminal VSCode. Để ẩn cảnh báo này, bạn có thể vô hiệu hóa tích hợp shell trong phần <strong>Terminal</strong> của <settingsLink>cài đặt O Code</settingsLink> hoặc khắc phục sự cố tích hợp terminal VSCode bằng liên kết bên dưới.",
 		"troubleshooting": "Nhấp vào đây để xem tài liệu tích hợp shell."
 	},
 	"ask": {
 		"autoApprovedRequestLimitReached": {
 			"title": "Đã Đạt Giới Hạn Yêu Cầu Tự Động Phê Duyệt",
-			"description": "Kilo Code đã đạt đến giới hạn tự động phê duyệt là {{count}} yêu cầu API. Bạn có muốn đặt lại bộ đếm và tiếp tục nhiệm vụ không?",
+			"description": "O Code đã đạt đến giới hạn tự động phê duyệt là {{count}} yêu cầu API. Bạn có muốn đặt lại bộ đếm và tiếp tục nhiệm vụ không?",
 			"button": "Đặt lại và Tiếp tục"
 		}
 	},
 	"codebaseSearch": {
-		"wantsToSearch": "Kilo Code muốn tìm kiếm trong cơ sở mã cho <code>{{query}}</code>:",
-		"wantsToSearchWithPath": "Kilo Code muốn tìm kiếm trong cơ sở mã cho <code>{{query}}</code> trong <code>{{path}}</code>:",
+		"wantsToSearch": "O Code muốn tìm kiếm trong cơ sở mã cho <code>{{query}}</code>:",
+		"wantsToSearchWithPath": "O Code muốn tìm kiếm trong cơ sở mã cho <code>{{query}}</code> trong <code>{{path}}</code>:",
 		"didSearch_one": "Đã tìm thấy 1 kết quả",
 		"didSearch_other": "Đã tìm thấy {{count}} kết quả",
 		"resultTooltip": "Điểm tương tự: {{score}} (nhấp để mở tệp)"

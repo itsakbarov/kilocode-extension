@@ -6,12 +6,12 @@
 	"instructions": "手順",
 	"enableToggle": {
 		"title": "MCPサーバーを有効化",
-		"description": "これをONにすると、Kilo Codeが接続されたMCPサーバーのツールを使えるようになるよ。Kilo Codeの機能が増える！追加ツールを使わないなら、APIトークンのコストを抑えるためにOFFにしてね。"
+		"description": "これをONにすると、O Codeが接続されたMCPサーバーのツールを使えるようになるよ。O Codeの機能が増える！追加ツールを使わないなら、APIトークンのコストを抑えるためにOFFにしてね。"
 	},
 	"enableServerCreation": {
 		"title": "MCPサーバー作成を有効化",
-		"description": "これをONにすると、Kilo Codeが<1>新しい</1>カスタムMCPサーバーを作るのを手伝ってくれるよ。<0>サーバー作成について詳しく</0>",
-		"hint": "ヒント: APIトークンのコストを抑えたいときは、Kilo Codeに新しいMCPサーバーを作らせないときにこの設定をOFFにしてね。"
+		"description": "これをONにすると、O Codeが<1>新しい</1>カスタムMCPサーバーを作るのを手伝ってくれるよ。<0>サーバー作成について詳しく</0>",
+		"hint": "ヒント: APIトークンのコストを抑えたいときは、O Codeに新しいMCPサーバーを作らせないときにこの設定をOFFにしてね。"
 	},
 	"editGlobalMCP": "グローバルMCPを編集",
 	"editProjectMCP": "プロジェクトMCPを編集",
