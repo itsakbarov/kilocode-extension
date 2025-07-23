@@ -73,14 +73,6 @@ async function main() {
 						console.log(`[copyPaths] Copied icon-128.png to assets/icons/icon-128.png in dist`)
 					}
 
-						// Copy codicon font file for icon display
-						const codiconSrc = path.join(srcDir, "node_modules", "@vscode", "codicons", "dist", "codicon.ttf")
-						const codiconDest = path.join(distDir, "assets", "codicon.ttf")
-						if (fs.existsSync(codiconSrc)) {
-							fs.copyFileSync(codiconSrc, codiconDest)
-							console.log(`[copyPaths] Copied codicon.ttf to assets/ in dist`)
-						}
-
 					// Copy walkthrough files to dist directory
 					copyPaths([["walkthrough", "walkthrough"]], srcDir, distDir)
 					

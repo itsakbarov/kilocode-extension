@@ -20,6 +20,8 @@
 @import "tailwindcss/utilities.css" layer(utilities);
 @import "./kilocode.css";
 @import "katex/dist/katex.min.css";
+@import "@vscode/codicons/dist/codicon.css";
+@import "./codicon-custom.css";
 
 @plugin "tailwindcss-animate";
 

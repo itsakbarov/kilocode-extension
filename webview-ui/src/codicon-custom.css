@@ -1,8 +1,28 @@
 /* Custom codicon classes */
 
-/**
- * Fixes: https://github.com/microsoft/vscode-codicons/issues/286
- */
+/* Override codicon font-face to point to correct path */
+@font-face {
+	font-family: "codicon";
+	font-display: block;
+	src:
+		url("./build/assets/codicon.ttf") format("truetype"),
+		url("./assets/codicon.ttf") format("truetype"),
+		url("./codicon.ttf") format("truetype");
+}
+
+/* Make all codicon icons square shape */
+.codicon {
+	display: inline-flex !important;
+	align-items: center !important;
+	justify-content: center !important;
+	width: 1em !important;
+	height: 1em !important;
+	aspect-ratio: 1 / 1 !important;
+}
+
+/*
+* Fixes: https://github.com/microsoft/vscode-codicons/issues/286
+*/
 .codicon-attach::before {
 	content: "";
 	display: inline-block;

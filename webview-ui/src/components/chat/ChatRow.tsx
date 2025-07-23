@@ -85,12 +85,49 @@ const ChatRow = memo(
 
 		const [chatrow, { height }] = useSize(
 			<div
-				// kilocode_change: add highlighted className
 				className={cn(
-					`px-[15px] py-[10px] pr-[6px] relative ${highlighted ? "animate-message-highlight" : ""}`,
+					"group relative transition-all duration-200 ease-in-out mb-6",
+					highlighted && "animate-message-highlight",
 				)}>
 				{showTaskTimeline && <KiloChatRowGutterBar message={message} />}
-				<ChatRowContent {...props} />
+				<div
+					className={cn(
+						"flex gap-3 items-start max-w-4xl mx-auto px-4",
+						// User messages align right, assistant messages align left
+						message.type === "ask" ? "flex-row-reverse" : "flex-row",
+					)}>
+					{/* Avatar */}
+					<div
+						className={cn(
+							"flex-shrink-0 w-8 h-8 rounded-full flex items-center justify-center text-sm font-medium",
+							message.type === "ask"
+								? "bg-vscode-button-background text-vscode-button-foreground"
+								: "bg-vscode-badge-background text-vscode-badge-foreground border border-vscode-widget-border",
+						)}>
+						{message.type === "ask" ? "U" : "A"}
+					</div>
+
+					{/* Message bubble */}
+					<div
+						className={cn(
+							"relative flex-1 max-w-3xl",
+							message.type === "ask" ? "flex justify-end" : "flex justify-start",
+						)}>
+						<div
+							className={cn(
+								"relative rounded-2xl px-4 py-3 shadow-sm border",
+								"transition-all duration-200 ease-in-out",
+								message.type === "ask"
+									? "bg-vscode-button-background text-vscode-button-foreground border-vscode-button-background rounded-br-md"
+									: "bg-vscode-editor-background text-vscode-editor-foreground border-vscode-widget-border rounded-bl-md",
+								"max-w-full overflow-hidden",
+								// Hover effects
+								"group-hover:shadow-md group-hover:border-vscode-focusBorder/20",
+							)}>
+							<ChatRowContent {...props} />
+						</div>
+					</div>
+				</div>
 			</div>,
 		)
 
@@ -344,9 +381,15 @@ export const ChatRowContent = ({
 	const headerStyle: React.CSSProperties = {
 		display: "flex",
 		alignItems: "center",
-		gap: "10px",
-		marginBottom: "10px",
+		gap: "8px",
+		marginBottom: "8px",
 		wordBreak: "break-word",
+		fontSize: "12px",
+		fontWeight: 500,
+		fontFamily: '"GeistSans", "GeistSans Fallback", ui-sans-serif, system-ui, sans-serif',
+		color: "var(--vscode-descriptionForeground)",
+		lineHeight: 1.4,
+		opacity: 0.8,
 	}
 
 	const pStyle: React.CSSProperties = {
@@ -354,6 +397,10 @@ export const ChatRowContent = ({
 		whiteSpace: "pre-wrap",
 		wordBreak: "break-word",
 		overflowWrap: "anywhere",
+		fontSize: "14px",
+		lineHeight: 1.6,
+		fontFamily: '"GeistSans", "GeistSans Fallback", ui-sans-serif, system-ui, sans-serif',
+		color: "inherit",
 	}
 
 	const tool = useMemo(
@@ -372,7 +419,11 @@ export const ChatRowContent = ({
 		const toolIcon = (name: string) => (
 			<span
 				className={`codicon codicon-${name}`}
-				style={{ color: "var(--vscode-foreground)", marginBottom: "-1.5px" }}></span>
+				style={{
+					color: "currentColor",
+					fontSize: "12px",
+					opacity: 0.7,
+				}}></span>
 		)
 
 		switch (tool.tool) {

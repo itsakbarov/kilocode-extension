@@ -20,44 +20,49 @@ export const Markdown = memo(({ markdown, partial }: { markdown?: string; partia
 		<div
 			onMouseEnter={() => setIsHovering(true)}
 			onMouseLeave={() => setIsHovering(false)}
-			style={{ position: "relative" }}>
-			<div style={{ wordBreak: "break-word", overflowWrap: "anywhere", marginBottom: -15, marginTop: -15 }}>
+			className="relative group">
+			<div className="prose prose-sm max-w-none">
 				<MarkdownBlock markdown={markdown} />
 			</div>
 			{markdown && !partial && isHovering && (
-				<div
-					style={{
-						position: "absolute",
-						bottom: "-4px",
-						right: "8px",
-						opacity: 0,
-						animation: "fadeIn 0.2s ease-in-out forwards",
-						borderRadius: "4px",
-					}}>
-					<style>{`@keyframes fadeIn { from { opacity: 0; } to { opacity: 1.0; } }`}</style>
+				<div className="absolute top-2 right-2 opacity-0 group-hover:opacity-100 transition-opacity duration-200">
 					<StandardTooltip content="Copy as markdown">
 						<VSCodeButton
 							className="copy-button"
 							appearance="icon"
 							style={{
 								height: "24px",
-								border: "none",
-								background: "var(--vscode-editor-background)",
-								transition: "background 0.2s ease-in-out",
+								width: "24px",
+								background: "var(--vscode-button-secondaryBackground, rgba(127, 127, 127, 0.1))",
+								borderRadius: "4px",
+								transition: "all 0.15s cubic-bezier(0.4, 0, 0.2, 1)",
+								display: "flex",
+								alignItems: "center",
+								justifyContent: "center",
+								border: "1px solid var(--vscode-widget-border, rgba(127, 127, 127, 0.1))",
 							}}
 							onClick={async () => {
 								const success = await copyWithFeedback(markdown)
 								if (success) {
 									const button = document.activeElement as HTMLElement
 									if (button) {
-										button.style.background = "var(--vscode-button-background)"
+										button.style.background = "var(--vscode-button-background, #0078d4)"
+										button.style.color = "var(--vscode-button-foreground, #ffffff)"
 										setTimeout(() => {
-											button.style.background = ""
+											button.style.background =
+												"var(--vscode-button-secondaryBackground, rgba(127, 127, 127, 0.1))"
+											button.style.color = ""
 										}, 200)
 									}
 								}
 							}}>
-							<span className="codicon codicon-copy" />
+							<span
+								className="codicon codicon-copy"
+								style={{
+									fontSize: "12px",
+									color: "var(--vscode-foreground)",
+								}}
+							/>
 						</VSCodeButton>
 					</StandardTooltip>
 				</div>

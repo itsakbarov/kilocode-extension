@@ -48,15 +48,26 @@
 @keyframes message-highlight {
 	0% {
 		background-color: transparent;
+		border-left-color: transparent;
+		transform: translateX(0);
 	}
-	20% {
-		background-color: color-mix(in srgb, var(--vscode-focusBorder) 25%, transparent);
+	15% {
+		background-color: color-mix(in srgb, var(--vscode-focusBorder) 15%, transparent);
+		border-left-color: var(--vscode-textLink-foreground);
+		transform: translateX(2px);
+	}
+	30% {
+		background-color: color-mix(in srgb, var(--vscode-focusBorder) 8%, transparent);
+		border-left-color: color-mix(in srgb, var(--vscode-textLink-foreground) 70%, transparent);
+		transform: translateX(0);
 	}
 	100% {
 		background-color: transparent;
+		border-left-color: transparent;
+		transform: translateX(0);
 	}
 }
 
 .animate-message-highlight {
-	animation: message-highlight 1s ease-out forwards;
+	animation: message-highlight 1.2s cubic-bezier(0.4, 0, 0.2, 1) forwards;
 }
