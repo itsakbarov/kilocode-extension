@@ -1,6 +1,6 @@
 # Kilocode Change Marking Guidelines
 
-We are a fork of Roo. We regularly merge in the Roo codebase. To enable us to merge more easily, we mark all
+We are a fork of Roo. We regularly merge in the O Codebase. To enable us to merge more easily, we mark all
 our own changes with `kilocode_change` comments.
 
 ## Basic Usage

@@ -257,16 +257,16 @@ export class WebAuthService extends EventEmitter<AuthServiceEvents> implements A
 			const url = `${getRooCodeApiUrl()}/extension/sign-in?${params.toString()}`
 			await vscode.env.openExternal(vscode.Uri.parse(url))
 		} catch (error) {
-			this.log(`[auth] Error initiating Roo Code Cloud auth: ${error}`)
-			throw new Error(`Failed to initiate Roo Code Cloud authentication: ${error}`)
+			this.log(`[auth] Error initiating O Code Cloud auth: ${error}`)
+			throw new Error(`Failed to initiate O Code Cloud authentication: ${error}`)
 		}
 	}
 
 	/**
-	 * Handle the callback from Roo Code Cloud
+	 * Handle the callback from O Code Cloud
 	 *
 	 * This method is called when the user is redirected back to the extension
-	 * after authenticating with Roo Code Cloud.
+	 * after authenticating with O Code Cloud.
 	 *
 	 * @param code The authorization code from the callback
 	 * @param state The state parameter from the callback
@@ -278,7 +278,7 @@ export class WebAuthService extends EventEmitter<AuthServiceEvents> implements A
 		organizationId?: string | null,
 	): Promise<void> {
 		if (!code || !state) {
-			vscode.window.showInformationMessage("Invalid Roo Code Cloud sign in url")
+			vscode.window.showInformationMessage("Invalid O Code Cloud sign in url")
 			return
 		}
 
@@ -298,14 +298,14 @@ export class WebAuthService extends EventEmitter<AuthServiceEvents> implements A
 
 			await this.storeCredentials(credentials)
 
-			vscode.window.showInformationMessage("Successfully authenticated with Roo Code Cloud")
-			this.log("[auth] Successfully authenticated with Roo Code Cloud")
+			vscode.window.showInformationMessage("Successfully authenticated with O Code Cloud")
+			this.log("[auth] Successfully authenticated with O Code Cloud")
 		} catch (error) {
-			this.log(`[auth] Error handling Roo Code Cloud callback: ${error}`)
+			this.log(`[auth] Error handling O Code Cloud callback: ${error}`)
 			const previousState = this.state
 			this.state = "logged-out"
 			this.emit("logged-out", { previousState })
-			throw new Error(`Failed to handle Roo Code Cloud callback: ${error}`)
+			throw new Error(`Failed to handle O Code Cloud callback: ${error}`)
 		}
 	}
 
@@ -330,11 +330,11 @@ export class WebAuthService extends EventEmitter<AuthServiceEvents> implements A
 				}
 			}
 
-			vscode.window.showInformationMessage("Logged out from Roo Code Cloud")
-			this.log("[auth] Logged out from Roo Code Cloud")
+			vscode.window.showInformationMessage("Logged out from O Code Cloud")
+			this.log("[auth] Logged out from O Code Cloud")
 		} catch (error) {
-			this.log(`[auth] Error logging out from Roo Code Cloud: ${error}`)
-			throw new Error(`Failed to log out from Roo Code Cloud: ${error}`)
+			this.log(`[auth] Error logging out from O Code Cloud: ${error}`)
+			throw new Error(`Failed to log out from O Code Cloud: ${error}`)
 		}
 	}
 

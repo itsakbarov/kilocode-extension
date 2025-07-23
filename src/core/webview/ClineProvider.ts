@@ -1933,7 +1933,7 @@ export class ClineProvider
 
 		const packageJSON = this.context.extension?.packageJSON
 
-		// Get Roo Code Cloud authentication state
+		// Get O Code Cloud authentication state
 		let cloudIsAuthenticated: boolean | undefined
 
 		try {

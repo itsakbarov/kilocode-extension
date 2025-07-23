@@ -106,7 +106,7 @@ check_docker_services() {
 
 if [[ "$(uname -s)" != "Darwin" ]]; then
   echo "⚠️ Only macOS is currently supported."
-  echo "The Roo Code evals system can also be run with Docker on any platform."
+  echo "The O Code evals system can also be run with Docker on any platform."
   echo "See https://github.com/RooCodeInc/Roo-Code/blob/main/packages/evals/README.md for instructions."
   exit 1
 fi

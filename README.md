@@ -9,7 +9,7 @@
 
 # 🚀 O Code
 
-> Open-source VS Code AI agent. Merged features from [Roo Code](https://github.com/RooVetGit/Roo-Code) and [Cline](https://github.com/cline/cline).
+> Open-source VS Code AI agent. Merged features from [O Code](https://github.com/RooVetGit/Roo-Code) and [Cline](https://github.com/cline/cline).
 
 - ✨ Generate code from natural language
 - ✅ Checks its own work
@@ -42,13 +42,13 @@
 
 [![Watch the video](https://img.youtube.com/vi/pqGfYXgrhig/maxresdefault.jpg)](https://youtu.be/pqGfYXgrhig)
 
-## Difference between Roo Code and Cline
+## Difference between O Code and Cline
 
 We're doing our best to combine the best of both worlds. O Code combines all features of Cline, Roo, and adds a few of our own additions. It has the best features of both, and we're working on making it even better!
 
 No need to fiddle with API keys, O Code ships with the latest AI models plugged in, including Claude 4 Sonnet and Opus and Gemini 2.5 Pro.
 
-O Code is a direct fork from Roo Code, but also includes the following features from Cline (and more):
+O Code is a direct fork from O Code, but also includes the following features from Cline (and more):
 
 - MCP Server Marketplace: Easily find, and use MCP servers to extend the agent capabilities.
 - System notifications: Get notified when the agent is done with a task.

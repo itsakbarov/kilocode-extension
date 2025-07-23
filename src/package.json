@@ -1,7 +1,7 @@
 {
 	"name": "o-code",
-	"displayName": "%extension.displayName%",
-	"description": "%extension.description%",
+	"displayName": "O Code",
+	"description": "Generate, Refactor, And debug code with AI assistance. Check out our <DocsLink>documentation</DocsLink> to learn more.",
 	"publisher": "ocode",
 	"version": "4.63.3",
 	"icon": "assets/icons/icon-128.png",
@@ -18,9 +18,9 @@
 	},
 	"repository": {
 		"type": "git",
-		"url": "https://github.com/O-Code-Org/ocode"
+		"url": "https://github.com/itsakbarov/kilocode-extension"
 	},
-	"homepage": "https://ocode.ai",
+	"homepage": "https://o.xyz",
 	"categories": [
 		"AI",
 		"Chat",
