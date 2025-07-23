@@ -24,7 +24,9 @@
 @plugin "tailwindcss-animate";
 
 @theme {
-	--font-display: var(--vscode-font-family);
+	--font-display: "Geist", var(--vscode-font-family), ui-sans-serif, system-ui, sans-serif;
+	--default-font-family: "Geist", var(--vscode-font-family), ui-sans-serif, system-ui, sans-serif;
+	--font-family-vscode-font-family: "Geist", var(--vscode-font-family), ui-sans-serif, system-ui, sans-serif;
 
 	--text-xs: calc(var(--vscode-font-size) * 0.85);
 	--text-sm: calc(var(--vscode-font-size) * 0.9);
@@ -222,6 +224,7 @@ html {
 body {
 	margin: 0;
 	line-height: 1.25;
+	font-family: "Geist", var(--vscode-font-family), ui-sans-serif, system-ui, sans-serif;
 }
 
 body.scrollable,
