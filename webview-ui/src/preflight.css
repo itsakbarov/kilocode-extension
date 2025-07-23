@@ -32,8 +32,7 @@ html,
 	tab-size: 4; /* 3 */
 	font-family: var(
 		--default-font-family,
-		"GeistSans",
-		"GeistSans Fallback",
+		"Geist",
 		ui-sans-serif,
 		system-ui,
 		sans-serif,

@@ -1435,9 +1435,11 @@ const ChatTextArea = forwardRef<HTMLTextAreaElement, ChatTextAreaProps>(
 					"flex",
 					"flex-col-reverse",
 					"min-h-0",
+					"bg-[#000000]",
 					"overflow-hidden",
 					"rounded-2xl", // More rounded corners
 					"border",
+					"border-vscode-widget-border",
 					isFocused
 						? "border-vscode-focusBorder shadow-sm"
 						: isDraggingOver
@@ -1499,7 +1501,7 @@ const ChatTextArea = forwardRef<HTMLTextAreaElement, ChatTextAreaProps>(
 						onHeightChange?.(height)
 					}}
 					// Modern placeholder design
-					placeholder={inputValue ? "" : "Plan, search, build anything..."}
+					placeholder={inputValue ? "" : "Ask a follow-up..."}
 					minRows={3}
 					maxRows={15}
 					autoFocus={true}
@@ -1510,7 +1512,7 @@ const ChatTextArea = forwardRef<HTMLTextAreaElement, ChatTextAreaProps>(
 						"text-vscode-editor-font-size",
 						"leading-vscode-editor-line-height",
 						"cursor-text",
-						isEditMode ? "pt-4 pb-16 px-5" : "py-4 px-5", // Increased padding
+						isEditMode ? "pt-4 pb-20 px-5" : "py-4 px-5", // Increased padding
 						"border-none", // Remove border since container has it
 						"bg-transparent", // Transparent background
 						"transition-all duration-200 ease-in-out",
@@ -1520,93 +1522,129 @@ const ChatTextArea = forwardRef<HTMLTextAreaElement, ChatTextAreaProps>(
 						"resize-none",
 						"overflow-x-hidden",
 						"overflow-y-auto",
-						"pr-24", // Increased right padding for controls
+						"pr-32", // Increased right padding for controls
 						"flex-none flex-grow",
 						"z-[2]",
 						"scrollbar-none",
 						"scrollbar-hide",
-						"pb-16", // Increased bottom padding for controls
+						"pb-20", // Increased bottom padding for controls
 						"focus:outline-none", // Remove focus outline
 						"focus:ring-0", // Remove focus ring
 					)}
 					onScroll={() => updateHighlights()}
 				/>
 
-				{/* Modern control bar - positioned at bottom right */}
-				<div className="absolute bottom-4 right-4 z-30 flex items-center gap-2">
-					{/* Add Context button */}
-					<StandardTooltip content="Add Context (@)">
-						<button
-							aria-label="Add Context (@)"
-							disabled={showContextMenu}
-							onClick={() => {
-								if (showContextMenu || !textAreaRef.current) return
+				{/* Modern control bar - positioned at bottom */}
+				<div className="absolute bottom-4 left-5 right-5 z-30 flex items-center justify-between">
+					{/* Left side - Model selector */}
+					<div className="flex items-center gap-2">
+						<div className="flex items-center gap-1.5 text-xs text-vscode-descriptionForeground">
+							<span className="codicon codicon-pulse text-sm" />
+							<span>v0-1.5-md</span>
+							<span className="codicon codicon-chevron-down text-xs" />
+						</div>
+					</div>
 
-								textAreaRef.current.focus()
-
-								setInputValue(`${inputValue} @`)
-								setShowContextMenu(true)
-								setSearchQuery("")
-								setSelectedMenuIndex(4)
-							}}
-							className={cn(
-								"relative inline-flex items-center justify-center",
-								"bg-vscode-button-secondaryBackground border-none p-2",
-								"rounded-lg w-8 h-8",
-								"opacity-70 hover:opacity-100 text-vscode-foreground",
-								"transition-all duration-200",
-								"hover:bg-vscode-button-hoverBackground",
-								"focus:outline-none focus-visible:ring-1 focus-visible:ring-vscode-focusBorder",
-								!showContextMenu && "cursor-pointer",
-								showContextMenu && "opacity-40 cursor-not-allowed",
-								{ hidden: containerWidth < 280 },
-							)}>
-							<span className="codicon codicon-add text-sm" />
-						</button>
-					</StandardTooltip>
-
-					{/* Image upload button */}
-					<StandardTooltip content={t("chat:addImages")}>
-						<button
-							aria-label={t("chat:addImages")}
-							disabled={shouldDisableImages}
-							onClick={!shouldDisableImages ? onSelectImages : undefined}
-							className={cn(
-								"relative inline-flex items-center justify-center",
-								"bg-vscode-button-secondaryBackground border-none p-2",
-								"rounded-lg w-8 h-8",
-								"opacity-70 hover:opacity-100 text-vscode-foreground",
-								"transition-all duration-200",
-								"hover:bg-vscode-button-hoverBackground",
-								"focus:outline-none focus-visible:ring-1 focus-visible:ring-vscode-focusBorder",
-								!shouldDisableImages && "cursor-pointer",
-								shouldDisableImages && "opacity-40 cursor-not-allowed",
-							)}>
-							<span className="codicon codicon-image text-sm" />
-						</button>
-					</StandardTooltip>
-
-					{/* Send button */}
-					{!isEditMode && (
-						<StandardTooltip content={t("chat:sendMessage")}>
+					{/* Right side - Action buttons */}
+					<div className="flex items-center gap-2">
+						{/* Enhance prompt button */}
+						<StandardTooltip content={t("chat:enhancePrompt")}>
 							<button
-								aria-label={t("chat:sendMessage")}
+								aria-label={t("chat:enhancePrompt")}
 								disabled={sendingDisabled}
-								onClick={!sendingDisabled ? onSend : undefined}
+								onClick={!sendingDisabled ? handleEnhancePrompt : undefined}
 								className={cn(
 									"relative inline-flex items-center justify-center",
-									"border-none p-2",
-									"rounded-lg w-8 h-8",
-									"transition-all duration-200",
+									"bg-transparent border-none p-1.5",
+									"rounded-md min-w-[28px] min-h-[28px]",
+									"opacity-60 hover:opacity-100 text-vscode-descriptionForeground hover:text-vscode-foreground",
+									"transition-all duration-150",
+									"hover:bg-[rgba(255,255,255,0.03)] hover:border-[rgba(255,255,255,0.15)]",
 									"focus:outline-none focus-visible:ring-1 focus-visible:ring-vscode-focusBorder",
-									!sendingDisabled
-										? "bg-vscode-button-background text-vscode-button-foreground hover:bg-vscode-button-hoverBackground cursor-pointer"
-										: "bg-vscode-button-secondaryBackground text-vscode-descriptionForeground opacity-50 cursor-not-allowed",
+									"active:bg-[rgba(255,255,255,0.1)]",
+									!sendingDisabled && "cursor-pointer",
+									sendingDisabled &&
+										"opacity-40 cursor-not-allowed grayscale-[30%] hover:bg-transparent hover:border-[rgba(255,255,255,0.08)] active:bg-transparent",
 								)}>
-								<span className="codicon codicon-send text-sm rtl:-scale-x-100" />
+								<WandSparkles className={cn("w-4 h-4", isEnhancingPrompt && "animate-spin")} />
 							</button>
 						</StandardTooltip>
-					)}
+
+						{/* Add Context button */}
+						<StandardTooltip content="Add Context (@)">
+							<button
+								aria-label="Add Context (@)"
+								disabled={showContextMenu}
+								onClick={() => {
+									if (showContextMenu || !textAreaRef.current) return
+
+									textAreaRef.current.focus()
+
+									setInputValue(`${inputValue} @`)
+									setShowContextMenu(true)
+									setSearchQuery("")
+									setSelectedMenuIndex(4)
+								}}
+								className={cn(
+									"relative inline-flex items-center justify-center",
+									"bg-transparent border-none p-1.5",
+									"rounded-md min-w-[28px] min-h-[28px]",
+									"opacity-60 hover:opacity-100 text-vscode-descriptionForeground hover:text-vscode-foreground",
+									"transition-all duration-150",
+									"hover:bg-[rgba(255,255,255,0.03)] hover:border-[rgba(255,255,255,0.15)]",
+									"focus:outline-none focus-visible:ring-1 focus-visible:ring-vscode-focusBorder",
+									"active:bg-[rgba(255,255,255,0.1)]",
+									!showContextMenu && "cursor-pointer",
+									showContextMenu && "opacity-40 cursor-not-allowed",
+								)}>
+								<span className="codicon codicon-add text-sm" />
+							</button>
+						</StandardTooltip>
+
+						{/* Image upload button */}
+						<StandardTooltip content={t("chat:addImages")}>
+							<button
+								aria-label={t("chat:addImages")}
+								disabled={shouldDisableImages}
+								onClick={!shouldDisableImages ? onSelectImages : undefined}
+								className={cn(
+									"relative inline-flex items-center justify-center",
+									"bg-transparent border-none p-1.5",
+									"rounded-md min-w-[28px] min-h-[28px]",
+									"opacity-60 hover:opacity-100 text-vscode-descriptionForeground hover:text-vscode-foreground",
+									"transition-all duration-150",
+									"hover:bg-[rgba(255,255,255,0.03)] hover:border-[rgba(255,255,255,0.15)]",
+									"focus:outline-none focus-visible:ring-1 focus-visible:ring-vscode-focusBorder",
+									"active:bg-[rgba(255,255,255,0.1)]",
+									!shouldDisableImages && "cursor-pointer",
+									shouldDisableImages && "opacity-40 cursor-not-allowed",
+								)}>
+								<span className="codicon codicon-image text-sm" />
+							</button>
+						</StandardTooltip>
+
+						{/* Send button */}
+						{!isEditMode && (
+							<StandardTooltip content={t("chat:sendMessage")}>
+								<button
+									aria-label={t("chat:sendMessage")}
+									disabled={sendingDisabled}
+									onClick={!sendingDisabled ? onSend : undefined}
+									className={cn(
+										"relative inline-flex items-center justify-center",
+										"border-none p-2",
+										"rounded-lg w-8 h-8",
+										"transition-all duration-200",
+										"focus:outline-none focus-visible:ring-1 focus-visible:ring-vscode-focusBorder",
+										!sendingDisabled
+											? "bg-vscode-button-background text-vscode-button-foreground hover:bg-vscode-button-hoverBackground cursor-pointer"
+											: "bg-vscode-button-secondaryBackground text-vscode-descriptionForeground opacity-50 cursor-not-allowed",
+									)}>
+									<span className="codicon codicon-send text-sm rtl:-scale-x-100" />
+								</button>
+							</StandardTooltip>
+						)}
+					</div>
 				</div>
 
 				{/* TTS Stop button */}
@@ -1650,14 +1688,14 @@ const ChatTextArea = forwardRef<HTMLTextAreaElement, ChatTextAreaProps>(
 				{/* Modern placeholder when no input */}
 				{!inputValue && (
 					<div
-						className="absolute left-5 z-30 pr-24 flex items-center h-8"
+						className="absolute left-5 z-30 pr-32 flex items-center h-8"
 						style={{
 							bottom: "1rem",
 							color: "var(--vscode-tab-inactiveForeground)",
 							userSelect: "none",
 							pointerEvents: "none",
 						}}>
-						<span className="text-sm opacity-70">Plan, search, build anything...</span>
+						<span className="text-sm opacity-70">Ask a follow-up...</span>
 					</div>
 				)}
 			</div>
@@ -1683,29 +1721,11 @@ const ChatTextArea = forwardRef<HTMLTextAreaElement, ChatTextAreaProps>(
 						className={cn("chat-text-area", "relative", "flex", "flex-col", "outline-none")}
 						onDrop={handleDrop}
 						onDragOver={(e) => {
-							// Only allowed to drop images/files on shift key pressed.
-							if (!e.shiftKey) {
-								setIsDraggingOver(false)
-								return
-							}
-
 							e.preventDefault()
 							setIsDraggingOver(true)
-							e.dataTransfer.dropEffect = "copy"
 						}}
-						onDragLeave={(e) => {
-							e.preventDefault()
-							const rect = e.currentTarget.getBoundingClientRect()
-
-							if (
-								e.clientX <= rect.left ||
-								e.clientX >= rect.right ||
-								e.clientY <= rect.top ||
-								e.clientY >= rect.bottom
-							) {
-								setIsDraggingOver(false)
-							}
-						}}>
+						onDragLeave={() => setIsDraggingOver(false)}
+						onDragEnd={() => setIsDraggingOver(false)}>
 						{/* kilocode_change start: pull slash commands from Cline */}
 						{showSlashCommandsMenu && (
 							<div ref={slashCommandsMenuContainerRef}>

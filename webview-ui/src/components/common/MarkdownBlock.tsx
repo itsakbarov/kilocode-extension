@@ -78,8 +78,8 @@ const remarkUrlToLink = () => {
 }
 
 const StyledMarkdown = styled.div`
-	/* Base font styling with GeistSans */
-	font-family: "GeistSans", "GeistSans Fallback", ui-sans-serif, system-ui, sans-serif;
+	/* Base font styling with Geist */
+	font-family: "Geist", ui-sans-serif, system-ui, sans-serif;
 	font-size: 14px;
 	line-height: 1.6;
 	color: inherit;
@@ -120,7 +120,7 @@ const StyledMarkdown = styled.div`
 	h4,
 	h5,
 	h6 {
-		font-family: "GeistSans", "GeistSans Fallback", ui-sans-serif, system-ui, sans-serif;
+		font-family: "Geist", ui-sans-serif, system-ui, sans-serif;
 		font-weight: 600;
 		line-height: 1.3;
 		margin: 1rem 0 0.5rem 0;

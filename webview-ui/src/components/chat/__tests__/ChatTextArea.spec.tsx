@@ -59,7 +59,7 @@ describe("ChatTextArea", () => {
 		selectApiConfigDisabled: false,
 		onSelectImages: vi.fn(),
 		shouldDisableImages: false,
-		placeholderText: "Type a message...",
+		_placeholderText: "Type a message...", // kilocode_change - updated property name
 		selectedImages: [],
 		setSelectedImages: vi.fn(),
 		onHeightChange: vi.fn(),

@@ -53,7 +53,7 @@ mermaid.initialize({
 		...MERMAID_THEME,
 		fontSize: "16px",
 		fontFamily:
-			"GeistSans, GeistSans Fallback, ui-sans-serif, system-ui, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji",
+			"Geist, ui-sans-serif, system-ui, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji",
 
 		// Additional styling
 		noteTextColor: "#ffffff",

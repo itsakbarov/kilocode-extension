@@ -386,7 +386,7 @@ export const ChatRowContent = ({
 		wordBreak: "break-word",
 		fontSize: "12px",
 		fontWeight: 500,
-		fontFamily: '"GeistSans", "GeistSans Fallback", ui-sans-serif, system-ui, sans-serif',
+		fontFamily: '"Geist", ui-sans-serif, system-ui, sans-serif',
 		color: "var(--vscode-descriptionForeground)",
 		lineHeight: 1.4,
 		opacity: 0.8,
@@ -399,7 +399,7 @@ export const ChatRowContent = ({
 		overflowWrap: "anywhere",
 		fontSize: "14px",
 		lineHeight: 1.6,
-		fontFamily: '"GeistSans", "GeistSans Fallback", ui-sans-serif, system-ui, sans-serif',
+		fontFamily: '"Geist", ui-sans-serif, system-ui, sans-serif',
 		color: "inherit",
 	}
 
