@@ -1,6 +1,6 @@
 {
 	"extension": {
-		"name": "Kilo Code",
+		"name": "O Code",
 		"description": "ผู้ช่วยเขียนโค้ด AI แบบ Open Source สำหรับการวางแผน สร้าง และแก้ไขโค้ด"
 	},
 	"number_format": {
@@ -104,7 +104,7 @@
 	"warnings": {
 		"no_terminal_content": "ไม่มีเนื้อหาเทอร์มินัลที่เลือก",
 		"missing_task_files": "ไฟล์ของงานนี้หายไป คุณต้องการลบออกจากรายการงานหรือไม่?",
-		"auto_import_failed": "ล้มเหลวในการนำเข้าการตั้งค่า Kilo Code อัตโนมัติ: {{error}}"
+		"auto_import_failed": "ล้มเหลวในการนำเข้าการตั้งค่า O Code อัตโนมัติ: {{error}}"
 	},
 	"info": {
 		"no_changes": "ไม่พบการเปลี่ยนแปลง",
@@ -113,7 +113,7 @@
 		"custom_storage_path_set": "ตั้งค่าเส้นทางจัดเก็บที่กำหนดเอง: {{path}}",
 		"default_storage_path": "กลับไปใช้เส้นทางจัดเก็บเริ่มต้น",
 		"settings_imported": "นำเข้าการตั้งค่าเรียบร้อยแล้ว",
-		"auto_import_success": "นำเข้าการตั้งค่า Kilo Code อัตโนมัติจาก {{filename}} เรียบร้อยแล้ว",
+		"auto_import_success": "นำเข้าการตั้งค่า O Code อัตโนมัติจาก {{filename}} เรียบร้อยแล้ว",
 		"share_link_copied": "คัดลอกลิงก์แชร์ไปยังคลิปบอร์ด",
 		"organization_share_link_copied": "คัดลอกลิงก์แชร์องค์กรไปยังคลิปบอร์ด!",
 		"public_share_link_copied": "คัดลอกลิงก์แชร์สาธารณะไปยังคลิปบอร์ด!",
@@ -146,7 +146,7 @@
 		"enter_valid_path": "กรุณาป้อนเส้นทางที่ถูกต้อง"
 	},
 	"input": {
-		"task_prompt": "Kilo Code ควรทำอะไร?",
+		"task_prompt": "O Code ควรทำอะไร?",
 		"task_placeholder": "สร้าง ค้นหา ถามอะไรก็ได้"
 	},
 	"customModes": {
@@ -167,8 +167,8 @@
 	},
 	"mdm": {
 		"errors": {
-			"cloud_auth_required": "องค์กรของคุณต้องการการยืนยันตัวตน Kilo Code Cloud กรุณาลงชื่อเข้าใช้เพื่อดำเนินการต่อ",
-			"organization_mismatch": "คุณต้องยืนยันตัวตนด้วยบัญชี Kilo Code Cloud ขององค์กรของคุณ",
+			"cloud_auth_required": "องค์กรของคุณต้องการการยืนยันตัวตน O Code Cloud กรุณาลงชื่อเข้าใช้เพื่อดำเนินการต่อ",
+			"organization_mismatch": "คุณต้องยืนยันตัวตนด้วยบัญชี O Code Cloud ขององค์กรของคุณ",
 			"verification_failed": "ไม่สามารถตรวจสอบการยืนยันตัวตนขององค์กร"
 		}
 	},

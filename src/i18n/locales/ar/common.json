@@ -1,6 +1,6 @@
 {
 	"extension": {
-		"name": "Kilo Code",
+		"name": "O Code",
 		"description": "أداة ذكاء اصطناعي مفتوحة المصدر تساعدك في تخطيط وبناء وتعديل الأكواد."
 	},
 	"number_format": {
@@ -104,7 +104,7 @@
 	"warnings": {
 		"no_terminal_content": "ما تم تحديد أي محتوى من الطرفية",
 		"missing_task_files": "ملفات المهمة ناقصة. تبي نحذفها من القائمة؟",
-		"auto_import_failed": "فشل الاستيراد التلقائي لإعدادات Kilo Code: {{error}}"
+		"auto_import_failed": "فشل الاستيراد التلقائي لإعدادات O Code: {{error}}"
 	},
 	"info": {
 		"no_changes": "ما تم العثور على تغييرات.",
@@ -118,7 +118,7 @@
 		"public_share_link_copied": "تم نسخ رابط المشاركة العام!",
 		"image_copied_to_clipboard": "تم نسخ بيانات الصورة إلى الحافظة",
 		"image_saved": "تم حفظ الصورة في {{path}}",
-		"auto_import_success": "تم استيراد إعدادات Kilo Code تلقائياً من {{filename}}",
+		"auto_import_success": "تم استيراد إعدادات O Code تلقائياً من {{filename}}",
 		"mode_exported": "تم تصدير الوضع '{{mode}}' بنجاح",
 		"mode_imported": "تم استيراد الوضع بنجاح"
 	},
@@ -146,7 +146,7 @@
 		"enter_valid_path": "رجاءً أدخل مسار صحيح"
 	},
 	"input": {
-		"task_prompt": "وش تبي Kilo Code يسوي؟",
+		"task_prompt": "وش تبي O Code يسوي؟",
 		"task_placeholder": "ابنِ، ابحث، اسأل عن شي"
 	},
 	"customModes": {
@@ -167,8 +167,8 @@
 	},
 	"mdm": {
 		"errors": {
-			"cloud_auth_required": "منظمتك تتطلب تسجيل دخول Kilo Code Cloud. سجل دخولك عشان تكمل.",
-			"organization_mismatch": "لازم تسجل دخول بحساب المنظمة في Kilo Code Cloud.",
+			"cloud_auth_required": "منظمتك تتطلب تسجيل دخول O Code Cloud. سجل دخولك عشان تكمل.",
+			"organization_mismatch": "لازم تسجل دخول بحساب المنظمة في O Code Cloud.",
 			"verification_failed": "فشل التحقق من تسجيل الدخول للمنظمة."
 		}
 	},

@@ -1,7 +1,7 @@
 {
 	"welcome": {
-		"greeting": "Witaj w Kilo Code!",
-		"introText1": "Kilo Code to darmowy, otwartoźródłowy agent kodowania AI.",
+		"greeting": "Witaj w O Code!",
+		"introText1": "O Code to darmowy, otwartoźródłowy agent kodowania AI.",
 		"introText2": "Współpracuje z najnowszymi modelami AI, takimi jak Claude 4 Sonnet, Gemini 2.5 Pro, GPT-4.1 i ponad 450 innymi.",
 		"introText3": "Stwórz darmowe konto i otrzymaj tokeny o wartości $20 do wykorzystania z dowolnym modelem AI.",
 		"ctaButton": "Stwórz darmowe konto",
@@ -11,7 +11,7 @@
 	},
 	"lowCreditWarning": {
 		"addCredit": "Dodaj kredyt",
-		"lowBalance": "Twój stan konta Kilo Code jest niski"
+		"lowBalance": "Twój stan konta O Code jest niski"
 	},
 	"notifications": {
 		"toolRequest": "Żądanie narzędzia oczekuje na zatwierdzenie",
@@ -23,32 +23,32 @@
 			"mcp": "Serwery MCP"
 		},
 		"provider": {
-			"account": "Konto Kilo Code",
-			"apiKey": "Klucz API Kilo Code",
-			"login": "Zaloguj się do Kilo Code",
-			"logout": "Wyloguj się z Kilo Code",
+			"account": "Konto O Code",
+			"apiKey": "Klucz API O Code",
+			"login": "Zaloguj się do O Code",
+			"logout": "Wyloguj się z O Code",
 			"providerRouting": {
-				"title": "Kilo Code - Routing dostawców OpenRouter",
-				"description": "Kilo Code kieruje żądania do najlepszych dostępnych dostawców dla Twojego modelu. Domyślnie żądania są równoważone obciążeniem między najlepszymi dostawcami, aby zmaksymalizować czas działania. Możesz jednak wybrać konkretnego dostawcę do użycia dla tego modelu."
+				"title": "O Code - Routing dostawców OpenRouter",
+				"description": "O Code kieruje żądania do najlepszych dostępnych dostawców dla Twojego modelu. Domyślnie żądania są równoważone obciążeniem między najlepszymi dostawcami, aby zmaksymalizować czas działania. Możesz jednak wybrać konkretnego dostawcę do użycia dla tego modelu."
 			}
 		},
 		"contextManagement": {
 			"allowVeryLargeReads": {
 				"label": "Zezwól na odczyt bardzo dużych plików",
-				"description": "Gdy włączone, Kilo Code będzie wykonywać odczyty bardzo dużych plików lub wyjść MCP, nawet jeśli istnieje duże prawdopodobieństwo przepełnienia okna kontekstu (rozmiar zawartości >80% okna kontekstu)."
+				"description": "Gdy włączone, O Code będzie wykonywać odczyty bardzo dużych plików lub wyjść MCP, nawet jeśli istnieje duże prawdopodobieństwo przepełnienia okna kontekstu (rozmiar zawartości >80% okna kontekstu)."
 			}
 		},
 		"systemNotifications": {
 			"label": "Włącz powiadomienia systemowe",
-			"description": "Gdy włączone, Kilo Code będzie wysyłać powiadomienia systemowe o ważnych wydarzeniach, takich jak zakończenie zadania lub błędy.",
+			"description": "Gdy włączone, O Code będzie wysyłać powiadomienia systemowe o ważnych wydarzeniach, takich jak zakończenie zadania lub błędy.",
 			"testButton": "Testuj powiadomienie",
-			"testTitle": "Kilo Code",
-			"testMessage": "To jest testowe powiadomienie z Kilo Code."
+			"testTitle": "O Code",
+			"testMessage": "To jest testowe powiadomienie z O Code."
 		}
 	},
 	"chat": {
 		"condense": {
-			"wantsToCondense": "Kilo Code chce skondensować Twoją rozmowę",
+			"wantsToCondense": "O Code chce skondensować Twoją rozmowę",
 			"condenseConversation": "Skondensuj Rozmowę"
 		}
 	},
@@ -64,15 +64,15 @@
 	},
 	"docs": "Dokumentacja",
 	"rules": {
-		"tooltip": "Zarządzaj Regułami i Przepływami Pracy Kilo Code",
-		"ariaLabel": "Reguły Kilo Code",
+		"tooltip": "Zarządzaj Regułami i Przepływami Pracy O Code",
+		"ariaLabel": "Reguły O Code",
 		"tabs": {
 			"rules": "Reguły",
 			"workflows": "Przepływy Pracy"
 		},
 		"description": {
-			"rules": "Reguły pozwalają dostarczyć Kilo Code instrukcje, których powinien przestrzegać we wszystkich trybach i dla wszystkich promptów. To trwały sposób dołączania kontekstu i preferencji dla wszystkich rozmów w twoim obszarze roboczym lub globalnie.",
-			"workflows": "Przepływy pracy to przygotowany szablon dla rozmowy. Przepływy pracy pozwalają zdefiniować prompty, których często używasz, i mogą zawierać serię kroków, aby poprowadzić Kilo Code przez powtarzalne zadania, takie jak wdrażanie usługi lub przesyłanie PR. Aby wywołać przepływ pracy, wpisz",
+			"rules": "Reguły pozwalają dostarczyć O Code instrukcje, których powinien przestrzegać we wszystkich trybach i dla wszystkich promptów. To trwały sposób dołączania kontekstu i preferencji dla wszystkich rozmów w twoim obszarze roboczym lub globalnie.",
+			"workflows": "Przepływy pracy to przygotowany szablon dla rozmowy. Przepływy pracy pozwalają zdefiniować prompty, których często używasz, i mogą zawierać serię kroków, aby poprowadzić O Code przez powtarzalne zadania, takie jak wdrażanie usługi lub przesyłanie PR. Aby wywołać przepływ pracy, wpisz",
 			"workflowsInChat": "w czacie."
 		},
 		"sections": {

@@ -35,7 +35,7 @@
 		"display": "Exibir"
 	},
 	"prompts": {
-		"description": "Configure prompts de suporte usados para ações rápidas como melhorar prompts, explicar código e corrigir problemas. Esses prompts ajudam o Kilo Code a fornecer melhor assistência para tarefas comuns de desenvolvimento."
+		"description": "Configure prompts de suporte usados para ações rápidas como melhorar prompts, explicar código e corrigir problemas. Esses prompts ajudam o O Code a fornecer melhor assistência para tarefas comuns de desenvolvimento."
 	},
 	"codeIndex": {
 		"title": "Indexação de Código",
@@ -123,15 +123,15 @@
 		"resetToDefault": "Redefinir para o padrão"
 	},
 	"autoApprove": {
-		"description": "Permitir que o Kilo Code realize operações automaticamente sem exigir aprovação. Ative essas configurações apenas se confiar totalmente na IA e compreender os riscos de segurança associados.",
+		"description": "Permitir que o O Code realize operações automaticamente sem exigir aprovação. Ative essas configurações apenas se confiar totalmente na IA e compreender os riscos de segurança associados.",
 		"toggleAriaLabel": "Alternar aprovação automática",
 		"disabledAriaLabel": "Aprovação automática desativada - selecione as opções primeiro",
 		"readOnly": {
 			"label": "Leitura",
-			"description": "Quando ativado, o Kilo Code visualizará automaticamente o conteúdo do diretório e lerá arquivos sem que você precise clicar no botão Aprovar.",
+			"description": "Quando ativado, o O Code visualizará automaticamente o conteúdo do diretório e lerá arquivos sem que você precise clicar no botão Aprovar.",
 			"outsideWorkspace": {
 				"label": "Incluir arquivos fora do espaço de trabalho",
-				"description": "Permitir que o Kilo Code leia arquivos fora do espaço de trabalho atual sem exigir aprovação."
+				"description": "Permitir que o O Code leia arquivos fora do espaço de trabalho atual sem exigir aprovação."
 			}
 		},
 		"write": {
@@ -140,11 +140,11 @@
 			"delayLabel": "Atraso após escritas para permitir que diagnósticos detectem problemas potenciais",
 			"outsideWorkspace": {
 				"label": "Incluir arquivos fora do espaço de trabalho",
-				"description": "Permitir que o Kilo Code crie e edite arquivos fora do espaço de trabalho atual sem exigir aprovação."
+				"description": "Permitir que o O Code crie e edite arquivos fora do espaço de trabalho atual sem exigir aprovação."
 			},
 			"protected": {
 				"label": "Incluir arquivos protegidos",
-				"description": "Permitir que o Kilo Code crie e edite arquivos protegidos (como .kilocodeignore e arquivos de configuração .kilocode/) sem exigir aprovação."
+				"description": "Permitir que o O Code crie e edite arquivos protegidos (como .kilocodeignore e arquivos de configuração .kilocode/) sem exigir aprovação."
 			}
 		},
 		"browser": {
@@ -310,13 +310,13 @@
 			"draftModelDesc": "O modelo de rascunho deve ser da mesma família de modelos para que a decodificação especulativa funcione corretamente.",
 			"selectDraftModel": "Selecionar Modelo de Rascunho",
 			"noModelsFound": "Nenhum modelo de rascunho encontrado. Certifique-se de que o LM Studio esteja em execução com o Modo Servidor ativado.",
-			"description": "O LM Studio permite que você execute modelos localmente em seu computador. Para instruções sobre como começar, veja o <a>guia de início rápido</a> deles. Você também precisará iniciar o recurso de <b>servidor local</b> do LM Studio para usá-lo com esta extensão. <span>Nota:</span> O Kilo Code usa prompts complexos e funciona melhor com modelos Claude. Modelos menos capazes podem não funcionar como esperado."
+			"description": "O LM Studio permite que você execute modelos localmente em seu computador. Para instruções sobre como começar, veja o <a>guia de início rápido</a> deles. Você também precisará iniciar o recurso de <b>servidor local</b> do LM Studio para usá-lo com esta extensão. <span>Nota:</span> O O Code usa prompts complexos e funciona melhor com modelos Claude. Modelos menos capazes podem não funcionar como esperado."
 		},
 		"ollama": {
 			"baseUrl": "URL Base (opcional)",
 			"modelId": "ID do Modelo",
 			"description": "O Ollama permite que você execute modelos localmente em seu computador. Para instruções sobre como começar, veja o guia de início rápido deles.",
-			"warning": "Nota: O Kilo Code usa prompts complexos e funciona melhor com modelos Claude. Modelos menos capazes podem não funcionar como esperado."
+			"warning": "Nota: O O Code usa prompts complexos e funciona melhor com modelos Claude. Modelos menos capazes podem não funcionar como esperado."
 		},
 		"unboundApiKey": "Chave de API Unbound",
 		"getUnboundApiKey": "Obter chave de API Unbound",
@@ -334,7 +334,7 @@
 			}
 		},
 		"customModel": {
-			"capabilities": "Configure as capacidades e preços para seu modelo personalizado compatível com OpenAI. Tenha cuidado ao especificar as capacidades do modelo, pois elas podem afetar como o Kilo Code funciona.",
+			"capabilities": "Configure as capacidades e preços para seu modelo personalizado compatível com OpenAI. Tenha cuidado ao especificar as capacidades do modelo, pois elas podem afetar como o O Code funciona.",
 			"maxTokens": {
 				"label": "Máximo de Tokens de Saída",
 				"description": "Número máximo de tokens que o modelo pode gerar em uma resposta. (Especifique -1 para permitir que o servidor defina o máximo de tokens.)"
@@ -381,7 +381,7 @@
 		},
 		"consecutiveMistakeLimit": {
 			"label": "Limite de Erros e Repetições",
-			"description": "Número de erros consecutivos ou ações repetidas antes de exibir o diálogo 'Kilo Code está com problemas'",
+			"description": "Número de erros consecutivos ou ações repetidas antes de exibir o diálogo 'O Code está com problemas'",
 			"unlimitedDescription": "Tentativas ilimitadas ativadas (prosseguimento automático). O diálogo nunca aparecerá.",
 			"warning": "⚠️ Definir como 0 permite tentativas ilimitadas, o que pode consumir um uso significativo da API"
 		},
@@ -418,7 +418,7 @@
 	"browser": {
 		"enable": {
 			"label": "Ativar ferramenta de navegador",
-			"description": "Quando ativado, o Kilo Code pode usar um navegador para interagir com sites ao usar modelos que suportam o uso do computador. <0>Saiba mais</0>"
+			"description": "Quando ativado, o O Code pode usar um navegador para interagir com sites ao usar modelos que suportam o uso do computador. <0>Saiba mais</0>"
 		},
 		"viewport": {
 			"label": "Tamanho da viewport",
@@ -446,18 +446,18 @@
 	"checkpoints": {
 		"enable": {
 			"label": "Ativar pontos de verificação automáticos",
-			"description": "Quando ativado, o Kilo Code criará automaticamente pontos de verificação durante a execução de tarefas, facilitando a revisão de alterações ou o retorno a estados anteriores. <0>Saiba mais</0>"
+			"description": "Quando ativado, o O Code criará automaticamente pontos de verificação durante a execução de tarefas, facilitando a revisão de alterações ou o retorno a estados anteriores. <0>Saiba mais</0>"
 		}
 	},
 	"notifications": {
 		"sound": {
 			"label": "Ativar efeitos sonoros",
-			"description": "Quando ativado, o Kilo Code reproduzirá efeitos sonoros para notificações e eventos.",
+			"description": "Quando ativado, o O Code reproduzirá efeitos sonoros para notificações e eventos.",
 			"volumeLabel": "Volume"
 		},
 		"tts": {
 			"label": "Ativar texto para fala",
-			"description": "Quando ativado, o Kilo Code lerá em voz alta suas respostas usando texto para fala.",
+			"description": "Quando ativado, o O Code lerá em voz alta suas respostas usando texto para fala.",
 			"speedLabel": "Velocidade"
 		}
 	},
@@ -465,7 +465,7 @@
 		"description": "Controle quais informações são incluídas na janela de contexto da IA, afetando o uso de token e a qualidade da resposta",
 		"autoCondenseContextPercent": {
 			"label": "Limite para acionar a condensação inteligente de contexto",
-			"description": "Quando a janela de contexto atingir este limite, o Kilo Code a condensará automaticamente."
+			"description": "Quando a janela de contexto atingir este limite, o O Code a condensará automaticamente."
 		},
 		"condensingApiConfiguration": {
 			"label": "Configuração de API para Condensação de Contexto",
@@ -481,7 +481,7 @@
 		},
 		"autoCondenseContext": {
 			"name": "Acionar automaticamente a condensação inteligente de contexto",
-			"description": "Quando habilitado, o Kilo Code condensará automaticamente o contexto quando o limite for atingido. Quando desabilitado, você ainda pode acionar manualmente a condensação de contexto."
+			"description": "Quando habilitado, o O Code condensará automaticamente o contexto quando o limite for atingido. Quando desabilitado, você ainda pode acionar manualmente a condensação de contexto."
 		},
 		"openTabs": {
 			"label": "Limite de contexto de abas abertas",
@@ -497,7 +497,7 @@
 		},
 		"maxReadFile": {
 			"label": "Limite de auto-truncamento de leitura de arquivo",
-			"description": "O Kilo Code lê este número de linhas quando o modelo omite valores de início/fim. Se este número for menor que o total do arquivo, o Kilo Code gera um índice de números de linha das definições de código. Casos especiais: -1 instrui o Kilo Code a ler o arquivo inteiro (sem indexação), e 0 instrui a não ler linhas e fornecer apenas índices de linha para contexto mínimo. Valores mais baixos minimizam o uso inicial de contexto, permitindo leituras posteriores precisas de intervalos de linhas. Requisições com início/fim explícitos não são limitadas por esta configuração.",
+			"description": "O O Code lê este número de linhas quando o modelo omite valores de início/fim. Se este número for menor que o total do arquivo, o O Code gera um índice de números de linha das definições de código. Casos especiais: -1 instrui o O Code a ler o arquivo inteiro (sem indexação), e 0 instrui a não ler linhas e fornecer apenas índices de linha para contexto mínimo. Valores mais baixos minimizam o uso inicial de contexto, permitindo leituras posteriores precisas de intervalos de linhas. Requisições com início/fim explícitos não são limitadas por esta configuração.",
 			"lines": "linhas",
 			"always_full_read": "Sempre ler o arquivo inteiro"
 		},
@@ -575,7 +575,7 @@
 	"advanced": {
 		"diff": {
 			"label": "Ativar edição através de diffs",
-			"description": "Quando ativado, o Kilo Code poderá editar arquivos mais rapidamente e rejeitará automaticamente escritas completas de arquivos truncados. Funciona melhor com o modelo mais recente Claude 4 Sonnet.",
+			"description": "Quando ativado, o O Code poderá editar arquivos mais rapidamente e rejeitará automaticamente escritas completas de arquivos truncados. Funciona melhor com o modelo mais recente Claude 4 Sonnet.",
 			"strategy": {
 				"label": "Estratégia de diff",
 				"options": {
@@ -596,7 +596,7 @@
 		},
 		"todoList": {
 			"label": "Habilitar ferramenta de lista de tarefas",
-			"description": "Quando habilitado, o Kilo Code pode criar e gerenciar listas de tarefas para acompanhar o progresso das tarefas. Isso ajuda a organizar tarefas complexas em etapas gerenciáveis."
+			"description": "Quando habilitado, o O Code pode criar e gerenciar listas de tarefas para acompanhar o progresso das tarefas. Isso ajuda a organizar tarefas complexas em etapas gerenciáveis."
 		}
 	},
 	"experimental": {
@@ -606,27 +606,27 @@
 		},
 		"SEARCH_AND_REPLACE": {
 			"name": "Usar ferramenta de busca e substituição experimental",
-			"description": "Ativar a ferramenta de busca e substituição experimental, permitindo que o Kilo Code substitua várias instâncias de um termo de busca em uma única solicitação."
+			"description": "Ativar a ferramenta de busca e substituição experimental, permitindo que o O Code substitua várias instâncias de um termo de busca em uma única solicitação."
 		},
 		"INSERT_BLOCK": {
 			"name": "Usar ferramenta de inserção de conteúdo experimental",
-			"description": "Ativar a ferramenta de inserção de conteúdo experimental, permitindo que o Kilo Code insira conteúdo em números de linha específicos sem precisar criar um diff."
+			"description": "Ativar a ferramenta de inserção de conteúdo experimental, permitindo que o O Code insira conteúdo em números de linha específicos sem precisar criar um diff."
 		},
 		"POWER_STEERING": {
 			"name": "Usar modo \"direção assistida\" experimental",
-			"description": "Quando ativado, o Kilo Code lembrará o modelo sobre os detalhes da sua definição de modo atual com mais frequência. Isso levará a uma adesão mais forte às definições de função e instruções personalizadas, mas usará mais tokens por mensagem."
+			"description": "Quando ativado, o O Code lembrará o modelo sobre os detalhes da sua definição de modo atual com mais frequência. Isso levará a uma adesão mais forte às definições de função e instruções personalizadas, mas usará mais tokens por mensagem."
 		},
 		"AUTOCOMPLETE": {
 			"name": "Usar recurso experimental de \"autocompletar\"",
-			"description": "Quando ativado, o Kilo Code fornecerá sugestões de código em linha enquanto você digita."
+			"description": "Quando ativado, o O Code fornecerá sugestões de código em linha enquanto você digita."
 		},
 		"MULTI_SEARCH_AND_REPLACE": {
 			"name": "Usar ferramenta diff de múltiplos blocos experimental",
-			"description": "Quando ativado, o Kilo Code usará a ferramenta diff de múltiplos blocos. Isso tentará atualizar vários blocos de código no arquivo em uma única solicitação."
+			"description": "Quando ativado, o O Code usará a ferramenta diff de múltiplos blocos. Isso tentará atualizar vários blocos de código no arquivo em uma única solicitação."
 		},
 		"CONCURRENT_FILE_READS": {
 			"name": "Habilitar leitura simultânea de arquivos",
-			"description": "Quando habilitado, o Kilo Code pode ler vários arquivos em uma única solicitação. Quando desabilitado, o Kilo Code deve ler arquivos um de cada vez. Desabilitar pode ajudar ao trabalhar com modelos menos capazes ou quando você deseja mais controle sobre o acesso aos arquivos."
+			"description": "Quando habilitado, o O Code pode ler vários arquivos em uma única solicitação. Quando desabilitado, o O Code deve ler arquivos um de cada vez. Desabilitar pode ajudar ao trabalhar com modelos menos capazes ou quando você deseja mais controle sobre o acesso aos arquivos."
 		},
 		"MARKETPLACE": {
 			"name": "Ativar Marketplace",
@@ -634,12 +634,12 @@
 		},
 		"MULTI_FILE_APPLY_DIFF": {
 			"name": "Habilitar edições de arquivos concorrentes",
-			"description": "Quando habilitado, o Kilo Code pode editar múltiplos arquivos em uma única solicitação. Quando desabilitado, o Kilo Code deve editar arquivos um de cada vez. Desabilitar isso pode ajudar ao trabalhar com modelos menos capazes ou quando você quer mais controle sobre modificações de arquivos."
+			"description": "Quando habilitado, o O Code pode editar múltiplos arquivos em uma única solicitação. Quando desabilitado, o O Code deve editar arquivos um de cada vez. Desabilitar isso pode ajudar ao trabalhar com modelos menos capazes ou quando você quer mais controle sobre modificações de arquivos."
 		}
 	},
 	"promptCaching": {
 		"label": "Desativar cache de prompts",
-		"description": "Quando marcado, o Kilo Code não usará o cache de prompts para este modelo."
+		"description": "Quando marcado, o O Code não usará o cache de prompts para este modelo."
 	},
 	"temperature": {
 		"useCustom": "Usar temperatura personalizada",
@@ -670,7 +670,7 @@
 		}
 	},
 	"modelPicker": {
-		"automaticFetch": "A extensão busca automaticamente a lista mais recente de modelos disponíveis em <serviceLink>{{serviceName}}</serviceLink>. Se você não tem certeza sobre qual modelo escolher, o Kilo Code funciona melhor com <defaultModelLink>{{defaultModelId}}</defaultModelLink>. Você também pode pesquisar por \"free\" para encontrar opções gratuitas atualmente disponíveis.",
+		"automaticFetch": "A extensão busca automaticamente a lista mais recente de modelos disponíveis em <serviceLink>{{serviceName}}</serviceLink>. Se você não tem certeza sobre qual modelo escolher, o O Code funciona melhor com <defaultModelLink>{{defaultModelId}}</defaultModelLink>. Você também pode pesquisar por \"free\" para encontrar opções gratuitas atualmente disponíveis.",
 		"label": "Modelo",
 		"searchPlaceholder": "Pesquisar",
 		"noMatchFound": "Nenhuma correspondência encontrada",
@@ -681,7 +681,7 @@
 		"support": "Para questões financeiras, entre em contato com o Suporte ao Cliente em <supportLink>https://kilocode.ai/support</supportLink>",
 		"telemetry": {
 			"label": "Permitir relatórios de erros e uso",
-			"description": "Ajude a melhorar o Kilo Code enviando dados de uso e relatórios de erros. Nunca são enviados código, prompts ou informações pessoais. Consulte nossa política de privacidade para mais detalhes."
+			"description": "Ajude a melhorar o O Code enviando dados de uso e relatórios de erros. Nunca são enviados código, prompts ou informações pessoais. Consulte nossa política de privacidade para mais detalhes."
 		},
 		"settings": {
 			"import": "Importar",

@@ -40,7 +40,7 @@
 		}
 	},
 	"commitMessage": {
-		"activated": "Генератор повідомлень для коміту Kilo Code активовано",
+		"activated": "Генератор повідомлень для коміту O Code активовано",
 		"gitNotFound": "⚠️ Git репозиторій не знайдено або git недоступний",
 		"gitInitError": "⚠️ Помилка ініціалізації Git: {{error}}",
 		"generating": "Kilo: Генерація повідомлення коміту...",
@@ -48,7 +48,7 @@
 		"generated": "Kilo: Повідомлення коміту згенеровано!",
 		"generationFailed": "Kilo: Не вдалося створити повідомлення коміту: {{errorMessage}}",
 		"generatingFromUnstaged": "Kilo: Створення повідомлення з використанням незафіксованих змін",
-    "activationFailed": "Kilo: Не вдалося активувати генератор повідомлень: {{error}}",
+		"activationFailed": "Kilo: Не вдалося активувати генератор повідомлень: {{error}}",
 		"providerRegistered": "Kilo: Постачальник повідомлень коміту зареєстрований"
 	},
 	"autocomplete": {
@@ -56,9 +56,9 @@
 			"enabled": "$(sparkle) Kilo Автодоповнення",
 			"disabled": "$(circle-slash) Kilo Автодоповнення",
 			"tooltip": {
-				"basic": "Автодоповнення Kilo Code",
+				"basic": "Автодоповнення O Code",
 				"tokenError": "Для використання автозаповнення необхідно встановити дійсний токен",
-				"disabled": "Kilo Code Автозаповнення (вимкнено)",
+				"disabled": "O Code Автозаповнення (вимкнено)",
 				"lastCompletion": "Останнє завершення:",
 				"model": "Модель:",
 				"sessionTotal": "Загальна вартість сеансу:"
@@ -77,26 +77,26 @@
 			"processing": "Обробка запропонованих редагувань...",
 			"generating": "Генерування запропонованих виправлень...",
 			"showing": "Відображення запропонованих змін...",
-			"title": "Kilo Code"
+			"title": "O Code"
 		},
 		"input": {
-			"title": "Kilo Code: Швидке Завдання",
+			"title": "O Code: Швидке Завдання",
 			"placeholder": "наприклад, 'переробіть цю функцію, щоб вона була ефективнішою'"
 		},
 		"commands": {
-			"generateSuggestions": "Kilo Code: Створення пропонованих виправлень",
+			"generateSuggestions": "O Code: Створення пропонованих виправлень",
 			"displaySuggestions": "Показати запропоновані редагування",
 			"applyCurrentSuggestion": "Застосувати поточну запропоновану правку",
 			"cancelSuggestions": "Скасувати запропоновані правки",
 			"promptCodeSuggestion": "Швидке Завдання",
-			"category": "Kilo Code",
+			"category": "O Code",
 			"applyAllSuggestions": "Застосувати всі запропоновані редагування"
 		},
 		"codeAction": {
-			"title": "Kilo Code: Запропоновані правки"
+			"title": "O Code: Запропоновані правки"
 		},
 		"chatParticipant": {
-			"fullName": "Kilo Code Агент",
+			"fullName": "O Code Агент",
 			"description": "Я можу допомогти вам зі швидкими завданнями та запропонувати правки.",
 			"name": "Агент"
 		},

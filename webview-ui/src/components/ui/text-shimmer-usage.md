@@ -16,7 +16,7 @@ interface TextShimmerProps {
 }
 ```
 
-## Best Integration Points in Kilo Code
+## Best Integration Points in O Code
 
 ### 1. Chat Streaming States
 
@@ -121,7 +121,7 @@ import { TextShimmer } from "@/components/ui/text-shimmer"
 
 ```tsx
 <TextShimmer as="h1" duration={3} className="text-2xl font-bold text-center">
-	Welcome to Kilo Code
+	Welcome to O Code
 </TextShimmer>
 ```
 

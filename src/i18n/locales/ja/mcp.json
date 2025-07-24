@@ -5,7 +5,7 @@
 		"invalid_settings_validation": "MCP設定フォーマットが無効です：{{errorMessages}}",
 		"create_json": ".kilocode/mcp.jsonの作成または開くことに失敗しました：{{error}}",
 		"failed_update_project": "プロジェクトMCPサーバーの更新に失敗しました",
-		"invalidJsonArgument": "Kilo Codeが無効なJSON引数で{{toolName}}を使用しようとしました。再試行中..."
+		"invalidJsonArgument": "O Codeが無効なJSON引数で{{toolName}}を使用しようとしました。再試行中..."
 	},
 	"info": {
 		"server_restarting": "MCPサーバー{{serverName}}を再起動中...",

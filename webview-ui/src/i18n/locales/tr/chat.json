@@ -1,5 +1,5 @@
 {
-	"greeting": "Kilo Code sizin için ne yapabilir?",
+	"greeting": "O Code sizin için ne yapabilir?",
 	"task": {
 		"title": "Görev",
 		"seeMore": "Daha fazla gör",
@@ -18,7 +18,7 @@
 		"sharePublicly": "Herkese açık paylaş",
 		"sharePubliclyDescription": "Bağlantıya sahip herkes erişebilir",
 		"connectToCloud": "Buluta bağlan",
-		"connectToCloudDescription": "Görevleri paylaşmak için Kilo Code Cloud'a giriş yap",
+		"connectToCloudDescription": "Görevleri paylaşmak için O Code Cloud'a giriş yap",
 		"sharingDisabledByOrganization": "Paylaşım kuruluş tarafından devre dışı bırakıldı",
 		"shareSuccessOrganization": "Organizasyon bağlantısı panoya kopyalandı",
 		"shareSuccessPublic": "Genel bağlantı panoya kopyalandı"
@@ -87,7 +87,7 @@
 	},
 	"scrollToBottom": "Sohbetin altına kaydır",
 	"about": "AI yardımıyla kod oluşturun, yeniden düzenleyin ve hatalarını ayıklayın. Daha fazla bilgi edinmek için <DocsLink>belgelerimize</DocsLink> göz atın.",
-	"onboarding": "<strong>Bu çalışma alanındaki görev listeniz boş.</strong> Aşağıya bir görev yazarak başlayın. Nasıl başlayacağınızdan emin değil misiniz? Kilo Code'nun sizin için neler yapabileceği hakkında daha fazla bilgiyi <DocsLink>belgelerde</DocsLink> okuyun.",
+	"onboarding": "<strong>Bu çalışma alanındaki görev listeniz boş.</strong> Aşağıya bir görev yazarak başlayın. Nasıl başlayacağınızdan emin değil misiniz? O Code'nun sizin için neler yapabileceği hakkında daha fazla bilgiyi <DocsLink>belgelerde</DocsLink> okuyun.",
 	"rooTips": {
 		"boomerangTasks": {
 			"title": "Görev Orkestrasyonu",
@@ -123,7 +123,7 @@
 		"title": "Modlar",
 		"marketplace": "Mod Pazaryeri",
 		"settings": "Mod Ayarları",
-		"description": "Kilo Code'nun davranışını özelleştiren uzmanlaşmış kişilikler."
+		"description": "O Code'nun davranışını özelleştiren uzmanlaşmış kişilikler."
 	},
 	"errorReadingFile": "Dosya okuma hatası:",
 	"noValidImages": "Hiçbir geçerli resim işlenmedi",
@@ -135,7 +135,7 @@
 	"diffError": {
 		"title": "Düzenleme Başarısız"
 	},
-	"troubleMessage": "Kilo Code sorun yaşıyor...",
+	"troubleMessage": "O Code sorun yaşıyor...",
 	"apiRequest": {
 		"title": "API İsteği",
 		"failed": "API İsteği Başarısız",
@@ -161,59 +161,59 @@
 		"current": "Mevcut"
 	},
 	"instructions": {
-		"wantsToFetch": "Kilo Code mevcut göreve yardımcı olmak için ayrıntılı talimatlar almak istiyor"
+		"wantsToFetch": "O Code mevcut göreve yardımcı olmak için ayrıntılı talimatlar almak istiyor"
 	},
 	"fileOperations": {
-		"wantsToRead": "Kilo Code bu dosyayı okumak istiyor:",
-		"wantsToReadOutsideWorkspace": "Kilo Code çalışma alanı dışındaki bu dosyayı okumak istiyor:",
-		"didRead": "Kilo Code bu dosyayı okudu:",
-		"wantsToEdit": "Kilo Code bu dosyayı düzenlemek istiyor:",
-		"wantsToEditOutsideWorkspace": "Kilo Code çalışma alanı dışındaki bu dosyayı düzenlemek istiyor:",
-		"wantsToEditProtected": "Kilo Code korumalı bir yapılandırma dosyasını düzenlemek istiyor:",
-		"wantsToCreate": "Kilo Code yeni bir dosya oluşturmak istiyor:",
-		"wantsToSearchReplace": "Kilo Code bu dosyada arama ve değiştirme yapmak istiyor:",
-		"didSearchReplace": "Kilo Code bu dosyada arama ve değiştirme yaptı:",
-		"wantsToInsert": "Kilo Code bu dosyaya içerik eklemek istiyor:",
-		"wantsToInsertWithLineNumber": "Kilo Code bu dosyanın {{lineNumber}}. satırına içerik eklemek istiyor:",
-		"wantsToInsertAtEnd": "Kilo Code bu dosyanın sonuna içerik eklemek istiyor:",
-		"wantsToReadAndXMore": "Kilo Code bu dosyayı ve {{count}} tane daha okumak istiyor:",
-		"wantsToReadMultiple": "Kilo Code birden fazla dosya okumak istiyor:",
-		"wantsToApplyBatchChanges": "Kilo Code birden fazla dosyaya değişiklik uygulamak istiyor:"
+		"wantsToRead": "O Code bu dosyayı okumak istiyor:",
+		"wantsToReadOutsideWorkspace": "O Code çalışma alanı dışındaki bu dosyayı okumak istiyor:",
+		"didRead": "O Code bu dosyayı okudu:",
+		"wantsToEdit": "O Code bu dosyayı düzenlemek istiyor:",
+		"wantsToEditOutsideWorkspace": "O Code çalışma alanı dışındaki bu dosyayı düzenlemek istiyor:",
+		"wantsToEditProtected": "O Code korumalı bir yapılandırma dosyasını düzenlemek istiyor:",
+		"wantsToCreate": "O Code yeni bir dosya oluşturmak istiyor:",
+		"wantsToSearchReplace": "O Code bu dosyada arama ve değiştirme yapmak istiyor:",
+		"didSearchReplace": "O Code bu dosyada arama ve değiştirme yaptı:",
+		"wantsToInsert": "O Code bu dosyaya içerik eklemek istiyor:",
+		"wantsToInsertWithLineNumber": "O Code bu dosyanın {{lineNumber}}. satırına içerik eklemek istiyor:",
+		"wantsToInsertAtEnd": "O Code bu dosyanın sonuna içerik eklemek istiyor:",
+		"wantsToReadAndXMore": "O Code bu dosyayı ve {{count}} tane daha okumak istiyor:",
+		"wantsToReadMultiple": "O Code birden fazla dosya okumak istiyor:",
+		"wantsToApplyBatchChanges": "O Code birden fazla dosyaya değişiklik uygulamak istiyor:"
 	},
 	"directoryOperations": {
-		"wantsToViewTopLevel": "Kilo Code bu dizindeki üst düzey dosyaları görüntülemek istiyor:",
-		"didViewTopLevel": "Kilo Code bu dizindeki üst düzey dosyaları görüntüledi:",
-		"wantsToViewRecursive": "Kilo Code bu dizindeki tüm dosyaları özyinelemeli olarak görüntülemek istiyor:",
-		"didViewRecursive": "Kilo Code bu dizindeki tüm dosyaları özyinelemeli olarak görüntüledi:",
-		"wantsToViewDefinitions": "Kilo Code bu dizinde kullanılan kaynak kod tanımlama isimlerini görüntülemek istiyor:",
-		"didViewDefinitions": "Kilo Code bu dizinde kullanılan kaynak kod tanımlama isimlerini görüntüledi:",
-		"wantsToSearch": "Kilo Code bu dizinde <code>{{regex}}</code> için arama yapmak istiyor:",
-		"didSearch": "Kilo Code bu dizinde <code>{{regex}}</code> için arama yaptı:",
-		"wantsToSearchOutsideWorkspace": "Kilo Code bu dizinde (çalışma alanı dışında) <code>{{regex}}</code> için arama yapmak istiyor:",
-		"didSearchOutsideWorkspace": "Kilo Code bu dizinde (çalışma alanı dışında) <code>{{regex}}</code> için arama yaptı:",
-		"wantsToViewTopLevelOutsideWorkspace": "Kilo Code bu dizindeki (çalışma alanı dışında) üst düzey dosyaları görüntülemek istiyor:",
-		"didViewTopLevelOutsideWorkspace": "Kilo Code bu dizindeki (çalışma alanı dışında) üst düzey dosyaları görüntüledi:",
-		"wantsToViewRecursiveOutsideWorkspace": "Kilo Code bu dizindeki (çalışma alanı dışında) tüm dosyaları özyinelemeli olarak görüntülemek istiyor:",
-		"didViewRecursiveOutsideWorkspace": "Kilo Code bu dizindeki (çalışma alanı dışında) tüm dosyaları özyinelemeli olarak görüntüledi:",
-		"wantsToViewDefinitionsOutsideWorkspace": "Kilo Code bu dizinde (çalışma alanı dışında) kullanılan kaynak kod tanımlama isimlerini görüntülemek istiyor:",
-		"didViewDefinitionsOutsideWorkspace": "Kilo Code bu dizinde (çalışma alanı dışında) kullanılan kaynak kod tanımlama isimlerini görüntüledi:"
+		"wantsToViewTopLevel": "O Code bu dizindeki üst düzey dosyaları görüntülemek istiyor:",
+		"didViewTopLevel": "O Code bu dizindeki üst düzey dosyaları görüntüledi:",
+		"wantsToViewRecursive": "O Code bu dizindeki tüm dosyaları özyinelemeli olarak görüntülemek istiyor:",
+		"didViewRecursive": "O Code bu dizindeki tüm dosyaları özyinelemeli olarak görüntüledi:",
+		"wantsToViewDefinitions": "O Code bu dizinde kullanılan kaynak kod tanımlama isimlerini görüntülemek istiyor:",
+		"didViewDefinitions": "O Code bu dizinde kullanılan kaynak kod tanımlama isimlerini görüntüledi:",
+		"wantsToSearch": "O Code bu dizinde <code>{{regex}}</code> için arama yapmak istiyor:",
+		"didSearch": "O Code bu dizinde <code>{{regex}}</code> için arama yaptı:",
+		"wantsToSearchOutsideWorkspace": "O Code bu dizinde (çalışma alanı dışında) <code>{{regex}}</code> için arama yapmak istiyor:",
+		"didSearchOutsideWorkspace": "O Code bu dizinde (çalışma alanı dışında) <code>{{regex}}</code> için arama yaptı:",
+		"wantsToViewTopLevelOutsideWorkspace": "O Code bu dizindeki (çalışma alanı dışında) üst düzey dosyaları görüntülemek istiyor:",
+		"didViewTopLevelOutsideWorkspace": "O Code bu dizindeki (çalışma alanı dışında) üst düzey dosyaları görüntüledi:",
+		"wantsToViewRecursiveOutsideWorkspace": "O Code bu dizindeki (çalışma alanı dışında) tüm dosyaları özyinelemeli olarak görüntülemek istiyor:",
+		"didViewRecursiveOutsideWorkspace": "O Code bu dizindeki (çalışma alanı dışında) tüm dosyaları özyinelemeli olarak görüntüledi:",
+		"wantsToViewDefinitionsOutsideWorkspace": "O Code bu dizinde (çalışma alanı dışında) kullanılan kaynak kod tanımlama isimlerini görüntülemek istiyor:",
+		"didViewDefinitionsOutsideWorkspace": "O Code bu dizinde (çalışma alanı dışında) kullanılan kaynak kod tanımlama isimlerini görüntüledi:"
 	},
 	"commandOutput": "Komut Çıktısı",
 	"response": "Yanıt",
 	"arguments": "Argümanlar",
 	"mcp": {
-		"wantsToUseTool": "Kilo Code {{serverName}} MCP sunucusunda bir araç kullanmak istiyor:",
-		"wantsToAccessResource": "Kilo Code {{serverName}} MCP sunucusundaki bir kaynağa erişmek istiyor:"
+		"wantsToUseTool": "O Code {{serverName}} MCP sunucusunda bir araç kullanmak istiyor:",
+		"wantsToAccessResource": "O Code {{serverName}} MCP sunucusundaki bir kaynağa erişmek istiyor:"
 	},
 	"modes": {
-		"wantsToSwitch": "Kilo Code <code>{{mode}}</code> moduna geçmek istiyor",
-		"wantsToSwitchWithReason": "Kilo Code <code>{{mode}}</code> moduna geçmek istiyor çünkü: {{reason}}",
-		"didSwitch": "Kilo Code <code>{{mode}}</code> moduna geçti",
-		"didSwitchWithReason": "Kilo Code <code>{{mode}}</code> moduna geçti çünkü: {{reason}}"
+		"wantsToSwitch": "O Code <code>{{mode}}</code> moduna geçmek istiyor",
+		"wantsToSwitchWithReason": "O Code <code>{{mode}}</code> moduna geçmek istiyor çünkü: {{reason}}",
+		"didSwitch": "O Code <code>{{mode}}</code> moduna geçti",
+		"didSwitchWithReason": "O Code <code>{{mode}}</code> moduna geçti çünkü: {{reason}}"
 	},
 	"subtasks": {
-		"wantsToCreate": "Kilo Code <code>{{mode}}</code> modunda yeni bir alt görev oluşturmak istiyor:",
-		"wantsToFinish": "Kilo Code bu alt görevi bitirmek istiyor",
+		"wantsToCreate": "O Code <code>{{mode}}</code> modunda yeni bir alt görev oluşturmak istiyor:",
+		"wantsToFinish": "O Code bu alt görevi bitirmek istiyor",
 		"newTaskContent": "Alt Görev Talimatları",
 		"completionContent": "Alt Görev Tamamlandı",
 		"resultContent": "Alt Görev Sonuçları",
@@ -221,7 +221,7 @@
 		"completionInstructions": "Alt görev tamamlandı! Sonuçları inceleyebilir ve düzeltmeler veya sonraki adımlar önerebilirsiniz. Her şey iyi görünüyorsa, sonucu üst göreve döndürmek için onaylayın."
 	},
 	"questions": {
-		"hasQuestion": "Kilo Code'nun bir sorusu var:"
+		"hasQuestion": "O Code'nun bir sorusu var:"
 	},
 	"taskCompleted": "Görev Tamamlandı",
 	"powershell": {
@@ -230,7 +230,7 @@
 	"autoApprove": {
 		"title": "Otomatik-onay:",
 		"none": "Hiçbiri",
-		"description": "Otomatik onay, Kilo Code'un izin istemeden işlemler gerçekleştirmesine olanak tanır. Yalnızca tamamen güvendiğiniz eylemler için etkinleştirin. Daha detaylı yapılandırma <settingsLink>Ayarlar</settingsLink>'da mevcuttur.",
+		"description": "Otomatik onay, O Code'un izin istemeden işlemler gerçekleştirmesine olanak tanır. Yalnızca tamamen güvendiğiniz eylemler için etkinleştirin. Daha detaylı yapılandırma <settingsLink>Ayarlar</settingsLink>'da mevcuttur.",
 		"selectOptionsFirst": "Otomatik onayı etkinleştirmek için aşağıdan en az bir seçenek belirleyin",
 		"toggleAriaLabel": "Otomatik onayı değiştir",
 		"disabledAriaLabel": "Otomatik onay devre dışı - önce seçenekleri belirleyin"
@@ -251,8 +251,8 @@
 		"countdownDisplay": "{{count}}sn"
 	},
 	"announcement": {
-		"title": "🎉 Kilo Code {{version}} Yayınlandı",
-		"description": "Kilo Code {{version}}, geliştirme iş akışınızı geliştirmek için güçlü yeni özellikler ve önemli iyileştirmeler getiriyor.",
+		"title": "🎉 O Code {{version}} Yayınlandı",
+		"description": "O Code {{version}}, geliştirme iş akışınızı geliştirmek için güçlü yeni özellikler ve önemli iyileştirmeler getiriyor.",
 		"whatsNew": "Yenilikler",
 		"feature1": "<bold>Kod Tabanı İndeksleme Deneysel Aşamadan Mezun Oldu</bold>: Tam kod tabanı indeksleme artık kararlı ve geliştirilmiş arama ve bağlam anlayışı ile üretim kullanımına hazır.",
 		"feature2": "<bold>Yeni Yapılacaklar Listesi Özelliği</bold>: Görevlerinizi yolunda tutmak için entegre yapılacaklar yönetimi ile organize kalın ve geliştirme hedeflerinize odaklanın.",
@@ -261,7 +261,7 @@
 		"detailsDiscussLinks": "<discordLink>Discord</discordLink> ve <redditLink>Reddit</redditLink>'te daha fazla ayrıntı alın ve tartışmalara katılın 🚀"
 	},
 	"browser": {
-		"rooWantsToUse": "Kilo Code tarayıcıyı kullanmak istiyor:",
+		"rooWantsToUse": "O Code tarayıcıyı kullanmak istiyor:",
 		"consoleLogs": "Konsol Kayıtları",
 		"noNewLogs": "(Yeni kayıt yok)",
 		"screenshot": "Tarayıcı ekran görüntüsü",
@@ -295,19 +295,19 @@
 	"profileViolationWarning": "Geçerli profil kuruluşunuzun ayarlarıyla uyumlu değil",
 	"shellIntegration": {
 		"title": "Komut Çalıştırma Uyarısı",
-		"description": "Komutunuz VSCode terminal kabuk entegrasyonu olmadan çalıştırılıyor. Bu uyarıyı gizlemek için <settingsLink>Kilo Code ayarları</settingsLink>'nın <strong>Terminal</strong> bölümünden kabuk entegrasyonunu devre dışı bırakabilir veya aşağıdaki bağlantıyı kullanarak VSCode terminal entegrasyonu sorunlarını giderebilirsiniz.",
+		"description": "Komutunuz VSCode terminal kabuk entegrasyonu olmadan çalıştırılıyor. Bu uyarıyı gizlemek için <settingsLink>O Code ayarları</settingsLink>'nın <strong>Terminal</strong> bölümünden kabuk entegrasyonunu devre dışı bırakabilir veya aşağıdaki bağlantıyı kullanarak VSCode terminal entegrasyonu sorunlarını giderebilirsiniz.",
 		"troubleshooting": "Kabuk entegrasyonu belgelerini görmek için buraya tıklayın."
 	},
 	"ask": {
 		"autoApprovedRequestLimitReached": {
 			"title": "Otomatik Onaylanan İstek Limiti Aşıldı",
-			"description": "Kilo Code, {{count}} API isteği/istekleri için otomatik onaylanan limite ulaştı. Sayacı sıfırlamak ve göreve devam etmek istiyor musunuz?",
+			"description": "O Code, {{count}} API isteği/istekleri için otomatik onaylanan limite ulaştı. Sayacı sıfırlamak ve göreve devam etmek istiyor musunuz?",
 			"button": "Sıfırla ve Devam Et"
 		}
 	},
 	"codebaseSearch": {
-		"wantsToSearch": "Kilo Code kod tabanında <code>{{query}}</code> aramak istiyor:",
-		"wantsToSearchWithPath": "Kilo Code <code>{{path}}</code> içinde kod tabanında <code>{{query}}</code> aramak istiyor:",
+		"wantsToSearch": "O Code kod tabanında <code>{{query}}</code> aramak istiyor:",
+		"wantsToSearchWithPath": "O Code <code>{{path}}</code> içinde kod tabanında <code>{{query}}</code> aramak istiyor:",
 		"didSearch_one": "1 sonuç bulundu",
 		"didSearch_other": "{{count}} sonuç bulundu",
 		"resultTooltip": "Benzerlik puanı: {{score}} (dosyayı açmak için tıklayın)"

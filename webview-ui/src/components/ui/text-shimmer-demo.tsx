@@ -39,7 +39,7 @@ export function TextShimmerLoading() {
 export function TextShimmerCustomElement() {
 	return (
 		<TextShimmer as="h1" duration={2.5} className="text-3xl font-bold">
-			Welcome to Kilo Code
+			Welcome to O Code
 		</TextShimmer>
 	)
 }

@@ -59,7 +59,7 @@ export class KilocodeOpenrouterHandler extends OpenRouterHandler {
 		}
 
 		if (Object.keys(this.models).length === 0) {
-			throw new Error("Failed to load Kilo Code provider model list.")
+			throw new Error("Failed to load O Code provider model list.")
 		} else if (this.models[id]) {
 			info = this.models[id]
 		} else {

@@ -709,7 +709,7 @@ export class ClineProvider
 						window.AUDIO_BASE_URI = "${audioUri}"
 						window.MATERIAL_ICONS_BASE_URI = "${materialIconsUri}"
 					</script>
-					<title>Kilo Code</title>
+					<title>O Code</title>
 				</head>
 				<body>
 					<div id="root"></div>
@@ -786,7 +786,7 @@ export class ClineProvider
 				window.AUDIO_BASE_URI = "${audioUri}"
 				window.MATERIAL_ICONS_BASE_URI = "${materialIconsUri}"
 			</script>
-            <title>Kilo Code</title>
+            <title>O Code</title>
           </head>
           <body>
             <noscript>You need to enable JavaScript to run this app.</noscript>
@@ -1148,7 +1148,7 @@ export class ClineProvider
 			kilocodeToken: token,
 		})
 
-		vscode.window.showInformationMessage("Kilo Code successfully configured!")
+		vscode.window.showInformationMessage("O Code successfully configured!")
 
 		if (this.getCurrentCline()) {
 			this.getCurrentCline()!.api = buildApiHandler({
@@ -1870,7 +1870,7 @@ export class ClineProvider
 			return
 		}
 
-		// Logout from Kilo Code provider before resetting (same approach as ProfileView logout)
+		// Logout from O Code provider before resetting (same approach as ProfileView logout)
 		const { apiConfiguration, currentApiConfigName } = await this.getState()
 		if (apiConfiguration.kilocodeToken) {
 			await this.upsertProviderProfile(currentApiConfigName, {
