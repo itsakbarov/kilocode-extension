@@ -1,7 +1,6 @@
 import { memo, useRef, useState } from "react"
 import { useWindowSize } from "react-use"
 import { useTranslation } from "react-i18next"
-import { VSCodeBadge } from "@vscode/webview-ui-toolkit/react"
 import { CloudUpload, CloudDownload, FoldVertical } from "lucide-react"
 import { validateSlashCommand } from "@/utils/slash-commands"
 
@@ -18,7 +17,6 @@ import { useSelectedModel } from "@/components/ui/hooks/useSelectedModel"
 import Thumbnails from "../common/Thumbnails"
 
 import { TaskActions } from "./TaskActions"
-import { ShareButton } from "./ShareButton"
 import { ContextWindowProgress } from "./ContextWindowProgress"
 import { TaskTimeline } from "./TaskTimeline"
 import { mentionRegexGlobal } from "@roo/context-mentions"
@@ -93,8 +91,8 @@ const TaskHeader = ({
 		<div className="py-2 px-3">
 			<div
 				className={cn(
-					"p-2.5 flex flex-col gap-1.5 relative z-1 border",
-					hasTodos ? "rounded-t-xs border-b-0" : "rounded-xs",
+					"p-2.5 flex flex-col gap-1.5 relative z-1  border",
+					hasTodos ? "rounded-t-xs border-b-0" : "rounded-lg",
 					isTaskExpanded
 						? "border-vscode-panel-border text-vscode-foreground"
 						: "border-vscode-panel-border/80 text-vscode-foreground/80",
@@ -123,35 +121,6 @@ const TaskHeader = ({
 						</Button>
 					</StandardTooltip>
 				</div>
-				{/* Collapsed state: Track context and cost if we have any */}
-				{!isTaskExpanded && contextWindow > 0 && (
-					// kilocode_change start
-					<div className={`w-full flex flex-col gap-1 h-auto`}>
-						{showTaskTimeline && (
-							<TaskTimeline
-								groupedMessages={groupedMessages}
-								onMessageClick={onMessageClick}
-								isTaskActive={isTaskActive}
-							/>
-						)}
-						{/* kilocode_change end */}
-
-						<div className="flex flex-row items-center gap-1">
-							<ContextWindowProgress
-								contextWindow={contextWindow}
-								contextTokens={contextTokens || 0}
-								maxTokens={
-									model
-										? getModelMaxOutputTokens({ modelId, model, settings: apiConfiguration })
-										: undefined
-								}
-							/>
-							{condenseButton}
-							<ShareButton item={currentTaskItem} disabled={buttonsDisabled} />
-							{!!totalCost && <VSCodeBadge>${totalCost.toFixed(2)}</VSCodeBadge>}
-						</div>
-					</div>
-				)}
 				{/* Expanded state: Show task text and images */}
 				{isTaskExpanded && (
 					<>

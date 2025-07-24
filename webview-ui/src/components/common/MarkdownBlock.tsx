@@ -123,7 +123,9 @@ const StyledMarkdown = styled.div`
 	}
 
 	font-family:
+		"Geist",
 		var(--vscode-font-family),
+		ui-sans-serif,
 		system-ui,
 		-apple-system,
 		BlinkMacSystemFont,
@@ -274,7 +276,7 @@ const MarkdownBlock = memo(({ markdown }: MarkdownBlockProps) => {
 	}, [markdown, setMarkdown, theme])
 
 	return (
-		<div style={{}}>
+		<div className="markdown-content">
 			<StyledMarkdown>{reactContent}</StyledMarkdown>
 		</div>
 	)

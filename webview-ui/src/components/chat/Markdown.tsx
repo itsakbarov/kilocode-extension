@@ -18,6 +18,7 @@ export const Markdown = memo(({ markdown, partial }: { markdown?: string; partia
 
 	return (
 		<div
+			className="chat-message-content"
 			onMouseEnter={() => setIsHovering(true)}
 			onMouseLeave={() => setIsHovering(false)}
 			style={{ position: "relative" }}>

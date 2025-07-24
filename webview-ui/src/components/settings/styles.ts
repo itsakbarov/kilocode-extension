@@ -3,7 +3,9 @@ import styled from "styled-components"
 // Keep StyledMarkdown as it's used by ModelDescriptionMarkdown.tsx
 export const StyledMarkdown = styled.div`
 	font-family:
+		"Geist",
 		var(--vscode-font-family),
+		ui-sans-serif,
 		system-ui,
 		-apple-system,
 		BlinkMacSystemFont,
