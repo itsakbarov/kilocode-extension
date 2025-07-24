@@ -53,7 +53,6 @@ import {
 	validateSlashCommand,
 } from "@/utils/slash-commands"
 import { StopIcon } from "@radix-ui/react-icons"
-import { VSCodeButton } from "@vscode/webview-ui-toolkit/react"
 // kilocode_change end
 
 interface ChatTextAreaProps {
