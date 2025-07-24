@@ -4,7 +4,7 @@ import { McpExecution } from "./McpExecution"
 import { useSize } from "react-use"
 import { useTranslation, Trans } from "react-i18next"
 import deepEqual from "fast-deep-equal"
-import { VSCodeBadge, VSCodeButton } from "@vscode/webview-ui-toolkit/react"
+import { VSCodeButton } from "@vscode/webview-ui-toolkit/react"
 
 import type { ClineMessage } from "@roo-code/types"
 // import { Mode } from "@roo/modes" // kilocode_change
@@ -132,7 +132,8 @@ export const ChatRowContent = ({
 	editable,
 }: ChatRowContentProps) => {
 	const { t } = useTranslation()
-	const { apiConfiguration, mcpServers, alwaysAllowMcp, currentCheckpoint } = useExtensionState()
+	// i comment out apiConfiguration
+	const { mcpServers, alwaysAllowMcp, currentCheckpoint } = useExtensionState()
 	const [reasoningCollapsed, setReasoningCollapsed] = useState(true)
 	const [isDiffErrorExpanded, setIsDiffErrorExpanded] = useState(false)
 	const [showCopySuccess, setShowCopySuccess] = useState(false)
@@ -282,21 +283,7 @@ export const ChatRowContent = ({
 			case "api_req_retry_delayed":
 				return []
 			case "api_req_started":
-				const getIconSpan = (iconName: string, color: string) => (
-					<div
-						style={{
-							width: 16,
-							height: 16,
-							display: "flex",
-							alignItems: "center",
-							justifyContent: "center",
-						}}>
-						<span
-							className={`codicon codicon-${iconName}`}
-							style={{ color, fontSize: 16, marginBottom: "-1.5px" }}
-						/>
-					</div>
-				)
+				const getIconSpan = (iconName: string, color: string) => <div className={cn(iconName, color)}></div>
 				return [
 					apiReqCancelReason !== null && apiReqCancelReason !== undefined ? (
 						apiReqCancelReason === "user_cancelled" ? (
@@ -1032,14 +1019,14 @@ export const ChatRowContent = ({
 									{icon}
 									{title}
 									{/* kilocode_change */}
-									{apiConfiguration?.apiProvider !== "kilocode" && (
+									{/* {apiConfiguration?.apiProvider !== "kilocode" && (
 										<VSCodeBadge
 											style={{
 												opacity: cost !== null && cost !== undefined && cost > 0 ? 1 : 0,
 											}}>
 											${Number(cost || 0)?.toFixed(4)}
 										</VSCodeBadge>
-									)}
+									)} */}
 								</div>
 								<span className={`codicon codicon-chevron-${isExpanded ? "up" : "down"}`}></span>
 							</div>

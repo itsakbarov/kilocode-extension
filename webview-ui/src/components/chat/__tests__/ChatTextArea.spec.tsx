@@ -66,6 +66,8 @@ describe("ChatTextArea", () => {
 		mode: defaultModeSlug,
 		setMode: vi.fn(),
 		modeShortcutText: "(⌘. for next mode)",
+		isStreaming: false,
+		onStop: vi.fn(),
 	}
 
 	beforeEach(() => {
@@ -975,6 +977,42 @@ describe("ChatTextArea", () => {
 			// Should not show save button when not in edit mode
 			const saveButton = screen.queryByRole("button", { name: /save/i })
 			expect(saveButton).not.toBeInTheDocument()
+		})
+	})
+
+	describe("Stop streaming functionality", () => {
+		it("should show stop icon when streaming", () => {
+			render(<ChatTextArea {...defaultProps} isStreaming={true} />)
+
+			const button = screen.getByRole("button", { name: /cancel/i })
+			expect(button).toBeInTheDocument()
+		})
+
+		it("should call onStop when stop button is clicked during streaming", async () => {
+			const onStop = vi.fn()
+			render(<ChatTextArea {...defaultProps} isStreaming={true} onStop={onStop} />)
+
+			const stopButton = screen.getByRole("button", { name: /cancel/i })
+			await userEvent.click(stopButton)
+
+			expect(onStop).toHaveBeenCalledTimes(1)
+		})
+
+		it("should show send button when not streaming", () => {
+			render(<ChatTextArea {...defaultProps} isStreaming={false} />)
+
+			const button = screen.getByRole("button", { name: /send/i })
+			expect(button).toBeInTheDocument()
+		})
+
+		it("should call onSend when send button is clicked and not streaming", async () => {
+			const onSend = vi.fn()
+			render(<ChatTextArea {...defaultProps} isStreaming={false} onSend={onSend} sendingDisabled={false} />)
+
+			const sendButton = screen.getByRole("button", { name: /send/i })
+			await userEvent.click(sendButton)
+
+			expect(onSend).toHaveBeenCalledTimes(1)
 		})
 	})
 })

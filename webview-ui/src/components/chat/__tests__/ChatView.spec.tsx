@@ -111,6 +111,8 @@ interface ChatTextAreaProps {
 	placeholderText?: string
 	selectedImages?: string[]
 	shouldDisableImages?: boolean
+	isStreaming?: boolean
+	onStop?: () => void
 }
 
 const mockInputRef = React.createRef<HTMLInputElement>()

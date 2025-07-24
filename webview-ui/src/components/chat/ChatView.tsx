@@ -743,6 +743,11 @@ const ChatViewComponent: React.ForwardRefRenderFunction<ChatViewRef, ChatViewPro
 
 	const handleTaskCloseButtonClick = useCallback(() => startNewTask(), [startNewTask])
 
+	const handleStopStreaming = useCallback(() => {
+		vscode.postMessage({ type: "cancelTask" })
+		setDidClickCancel(true)
+	}, [])
+
 	const { info: model } = useSelectedModel(apiConfiguration)
 
 	const selectImages = useCallback(() => vscode.postMessage({ type: "selectImages" }), [])
@@ -1883,7 +1888,7 @@ const ChatViewComponent: React.ForwardRefRenderFunction<ChatViewRef, ChatViewPro
 								</StandardTooltip>
 							) : (
 								<>
-									{primaryButtonText && !isStreaming && (
+									{/* {primaryButtonText && !isStreaming && (
 										<StandardTooltip
 											content={
 												primaryButtonText === t("chat:retry.title")
@@ -1914,8 +1919,8 @@ const ChatViewComponent: React.ForwardRefRenderFunction<ChatViewRef, ChatViewPro
 												{primaryButtonText}
 											</VSCodeButton>
 										</StandardTooltip>
-									)}
-									{(secondaryButtonText || isStreaming) && (
+									)} */}
+									{/* {(secondaryButtonText || isStreaming) && (
 										<StandardTooltip
 											content={
 												isStreaming
@@ -1936,7 +1941,7 @@ const ChatViewComponent: React.ForwardRefRenderFunction<ChatViewRef, ChatViewPro
 												{isStreaming ? t("chat:cancel.title") : secondaryButtonText}
 											</VSCodeButton>
 										</StandardTooltip>
-									)}
+									)} */}
 								</>
 							)}
 						</div>
@@ -1965,6 +1970,7 @@ const ChatViewComponent: React.ForwardRefRenderFunction<ChatViewRef, ChatViewPro
 				mode={mode}
 				setMode={setMode}
 				modeShortcutText={modeShortcutText}
+				onStop={handleStopStreaming}
 			/>
 			{/* kilocode_change: added settings toggle the profile and model selection */}
 			<BottomControls showApiConfig />
