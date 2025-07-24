@@ -53,6 +53,7 @@ import {
 	validateSlashCommand,
 } from "@/utils/slash-commands"
 import { StopIcon } from "@radix-ui/react-icons"
+import { VSCodeButton } from "@vscode/webview-ui-toolkit/react"
 // kilocode_change end
 
 interface ChatTextAreaProps {
@@ -1197,7 +1198,7 @@ const ChatTextArea = forwardRef<HTMLTextAreaElement, ChatTextAreaProps>(
 				// kilocode_change end
 				className={cn("flex", "justify-between", "items-center", "mt-auto")}>
 				<div className={cn("flex", "items-center", "gap-1", "min-w-0")}>
-					<div className="shrink-0">
+					<div className="w-full flex gap-1">
 						{/* kilocode_change start: SelectDropdown instead of ModeSelector */}
 						<SelectDropdown
 							value={allModes.find((m) => m.slug === mode)?.slug ?? defaultModeSlug}
@@ -1235,9 +1236,13 @@ const ChatTextArea = forwardRef<HTMLTextAreaElement, ChatTextAreaProps>(
 								"w-full bg-[var(--background)] border-[var(--vscode-input-border)] hover:bg-[var(--color-vscode-list-hoverBackground)]",
 							)}
 						/>
+						{/* Create a button with "Suggest Model" text and it should be the same styles and sizes with SelectDropdown above */}
+
 						{/* kilocode_change end */}
 					</div>
-
+					<button className="text-sm whitespace-nowrap rounded-md py-1 px-2 w-full bg-[var(--background)] hover:border-vscode-focusBorder  hover:bg-[var(--color-vscode-list-hoverBackground)]">
+						Suggest model
+					</button>
 					{/* kilocode_change start - hide if there is only one profile */}
 					<div
 						className={cn("flex-1", "min-w-0", "overflow-hidden", {
