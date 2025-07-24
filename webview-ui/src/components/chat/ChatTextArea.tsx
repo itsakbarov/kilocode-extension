@@ -36,7 +36,7 @@ import {
 	// Image, // kilocode_change
 	WandSparkles,
 	SendHorizontal,
-	Paperclip, // kilocode_change
+	Paperclip,
 } from "lucide-react"
 import { IndexingStatusBadge } from "./IndexingStatusBadge"
 import { cn } from "@/lib/utils"
@@ -52,6 +52,7 @@ import {
 	insertSlashCommand,
 	validateSlashCommand,
 } from "@/utils/slash-commands"
+import { StopIcon } from "@radix-ui/react-icons"
 // kilocode_change end
 
 interface ChatTextAreaProps {
@@ -72,12 +73,15 @@ interface ChatTextAreaProps {
 	// Edit mode props
 	isEditMode?: boolean
 	onCancel?: () => void
+	isStreaming: boolean
+	onStop?: () => void
 }
 
 const ChatTextArea = forwardRef<HTMLTextAreaElement, ChatTextAreaProps>(
 	(
 		{
 			inputValue,
+			isStreaming,
 			setInputValue,
 			sendingDisabled,
 			selectApiConfigDisabled,
@@ -93,6 +97,7 @@ const ChatTextArea = forwardRef<HTMLTextAreaElement, ChatTextAreaProps>(
 			modeShortcutText,
 			isEditMode = false,
 			onCancel,
+			onStop,
 		},
 		ref,
 	) => {
@@ -1591,11 +1596,11 @@ const ChatTextArea = forwardRef<HTMLTextAreaElement, ChatTextAreaProps>(
 						</button>
 					</StandardTooltip>
 					{!isEditMode && (
-						<StandardTooltip content={t("chat:sendMessage")}>
+						<StandardTooltip content={isStreaming ? t("chat:cancel.title") : t("chat:sendMessage")}>
 							<button
-								aria-label={t("chat:sendMessage")}
-								disabled={sendingDisabled}
-								onClick={!sendingDisabled ? onSend : undefined}
+								aria-label={isStreaming ? t("chat:cancel.title") : t("chat:sendMessage")}
+								disabled={sendingDisabled && !isStreaming}
+								onClick={isStreaming ? onStop : !sendingDisabled ? onSend : undefined}
 								className={cn(
 									"relative inline-flex items-center justify-center",
 									"bg-transparent border-none p-1.5",
@@ -1605,12 +1610,17 @@ const ChatTextArea = forwardRef<HTMLTextAreaElement, ChatTextAreaProps>(
 									"hover:bg-[rgba(255,255,255,0.03)] hover:border-[rgba(255,255,255,0.15)]",
 									"focus:outline-none focus-visible:ring-1 focus-visible:ring-vscode-focusBorder",
 									"active:bg-[rgba(255,255,255,0.1)]",
-									!sendingDisabled && "cursor-pointer",
+									((!sendingDisabled && !isStreaming) || isStreaming) && "cursor-pointer",
 									sendingDisabled &&
+										!isStreaming &&
 										"opacity-40 cursor-not-allowed grayscale-[30%] hover:bg-transparent hover:border-[rgba(255,255,255,0.08)] active:bg-transparent",
 								)}>
 								{/* kilocode_change: rtl */}
-								<SendHorizontal className="w-4 h-4 rtl:-scale-x-100" />
+								{isStreaming ? (
+									<StopIcon className="w-4 h-4" />
+								) : (
+									<SendHorizontal className="w-4 h-4 rtl:-scale-x-100" />
+								)}
 							</button>
 						</StandardTooltip>
 					)}

@@ -693,6 +693,7 @@ const ChatViewComponent: React.ForwardRefRenderFunction<ChatViewRef, ChatViewPro
 	const handleSecondaryButtonClick = useCallback(
 		(text?: string, images?: string[]) => {
 			// Mark that user has responded
+			console.log("handleSecondaryButtonClick", text, images)
 			userRespondedRef.current = true
 
 			const trimmedInput = text?.trim()
@@ -1861,7 +1862,7 @@ const ChatViewComponent: React.ForwardRefRenderFunction<ChatViewRef, ChatViewPro
 					</div>
 					{areButtonsVisible && (
 						<div
-							className={`flex h-9 items-center mb-1 px-[15px] ${
+							className={`flex h-10 items-center mb-1 px-[15px] ${
 								showScrollToBottom
 									? "opacity-100"
 									: enableButtons || (isStreaming && !didClickCancel)
@@ -1871,13 +1872,13 @@ const ChatViewComponent: React.ForwardRefRenderFunction<ChatViewRef, ChatViewPro
 							{showScrollToBottom ? (
 								<StandardTooltip content={t("chat:scrollToBottom")}>
 									<VSCodeButton
-										appearance="secondary"
-										className="flex-[2]"
+										appearance="primary"
+										className="flex border-none items-center justify-center rounded-full size-8 ml-auto"
 										onClick={() => {
 											scrollToBottomSmooth()
 											disableAutoScrollRef.current = false
 										}}>
-										<span className="codicon codicon-chevron-down"></span>
+										<span className="w-2 -translate-x-1 codicon codicon-chevron-down text-xs"></span>
 									</VSCodeButton>
 								</StandardTooltip>
 							) : (
@@ -1945,6 +1946,7 @@ const ChatViewComponent: React.ForwardRefRenderFunction<ChatViewRef, ChatViewPro
 
 			<ChatTextArea
 				ref={textAreaRef}
+				isStreaming={isStreaming}
 				inputValue={inputValue}
 				setInputValue={setInputValue}
 				sendingDisabled={sendingDisabled || isProfileDisabled}
